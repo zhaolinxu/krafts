@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Keep Craft v0.9.3 beta</title>
+	<title>持续建设 v0.9.3 beta</title>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="https://code.jquery.com/ui/jquery-ui-git.css">
 	<link rel="stylesheet" id="estilo" type="text/css" href="css/style.css">
@@ -29,33 +29,29 @@
 <body>
 
  <div id='header'>
-    <div class="infokraft">Keep Craft v0.9.3 beta Created by Ernesto Mayoral emayoralc@gmail.com<br>New content added regularly, don't forget to refresh 
-<form  class="imgdonar" action="https://www.paypal.com/cgi-bin/webscr&lc=US" method="post" target="blank">
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="hosted_button_id" value="KFT9EFSL3MX8C">
-<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-</form><br>
+    <div class="infokraft" style="padding:10px 20px">作者：Ernesto Mayoral emayoralc@gmail.com<br>
+<!--    定期添加新内容，不要忘记刷新-->
+<br>
 <a href="https://www.reddit.com/r/Keep_Craft/" target="blank" >Subreddit</a> <a class="a2" href="http://keep-kraft.wikia.com/wiki/Keep_Kraft_Wikia" target="blank">Wiki</a>
 </div>
 
-	<button class='but' onclick="save()">Save</button> <button class='but'  data-toggle="modal" data-target="#changelog">Changelog</button> 		 <button class='but'  data-toggle="modal" data-target="#options">Options</button> <div class="population"></div><div class="ships"></div><div class="titles"></div><div class="territory"></div><div class="shardsnum"></div><div class="legacynum"></div><div class="treasurenum"></div>
+	<button class='but' onclick="save()">保存</button> <button class='but'  data-toggle="modal" data-target="#changelog">更新日志</button> 		 <button class='but'  data-toggle="modal" data-target="#options">选项</button> <div class="population"></div><div class="ships"></div><div class="titles"></div><div class="territory"></div><div class="shardsnum"></div><div class="legacynum"></div><div class="treasurenum"></div>
         <br><br>
 	</div>
  <div id='navigation'>          
 	<ul class="nav nav-tabs">
-		<li class="active"><a data-toggle="tab" href="#build">Buildings</a></li>
-		<li id="facilitiespane"><a data-toggle="tab" href="#facilities">Facilities</a></li>
-		<li id="jobspane"><a data-toggle="tab" href="#jobs">Jobs</a></li>
-		<li id="technologiespane"><a data-toggle="tab" href="#technologies">Technologies</a></li>
-		<li id="craftingpane"><a data-toggle="tab" href="#crafting">Crafting</a></li>
-		<li id="militarypane"><a data-toggle="tab" href="#military">Military</a></li>
-		<li id="casinopane"><a data-toggle="tab" href="#casino">Casino</a></li>
-		<li id="marketpane"><a data-toggle="tab" href="#market">Market</a></li>
-		<li id="leaderpane"><a data-toggle="tab" href="#leader">Leaders</a></li>
-		<li id="dockpane"><a data-toggle="tab" href="#dock">Dock</a></li>
-		<li id="heirloomspane"><a data-toggle="tab" href="#heirlooms">Heirlooms</a></li>
-		<li id="legacypane"><a data-toggle="tab" href="#legacy">Legacy</a></li>
+		<li class="active"><a data-toggle="tab" href="#build">建筑</a></li>
+		<li id="facilitiespane"><a data-toggle="tab" href="#facilities">设施</a></li>
+		<li id="jobspane"><a data-toggle="tab" href="#jobs">工作</a></li>
+		<li id="technologiespane"><a data-toggle="tab" href="#technologies">科技</a></li>
+		<li id="craftingpane"><a data-toggle="tab" href="#crafting">工艺</a></li>
+		<li id="militarypane"><a data-toggle="tab" href="#military">军事</a></li>
+		<li id="casinopane"><a data-toggle="tab" href="#casino">赌场</a></li>
+		<li id="marketpane"><a data-toggle="tab" href="#market">市场</a></li>
+		<li id="leaderpane"><a data-toggle="tab" href="#leader">领导人</a></li>
+		<li id="dockpane"><a data-toggle="tab" href="#dock">码头</a></li>
+		<li id="heirloomspane"><a data-toggle="tab" href="#heirlooms">传家宝</a></li>
+		<li id="legacypane"><a data-toggle="tab" href="#legacy">遗产</a></li>
 	</ul>
 	<br><br>
 </div>
@@ -148,7 +144,7 @@
 			<div class="block craft_patent"></div>
 			<div class="block craft_book"></div>
 			<div class="block craft_strategy"></div><br>
-		<button class="toggletech" onclick="toggletech()">Hide researched technologies</button><br><br>
+		<button class="toggletech" onclick="toggletech()">隐藏已研究的科技</button><br><br>
 		<div class="technolist">
 			<div class="block tech_coppertools"></div>
 			<div class="block tech_pickaxe"></div>
@@ -411,13 +407,13 @@
 
 
 		<div id="heirlooms" class="heirlooms tab-pane fade">
-		<button id="sellheirloombutton" onclick="sellheirloom()">Sell</button>
+		<button id="sellheirloombutton" onclick="sellheirloom()">出售</button>
 		<button onclick="swapheirlooms()">Pick</button><br><br>
 		<div class="heirloomslog"></div><br><br>
 		Your empire heirloom:<br>
 		<div class="heirloomslog2"></div><br>
 		
-		<button id="upgradeheirloom" onclick="upgradeheirloom()">Upgrade</button> <button id="save" onclick="storeheirlooms(-1)">Store</button><br><br>
+		<button id="upgradeheirloom" onclick="upgradeheirloom()">升级</button> <button id="save" onclick="storeheirlooms(-1)">Store</button><br><br>
 		Your stored heirlooms:<br>
 		<div class="heirloomlist"></div><br>
 	</div>
@@ -435,7 +431,7 @@
 
 
 	<div id="legacy" class="legacy tab-pane fade">
-	Use your legacy wisely<br>
+	明智地使用你的遗产<br>
 	<div class="block legacy_motivation"></div><br>
 	<div class="block legacy_depot"></div><br>
 	<div class="block legacy_mastery"></div><br>
@@ -457,21 +453,21 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title messagetitle">Options</h4>
+          <h4 class="modal-title messagetitle">选项</h4>
         </div>
         <div class="modal-body messagetext">
-		 <button class='but' onclick="cleartheme()" >Clear theme</button><br>
-		 <button class='but'  onclick="darktheme()" >Dark theme</button><br>
-		 <button class='but'  data-toggle="modal" onclick="encode()" data-target="#importmodal">Import/Export</button><br><br>
-		 Performance factor (Change only if you experience freezing or delay)<br>
+		 <button class='but' onclick="cleartheme()" >默认主题</button><br>
+		 <button class='but'  onclick="darktheme()" >黑色主题</button><br>
+		 <button class='but'  data-toggle="modal" onclick="encode()" data-target="#importmodal">导入/导出</button><br><br>
+		 性能选项 (当你觉得卡顿时再设置)<br>
 		 <select id='performanceselect'>
-		 	<option value='1'>Maximum performance</option>
-		 	<option value='2'>Medium performance</option>
-			<option value='3'>Low performance</option>
+		 	<option value='1'>最高性能</option>
+		 	<option value='2'>中等性能</option>
+			<option value='3'>低性能</option>
 		 </select>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
         </div>
       </div>
       
@@ -971,7 +967,7 @@
          <b>V 0.3.2</b>
         <ul>
 		<li>The game saves the status (on or off) of buildings</li>
-		<li>Fixed technologies not disappearing when Hide Researched Technologies its active</li>
+		<li>Fixed technologies not disappearing when 隐藏已研究的科技 its active</li>
         </ul>
          <b>V 0.3.1</b>
         <ul>
@@ -1273,14 +1269,16 @@ fillDeal();
 	;
 </script>
 
+<!--
 <script>
 		update(unlocked,JSON.parse(Cookies.get( 'unlocked')));
 
 </script>
+-->
 <script>
 
 </script>
-	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script>
 
 function darktheme() {
@@ -1313,12 +1311,14 @@ if(bonus["theme"]=="clear"){
 
 </script>
 
+<!--
 <script type="text/javascript">document.write(unescape("%3Cscript src=%27http://s10.histats.com/js15.js%27 type=%27text/javascript%27%3E%3C/script%3E"));</script>
 <a href="http://www.histats.com" target="_blank" title="acesso" ><script  type="text/javascript" >
 try {Histats.start(1,3127890,4,0,0,0,"");
 Histats.track_hits();} catch(err){};
 </script></a>
+-->
 <noscript><a href="http://www.histats.com" target="_blank"><img  src="http://sstatic1.histats.com/0.gif?3127890&101" alt="acesso" border="0"></a></noscript>
 
-<script id="cid0020000148873222256" data-cfasync="false" async src="//st.chatango.com/js/gz/emb.js" style="width: 315px;height: 300px;">{"handle":"keepcraft","arch":"js","styles":{"a":"ffffff","b":100,"e":"ffffff","h":"ffffff","l":"cccccc","m":"dadada","q":"ffffff","r":100,"pos":"br","cv":1,"cvfg":"ffffff","cvw":315,"cvh":38,"sbc":"bbbbbb","ticker":1,"fwtickm":1}}</script>
+<!--<script id="cid0020000148873222256" data-cfasync="false" async src="//st.chatango.com/js/gz/emb.js" style="width: 315px;height: 300px;">{"handle":"keepcraft","arch":"js","styles":{"a":"ffffff","b":100,"e":"ffffff","h":"ffffff","l":"cccccc","m":"dadada","q":"ffffff","r":100,"pos":"br","cv":1,"cvfg":"ffffff","cvw":315,"cvh":38,"sbc":"bbbbbb","ticker":1,"fwtickm":1}}</script>-->
 </html>

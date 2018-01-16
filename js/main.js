@@ -1087,7 +1087,7 @@ function fight(){
 
 
 function retreat(){
-	$(".expeditionresult").html("You flee cowardly")
+	$(".expeditionresult").html("你怯懦的逃跑了")
 	$(".encounter").hide()
 }
 function crafting(b){
@@ -2622,8 +2622,8 @@ else
 }
 unattainable=maximums["wood"]*(bonus["storage"]+1)<woodcost
 set_unattainable(".build_lumbermill", unattainable);
-$(".build_lumbermill").html("Lumbermill ("+buildings["lumbermill"]+")");
-$(".build_lumbermill").attr('tooltip', 'Wood: '+ parseFloat(items["wood"]).toFixed(2)+" / "+parseFloat(woodcost).toFixed(2))
+$(".build_lumbermill").html("伐木场 ("+buildings["lumbermill"]+")");
+$(".build_lumbermill").attr('tooltip', '木头: '+ parseFloat(items["wood"]).toFixed(2)+" / "+parseFloat(woodcost).toFixed(2))
 $(".build_lumbermill").attr('tooltip2', "Wood production: +0.20/s");
 
 
@@ -2638,8 +2638,8 @@ else
 }
 unattainable=maximums["wood"]*(bonus["storage"]+1)<woodcost || maximums["mineral"]*(bonus["storage"]+1)<mineralcost
 set_unattainable(".build_mine", unattainable);
-$(".build_mine").html("Mine ("+buildings["mine"]+")");
-$(".build_mine").attr('tooltip', 'Wood: '+ parseFloat(items["wood"]).toFixed(2)+" / "+parseFloat(woodcost).toFixed(2) )
+$(".build_mine").html("矿井 ("+buildings["mine"]+")");
+$(".build_mine").attr('tooltip', '木头: '+ parseFloat(items["wood"]).toFixed(2)+" / "+parseFloat(woodcost).toFixed(2) )
 $(".build_mine").attr('tooltip2',"Minerals: "+ parseFloat(items["mineral"]).toFixed(2)+" / "+parseFloat(mineralcost).toFixed(2) )
 $(".build_mine").attr('tooltip3', "Mineral production: +0.20/s");
 
@@ -2655,10 +2655,10 @@ else
 }
 unattainable=maximums["wood"]*(bonus["storage"]+1)<woodcost || maximums["mineral"]*(bonus["storage"]+1)<mineralcost
 set_unattainable(".build_warehouse", unattainable);
-$(".build_warehouse").html("Warehouse ("+buildings["warehouse"]+")");
-$(".build_warehouse").attr('tooltip', 'Wood: '+ parseFloat(items["wood"]).toFixed(2)+" / "+parseFloat(woodcost).toFixed(2) )
-$(".build_warehouse").attr('tooltip2',"Minerals: "+ parseFloat(items["mineral"]).toFixed(2)+" / "+parseFloat(mineralcost).toFixed(2) )
-$(".build_warehouse").attr('tooltip3', "Increments storage space for basic materials");
+$(".build_warehouse").html("仓库 ("+buildings["warehouse"]+")");
+$(".build_warehouse").attr('tooltip', '木头: '+ parseFloat(items["wood"]).toFixed(2)+" / "+parseFloat(woodcost).toFixed(2) )
+$(".build_warehouse").attr('tooltip2',"矿物: "+ parseFloat(items["mineral"]).toFixed(2)+" / "+parseFloat(mineralcost).toFixed(2) )
+$(".build_warehouse").attr('tooltip3', "增加基础资源的存储空间");
 
 
 mineralcost=Math.pow(1.35, (buildings["fountain"]))*6
@@ -2671,7 +2671,7 @@ else
 }
 unattainable=maximums["mineral"]*(bonus["storage"]+1)<mineralcost
 set_unattainable(".build_fountain", unattainable);
-$(".build_fountain").html("Fountain ("+buildings["fountain"]+")");
+$(".build_fountain").html("喷泉 ("+buildings["fountain"]+")");
 $(".build_fountain").attr('tooltip',"Minerals: "+ parseFloat(items["mineral"]).toFixed(2)+" / "+parseFloat(mineralcost).toFixed(2) )
 $(".build_fountain").attr('tooltip2', "Water production: +0.40/s");
 $(".build_fountain").attr('tooltip3', "Water storage: 5");
@@ -2687,9 +2687,9 @@ else
 unattainable=maximums["wood"]*(bonus["storage"]+1)<woodcost
 set_unattainable(".build_pasture", unattainable);
 $(".build_pasture").html("Pasture ("+buildings["pasture"]+")");
-$(".build_pasture").attr('tooltip', 'Wood: '+ parseFloat(items["wood"]).toFixed(2)+" / "+parseFloat(woodcost).toFixed(2))
-$(".build_pasture").attr('tooltip2', "Water consumption: -0.20/s");
-$(".build_pasture").attr('tooltip3', "Food production: +0.20/s");
+$(".build_pasture").attr('tooltip', '木头: '+ parseFloat(items["wood"]).toFixed(2)+" / "+parseFloat(woodcost).toFixed(2))
+$(".build_pasture").attr('tooltip2', "耗水量: -0.20/s");
+$(".build_pasture").attr('tooltip3', "食品生产: +0.20/s");
 
 woodcost= Math.pow(1.8,(buildings["house"]))*20
 mineralcost=Math.pow(1.8, (buildings["house"]))*50
@@ -2704,10 +2704,10 @@ else
 unattainable=maximums["wood"]*(bonus["storage"]+1)<woodcost || maximums["mineral"]*(bonus["storage"]+1)<mineralcost || maximums["food"]*(bonus["storage"]+1)<foodcost
 set_unattainable(".build_house", unattainable);
 $(".build_house").html("House ("+buildings["house"]+")");
-$(".build_house").attr('tooltip', 'Wood: '+ parseFloat(items["wood"]).toFixed(2)+" / "+parseFloat(woodcost).toFixed(2))
-$(".build_house").attr('tooltip2', 'Minerals: '+ parseFloat(items["mineral"]).toFixed(2)+" / "+parseFloat(mineralcost).toFixed(2))
-$(".build_house").attr('tooltip3', 'Food: '+ parseFloat(items["food"]).toFixed(2)+" / "+parseFloat(foodcost).toFixed(2))
-$(".build_house").attr('tooltip4', "Max population +3");
+$(".build_house").attr('tooltip', '木头: '+ parseFloat(items["wood"]).toFixed(2)+" / "+parseFloat(woodcost).toFixed(2))
+$(".build_house").attr('tooltip2', '矿物: '+ parseFloat(items["mineral"]).toFixed(2)+" / "+parseFloat(mineralcost).toFixed(2))
+$(".build_house").attr('tooltip3', '食物: '+ parseFloat(items["food"]).toFixed(2)+" / "+parseFloat(foodcost).toFixed(2))
+$(".build_house").attr('tooltip4', "最大人口 +3");
 
 
 woodcost= Math.pow(1.9,(buildings["library"]))*300
@@ -2722,14 +2722,14 @@ else
 unattainable=maximums["wood"]*(bonus["storage"]+1)<woodcost || maximums["mineral"]*(bonus["storage"]+1)<mineralcost
 set_unattainable(".build_library", unattainable);
 $(".build_library").html("Library ("+buildings["library"]+")");
-$(".build_library").attr('tooltip', 'Wood: '+ parseFloat(items["wood"]).toFixed(2)+" / "+parseFloat(woodcost).toFixed(2))
-$(".build_library").attr('tooltip2', 'Minerals: '+ parseFloat(items["mineral"]).toFixed(2)+" / "+parseFloat(mineralcost).toFixed(2))
+$(".build_library").attr('tooltip', '木头: '+ parseFloat(items["wood"]).toFixed(2)+" / "+parseFloat(woodcost).toFixed(2))
+$(".build_library").attr('tooltip2', '矿物: '+ parseFloat(items["mineral"]).toFixed(2)+" / "+parseFloat(mineralcost).toFixed(2))
 if(buildings["library"]<8){
-$(".build_library").attr('tooltip3', 'Unlock powerful technologies each level');
+$(".build_library").attr('tooltip3', '每一级都可以解锁强大的技术');
 }
 else
 {
-$(".build_library").attr('tooltip4', 'Knowledge production +0.01/s');
+$(".build_library").attr('tooltip4', 'Knowledge production +0.01/秒');
 $(".build_library").attr('tooltip5', 'Knowledge maximum + 100');
 }
 
@@ -2746,9 +2746,9 @@ else
 unattainable=maximums["wood"]*(bonus["storage"]+1)<woodcost || maximums["copper"]*(bonus["storage"]+1)<coppercost
 set_unattainable(".build_banner", unattainable);
 $(".build_banner").html("Banner ("+buildings["banner"]+")");
-$(".build_banner").attr('tooltip', 'Wood: '+ parseFloat(items["wood"]).toFixed(2)+" / "+parseFloat(woodcost).toFixed(2))
-$(".build_banner").attr('tooltip2', 'Copper: '+ parseFloat(items["copper"]).toFixed(2)+" / "+parseFloat(coppercost).toFixed(2))
-$(".build_banner").attr('tooltip3', 'Max morale +1');
+$(".build_banner").attr('tooltip', '木头: '+ parseFloat(items["wood"]).toFixed(2)+" / "+parseFloat(woodcost).toFixed(2))
+$(".build_banner").attr('tooltip2', '铜: '+ parseFloat(items["copper"]).toFixed(2)+" / "+parseFloat(coppercost).toFixed(2))
+$(".build_banner").attr('tooltip3', '最大士气 +1');
 
 mineralcost= Math.pow(1.3,(buildings["foundry"]))*500;
 coppercost=Math.pow(1.3, (buildings["foundry"]))*5
@@ -2763,7 +2763,7 @@ unattainable=maximums["mineral"]*(bonus["storage"]+1)<mineralcost || maximums["c
 set_unattainable(".build_foundry", unattainable);
 $(".build_foundry").html("Foundry ("+buildings["foundry"]+")");
 $(".build_foundry").attr('tooltip', 'Mineral: '+ parseFloat(items["mineral"]).toFixed(2)+" / "+parseFloat(mineralcost).toFixed(2))
-$(".build_foundry").attr('tooltip2', 'Copper: '+ parseFloat(items["copper"]).toFixed(2)+" / "+parseFloat(coppercost).toFixed(2))
+$(".build_foundry").attr('tooltip2', '铜: '+ parseFloat(items["copper"]).toFixed(2)+" / "+parseFloat(coppercost).toFixed(2))
 $(".build_foundry").attr('tooltip3', "Mineral consumption: -0.50/s");
 $(".build_foundry").attr('tooltip4', "Iron production: +0.02/s");
 if(technologies["bronze"]>0){
@@ -2779,7 +2779,7 @@ else
 {
 	$(".build_barn").removeClass("unavailable")
 }
-$(".build_barn").html("Barn ("+buildings["barn"]+")");
+$(".build_barn").html("谷仓 ("+buildings["barn"]+")");
 $(".build_barn").attr('tooltip', 'Block: '+ parseFloat(craft["block"]).toFixed(2)+" / "+parseFloat(blockcost).toFixed(2))
 $(".build_barn").attr('tooltip2', 'Max wood +500');
 $(".build_barn").attr('tooltip3', 'Max mineral +500');
@@ -2799,7 +2799,7 @@ $(".build_casino").html("Casino ("+buildings["casino"]+")");
 $(".build_casino").attr('tooltip', 'Block: '+ parseFloat(craft["block"]).toFixed(2)+" / "+parseFloat(blockcost).toFixed(2))
 $(".build_casino").attr('tooltip2', 'Gold: '+ parseFloat(items["gold"]).toFixed(2)+" / "+parseFloat(goldcost).toFixed(2))
 $(".build_casino").attr('tooltip3', 'Allows betting in the casino');
-$(".build_casino").attr('tooltip4', 'Gold production +0.004/s');
+$(".build_casino").attr('tooltip4', 'Gold production +0.004/秒');
 $(".build_casino").attr('tooltip5', 'Max bet +0.5');
 $(".build_casino").attr('tooltip6', 'Max gold +1');
 
@@ -2816,7 +2816,7 @@ else
 unattainable=maximums["wood"]*(bonus["storage"]+1)<woodcost
 set_unattainable(".build_market", unattainable);
 $(".build_market").html("Market ("+buildings["market"]+")");
-$(".build_market").attr('tooltip', 'Wood: '+ parseFloat(items["wood"]).toFixed(2)+" / "+parseFloat(woodcost).toFixed(2))
+$(".build_market").attr('tooltip', '木头: '+ parseFloat(items["wood"]).toFixed(2)+" / "+parseFloat(woodcost).toFixed(2))
 $(".build_market").attr('tooltip2', 'Coin: '+ parseFloat(craft["coin"]).toFixed(2)+" / "+parseFloat(coincost).toFixed(2))
 $(".build_market").attr('tooltip3', 'Allows trading');
 $(".build_market").attr('tooltip4', '+5% market trade efficiency');
@@ -2835,8 +2835,8 @@ set_unattainable(".build_kiln", unattainable);
 $(".build_kiln").html("Kiln ("+buildings["kiln"]+")");
 $(".build_kiln").attr('tooltip', 'Mineral: '+ parseFloat(items["mineral"]).toFixed(2)+" / "+parseFloat(mineralcost).toFixed(2))
 $(".build_kiln").attr('tooltip2', 'Block: '+ parseFloat(craft["block"]).toFixed(2)+" / "+parseFloat(blockcost).toFixed(2))
-$(".build_kiln").attr('tooltip3', 'Wood consumption: -2.00/s');
-$(".build_kiln").attr('tooltip4', 'Coal production: +0.01/s');
+$(".build_kiln").attr('tooltip3', 'Wood consumption: -2.00/秒');
+$(".build_kiln").attr('tooltip4', 'Coal production: +0.01/秒');
 
 bronzecost= Math.pow(1.5,(buildings["statue"]))*1
 if(craft["bronze"]<bronzecost){
@@ -2847,8 +2847,8 @@ else
 	$(".build_statue").removeClass("unavailable")
 }
 $(".build_statue").html("Statue ("+buildings["statue"]+")");
-$(".build_statue").attr('tooltip', 'Bronze: '+ parseFloat(craft["bronze"]).toFixed(2)+" / "+parseFloat(bronzecost).toFixed(2))
-$(".build_statue").attr('tooltip2', 'Max morale +2');
+$(".build_statue").attr('tooltip', '青铜: '+ parseFloat(craft["bronze"]).toFixed(2)+" / "+parseFloat(bronzecost).toFixed(2))
+$(".build_statue").attr('tooltip2', '最大士气 +2');
 $(".build_statue").attr('tooltip3', 'Morale production +5%');
 
 blockcost= Math.pow(1.25,(buildings["towncenter"]))*20
@@ -2879,7 +2879,7 @@ else
 unattainable=maximums["steel"]*(bonus["storage"]+1)<steelcost
 set_unattainable(".build_workbench", unattainable);
 $(".build_workbench").html("Workbench ("+buildings["workbench"]+")");
-$(".build_workbench").attr('tooltip', 'Steel: '+ parseFloat(items["steel"]).toFixed(2)+" / "+parseFloat(steelcost).toFixed(2))
+$(".build_workbench").attr('tooltip', '钢: '+ parseFloat(items["steel"]).toFixed(2)+" / "+parseFloat(steelcost).toFixed(2))
 $(".build_workbench").attr('tooltip2', 'Craft efficiency +8%');
 $(".build_workbench").attr('tooltip4', 'Allows +1 items crafted per workbench');
 $(".build_workbench").attr('tooltip5', 'when active');
@@ -2928,10 +2928,10 @@ else
 unattainable=maximums["wood"]*(bonus["storage"]+1)<woodcost
 set_unattainable(".build_shipyard", unattainable);
 $(".build_shipyard").html("Shipyard ("+buildings["shipyard"]+")");
-$(".build_shipyard").attr('tooltip', 'Wood: '+ parseFloat(items["wood"]).toFixed(2)+" / "+parseFloat(woodcost).toFixed(2))
+$(".build_shipyard").attr('tooltip', '木头: '+ parseFloat(items["wood"]).toFixed(2)+" / "+parseFloat(woodcost).toFixed(2))
 $(".build_shipyard").attr('tooltip2', 'Structure: '+ parseFloat(craft["structure"]).toFixed(2)+" / "+parseFloat(structurecost).toFixed(2))
-$(".build_shipyard").attr('tooltip4', 'Wood consumption -40.00/s');
-$(".build_shipyard").attr('tooltip5', 'Plank production +0.05/s');
+$(".build_shipyard").attr('tooltip4', 'Wood consumption -40.00/秒');
+$(".build_shipyard").attr('tooltip5', 'Plank production +0.05/秒');
 
 
 ironcost=Math.pow(1.3,(buildings["docks"]))*100
@@ -2947,7 +2947,7 @@ unattainable=maximums["iron"]*(bonus["storage"]+1)<ironcost
 set_unattainable(".build_docks", unattainable);
 $(".build_docks").html("Docks ("+buildings["docks"]+")");
 $(".build_docks").attr('tooltip', 'Iron: '+ parseFloat(items["iron"]).toFixed(2)+" / "+parseFloat(ironcost).toFixed(2))
-$(".build_docks").attr('tooltip2', 'Plank: '+ parseFloat(craft["plank"]).toFixed(2)+" / "+parseFloat(plankcost).toFixed(2))
+$(".build_docks").attr('tooltip2', '木板: '+ parseFloat(craft["plank"]).toFixed(2)+" / "+parseFloat(plankcost).toFixed(2))
 $(".build_docks").attr('tooltip4', '+1 Ship storage');
 
 
@@ -2965,11 +2965,11 @@ unattainable=maximums["steel"]*(bonus["storage"]+1)<steelcost
 set_unattainable(".build_bank", unattainable);
 $(".build_bank").html("Bank ("+buildings["bank"]+")");
 $(".build_bank").attr('tooltip', 'Block: '+ parseFloat(craft["block"]).toFixed(2)+" / "+parseFloat(blockcost).toFixed(2))
-$(".build_bank").attr('tooltip2', 'Steel: '+ parseFloat(items["steel"]).toFixed(2)+" / "+parseFloat(steelcost).toFixed(2))
+$(".build_bank").attr('tooltip2', '钢: '+ parseFloat(items["steel"]).toFixed(2)+" / "+parseFloat(steelcost).toFixed(2))
 $(".build_bank").attr('tooltip3', 'Coin: '+ parseFloat(craft["coin"]).toFixed(2)+" / "+parseFloat(coincost).toFixed(2))
 $(".build_bank").attr('tooltip5', 'Gold storage +2');
-$(".build_bank").attr('tooltip6', 'Gold consumption -0.10/s');
-$(".build_bank").attr('tooltip7', 'Coin production +0.02/s');
+$(".build_bank").attr('tooltip6', 'Gold consumption -0.10/秒');
+$(".build_bank").attr('tooltip7', 'Coin production +0.02/秒');
 
 
 coppercost=Math.pow(1.2,(buildings["crusher"]))*150
@@ -2985,12 +2985,12 @@ else
 unattainable=maximums["copper"]*(bonus["storage"]+1)<coppercost || maximums["iron"]*(bonus["storage"]+1)<ironcost || maximums["steel"]*(bonus["storage"]+1)<steelcost
 set_unattainable(".build_crusher", unattainable);
 $(".build_crusher").html("Crusher ("+buildings["crusher"]+")");
-$(".build_crusher").attr('tooltip', 'Copper: '+ parseFloat(items["copper"]).toFixed(2)+" / "+parseFloat(coppercost).toFixed(2))
+$(".build_crusher").attr('tooltip', '铜: '+ parseFloat(items["copper"]).toFixed(2)+" / "+parseFloat(coppercost).toFixed(2))
 $(".build_crusher").attr('tooltip2', 'Iron: '+ parseFloat(items["iron"]).toFixed(2)+" / "+parseFloat(ironcost).toFixed(2))
-$(".build_crusher").attr('tooltip3', 'Steel: '+ parseFloat(items["steel"]).toFixed(2)+" / "+parseFloat(steelcost).toFixed(2))
+$(".build_crusher").attr('tooltip3', '钢: '+ parseFloat(items["steel"]).toFixed(2)+" / "+parseFloat(steelcost).toFixed(2))
 $(".build_crusher").attr('tooltip5', 'Sand storage +200');
-$(".build_crusher").attr('tooltip6', 'Mineral consumption -10.00/s');
-$(".build_crusher").attr('tooltip7', 'Sand production +0.5/s');
+$(".build_crusher").attr('tooltip6', 'Mineral consumption -10.00/秒');
+$(".build_crusher").attr('tooltip7', 'Sand production +0.5/秒');
 
 
 bronzecost=Math.pow(1.3,(buildings["blockyard"]))*50
@@ -3003,11 +3003,11 @@ else
 	$(".build_blockyard").removeClass("unavailable")
 }
 $(".build_blockyard").html("Blockyard ("+buildings["blockyard"]+")");
-$(".build_blockyard").attr('tooltip', 'Bronze: '+ parseFloat(craft["bronze"]).toFixed(2)+" / "+parseFloat(bronzecost).toFixed(2))
+$(".build_blockyard").attr('tooltip', '青铜: '+ parseFloat(craft["bronze"]).toFixed(2)+" / "+parseFloat(bronzecost).toFixed(2))
 $(".build_blockyard").attr('tooltip2', 'Pickaxe: '+ parseFloat(craft["pickaxe"]).toFixed(2)+" / "+parseFloat(pickaxecost).toFixed(2))
-$(".build_blockyard").attr('tooltip4', 'Wood consumption -4.00/s');
-$(".build_blockyard").attr('tooltip5', 'Mineral consumption -8.00/s');
-$(".build_blockyard").attr('tooltip6', 'Block production +0.04/s');
+$(".build_blockyard").attr('tooltip4', 'Wood consumption -4.00/秒');
+$(".build_blockyard").attr('tooltip5', 'Mineral consumption -8.00/秒');
+$(".build_blockyard").attr('tooltip6', 'Block production +0.04/秒');
 
 
 framecost= Math.pow(1.4,(buildings["bunker"]))*5
@@ -3038,9 +3038,9 @@ $(".build_laboratory").html("Laboratory ("+buildings["laboratory"]+")");
 $(".build_laboratory").attr('tooltip', 'Frame: '+ parseFloat(craft["frame"]).toFixed(2)+" / "+parseFloat(framecost).toFixed(2))
 $(".build_laboratory").attr('tooltip2', 'Glass: '+ parseFloat(craft["glass"]).toFixed(2)+" / "+parseFloat(glasscost).toFixed(2))
 $(".build_laboratory").attr('tooltip3', 'Chemicals storage + 5');
-$(".build_laboratory").attr('tooltip4', 'Bottle consumption per scientist -0.001/s');
-$(".build_laboratory").attr('tooltip5', 'Knowledge production per scientist  +0.005/s');
-$(".build_laboratory").attr('tooltip6', 'Chemicals production per scientist +0.001/s');
+$(".build_laboratory").attr('tooltip4', 'Bottle consumption per scientist -0.001/秒');
+$(".build_laboratory").attr('tooltip5', 'Knowledge production per scientist  +0.005/秒');
+$(".build_laboratory").attr('tooltip6', 'Chemicals production per scientist +0.001/秒');
 
 
 framecost=Math.pow(1.3,(buildings["scienceoutpost"]))*10
@@ -3057,7 +3057,7 @@ $(".build_scienceoutpost").html("Scientific outpost ("+buildings["scienceoutpost
 $(".build_scienceoutpost").attr('tooltip', 'Frame: '+ parseFloat(craft["frame"]).toFixed(2)+" / "+parseFloat(framecost).toFixed(2))
 $(".build_scienceoutpost").attr('tooltip2', 'Glass: '+ parseFloat(craft["glass"]).toFixed(2)+" / "+parseFloat(glasscost).toFixed(2))
 $(".build_scienceoutpost").attr('tooltip3', 'Territory: '+ parseFloat(bonus["territory"]).toFixed(2)+" / "+parseFloat(territorycost).toFixed(2))
-$(".build_scienceoutpost").attr('tooltip5', 'Knowledge production +0.02/s');
+$(".build_scienceoutpost").attr('tooltip5', 'Knowledge production +0.02/秒');
 $(".build_scienceoutpost").attr('tooltip6', 'Max population +10');
 $(".build_scienceoutpost").attr('tooltip7', 'Grants 1 title per outpost');
 
@@ -3076,7 +3076,7 @@ $(".build_tradeoutpost").html("Trade outpost ("+buildings["tradeoutpost"]+")");
 $(".build_tradeoutpost").attr('tooltip', 'Frame: '+ parseFloat(craft["frame"]).toFixed(2)+" / "+parseFloat(framecost).toFixed(2))
 $(".build_tradeoutpost").attr('tooltip2', 'Coin: '+ parseFloat(craft["coin"]).toFixed(2)+" / "+parseFloat(coincost).toFixed(2))
 $(".build_tradeoutpost").attr('tooltip3', 'Territory: '+ parseFloat(bonus["territory"]).toFixed(2)+" / "+parseFloat(territorycost).toFixed(2))
-$(".build_tradeoutpost").attr('tooltip5', 'Gold production +0.01/s');
+$(".build_tradeoutpost").attr('tooltip5', 'Gold production +0.01/秒');
 $(".build_tradeoutpost").attr('tooltip6', 'Max population +10');
 $(".build_tradeoutpost").attr('tooltip7', 'Grants 1 title per outpost');
 
@@ -3097,7 +3097,7 @@ $(".build_militaryoutpost").attr('tooltip', 'Frame: '+ parseFloat(craft["frame"]
 $(".build_militaryoutpost").attr('tooltip2', 'Sword: '+ parseFloat(craft["sword"]).toFixed(2)+" / "+parseFloat(swordcost).toFixed(2))
 $(".build_militaryoutpost").attr('tooltip3', 'Armor: '+ parseFloat(craft["armor"]).toFixed(2)+" / "+parseFloat(armorcost).toFixed(2))
 $(".build_militaryoutpost").attr('tooltip4', 'Territory: '+ parseFloat(bonus["territory"]).toFixed(2)+" / "+parseFloat(territorycost).toFixed(2))
-$(".build_militaryoutpost").attr('tooltip5', 'Max morale +3');
+$(".build_militaryoutpost").attr('tooltip5', '最大士气 +3');
 $(".build_militaryoutpost").attr('tooltip6', 'Max population +10');
 $(".build_militaryoutpost").attr('tooltip7', 'Grants 1 title per outpost');
 
@@ -3116,12 +3116,12 @@ set_unattainable(".build_quarry", unattainable);
 $(".build_quarry").html("Quarry ("+buildings["quarry"]+")");
 $(".build_quarry").attr('tooltip', 'Mineral: '+ parseFloat(items["mineral"]).toFixed(2)+" / "+parseFloat(mineralcost).toFixed(2))
 $(".build_quarry").attr('tooltip2', 'Pickaxe: '+ parseFloat(craft["pickaxe"]).toFixed(2)+" / "+parseFloat(pickaxecost).toFixed(2))
-$(".build_quarry").attr('tooltip4', 'Clay production +0.20/s');
+$(".build_quarry").attr('tooltip4', 'Clay production +0.20/秒');
 if(technologies["mineralcoal"]==1){
-$(".build_quarry").attr('tooltip5', 'Coal production +0.02/s');
+$(".build_quarry").attr('tooltip5', 'Coal production +0.02/秒');
 }
 if(technologies["safestorage"]==1){
-$(".build_quarry").attr('tooltip6', 'Nickel production +0.001/s');
+$(".build_quarry").attr('tooltip6', 'Nickel production +0.001/秒');
 }
 
 
@@ -3137,9 +3137,9 @@ else
 $(".build_carpentry").html("Carpentry ("+buildings["carpentry"]+")");
 $(".build_carpentry").attr('tooltip', 'Frame: '+ parseFloat(craft["frame"]).toFixed(2)+" / "+parseFloat(framecost).toFixed(2))
 $(".build_carpentry").attr('tooltip2', 'Brick: '+ parseFloat(craft["brick"]).toFixed(2)+" / "+parseFloat(brickcost).toFixed(2))
-$(".build_carpentry").attr('tooltip4', 'Wood consumption -5.00/s');
-$(".build_carpentry").attr('tooltip5', 'Iron consumption -0.10/s');
-$(".build_carpentry").attr('tooltip6', 'Structure production +0.005/s');
+$(".build_carpentry").attr('tooltip4', 'Wood consumption -5.00/秒');
+$(".build_carpentry").attr('tooltip5', 'Iron consumption -0.10/秒');
+$(".build_carpentry").attr('tooltip6', 'Structure production +0.005/秒');
 
 
 brickcost=Math.pow(1.4,(buildings["blastfurnace"]))*25
@@ -3152,8 +3152,8 @@ else
 }
 $(".build_blastfurnace").html("Blast furnace ("+buildings["blastfurnace"]+")");
 $(".build_blastfurnace").attr('tooltip', 'Brick: '+ parseFloat(craft["brick"]).toFixed(2)+" / "+parseFloat(brickcost).toFixed(2))
-$(".build_blastfurnace").attr('tooltip2', 'Mineral consumption per foundryman -0.25/s');
-$(".build_blastfurnace").attr('tooltip3', 'Iron production per foundryman +0.01/s');
+$(".build_blastfurnace").attr('tooltip2', 'Mineral consumption per foundryman -0.25/秒');
+$(".build_blastfurnace").attr('tooltip3', 'Iron production per foundryman +0.01/秒');
 
 
 brickcost=Math.pow(1.2,(buildings["compressor"]))*500
@@ -3183,7 +3183,7 @@ else
 }
 $(".build_share").html("Share ("+buildings["share"]+")");
 $(".build_share").attr('tooltip', 'Token: '+ parseFloat(craft["token"]).toFixed(2)+" / "+parseFloat(tokencost).toFixed(2))
-$(".build_share").attr('tooltip3', 'Token production +0.1/s');
+$(".build_share").attr('tooltip3', 'Token production +0.1/秒');
 
 
 blockcost=Math.pow(1.2,(buildings["repository"]))*5000
@@ -3216,7 +3216,7 @@ else
 unattainable=maximums["wood"]*(bonus["storage"]+1)<woodcost || maximums["iron"]*(bonus["storage"]+1)<ironcost
 set_unattainable(".build_trainstation", unattainable);
 $(".build_trainstation").html("Train station ("+buildings["trainstation"]+")");
-$(".build_trainstation").attr('tooltip', 'Wood: '+ parseFloat(items["wood"]).toFixed(2)+" / "+parseFloat(woodcost).toFixed(2))
+$(".build_trainstation").attr('tooltip', '木头: '+ parseFloat(items["wood"]).toFixed(2)+" / "+parseFloat(woodcost).toFixed(2))
 $(".build_trainstation").attr('tooltip2', 'Iron: '+ parseFloat(items["iron"]).toFixed(2)+" / "+parseFloat(ironcost).toFixed(2))
 $(".build_trainstation").attr('tooltip3', 'Frame: '+ parseFloat(craft["frame"]).toFixed(2)+" / "+parseFloat(framecost).toFixed(2))
 $(".build_trainstation").attr('tooltip5', '+2 train capacity');
@@ -3237,8 +3237,8 @@ $(".build_workshop").attr('tooltip', 'Brick: '+ parseFloat(craft["brick"]).toFix
 $(".build_workshop").attr('tooltip2', 'Plate: '+ parseFloat(craft["plate"]).toFixed(2)+" / "+parseFloat(platecost).toFixed(2))
 $(".build_workshop").attr('tooltip3', 'Engine: '+ parseFloat(craft["engine"]).toFixed(2)+" / "+parseFloat(enginecost).toFixed(2))
 $(".build_workshop").attr('tooltip4', '+10% craft efficiency');
-$(".build_workshop").attr('tooltip5', 'Coal consumption: -0.03/s');
-$(".build_workshop").attr('tooltip6', 'Chemicals consumption: -0.01/s');
+$(".build_workshop").attr('tooltip5', 'Coal consumption: -0.03/秒');
+$(".build_workshop").attr('tooltip6', 'Chemicals consumption: -0.01/秒');
 $(".build_workshop").attr('tooltip7', '+10% autocraft efficiency when active');
 
 
@@ -3254,8 +3254,8 @@ else
 $(".build_powerplant").html("Power plant ("+buildings["powerplant"]+")");
 $(".build_powerplant").attr('tooltip', 'Frame: '+ parseFloat(craft["frame"]).toFixed(2)+" / "+parseFloat(framecost).toFixed(2))
 $(".build_powerplant").attr('tooltip2', 'Plate: '+ parseFloat(craft["plate"]).toFixed(2)+" / "+parseFloat(platecost).toFixed(2))
-$(".build_powerplant").attr('tooltip4', 'Coal consumption: -0.05/s');
-$(".build_powerplant").attr('tooltip5', 'Water consumption: -2.00/s');
+$(".build_powerplant").attr('tooltip4', 'Coal consumption: -0.05/秒');
+$(".build_powerplant").attr('tooltip5', 'Water consumption: -2.00/秒');
 $(".build_powerplant").attr('tooltip6', 'Energy production: 1 MWh');
 $(".build_powerplant").attr('tooltip7', 'Energy storage: 100 KWh');
 
@@ -3272,12 +3272,12 @@ else
 unattainable=maximums["steel"]*(bonus["storage"]+1)<steelcost
 set_unattainable(".build_cementkiln", unattainable);
 $(".build_cementkiln").html("Cement kiln ("+buildings["cementkiln"]+")");
-$(".build_cementkiln").attr('tooltip', 'Steel: '+ parseFloat(items["steel"]).toFixed(2)+" / "+parseFloat(steelcost).toFixed(2))
+$(".build_cementkiln").attr('tooltip', '钢: '+ parseFloat(items["steel"]).toFixed(2)+" / "+parseFloat(steelcost).toFixed(2))
 $(".build_cementkiln").attr('tooltip2', 'Plate: '+ parseFloat(craft["plate"]).toFixed(2)+" / "+parseFloat(platecost).toFixed(2))
-$(".build_cementkiln").attr('tooltip4', 'Mineral consumption: -100.00/s');
-$(".build_cementkiln").attr('tooltip5', 'Clay consumption: -2.00/s');
+$(".build_cementkiln").attr('tooltip4', 'Mineral consumption: -100.00/秒');
+$(".build_cementkiln").attr('tooltip5', 'Clay consumption: -2.00/秒');
 $(".build_cementkiln").attr('tooltip6', 'Energy consumption: 300 KWh');
-$(".build_cementkiln").attr('tooltip7', 'Cement production: +0.1/s');
+$(".build_cementkiln").attr('tooltip7', 'Cement production: +0.1/秒');
 
 
 cementcost = Math.pow(1.3,(buildings["university"]))*15000
@@ -3298,8 +3298,8 @@ $(".build_university").attr('tooltip2', 'Brick: '+ parseFloat(craft["brick"]).to
 $(".build_university").attr('tooltip3', 'Frame: '+ parseFloat(craft["frame"]).toFixed(2)+" / "+parseFloat(framecost).toFixed(2))
 $(".build_university").attr('tooltip4', 'Knowledge storage +200');
 $(".build_university").attr('tooltip5', 'Energy consumption: 500 KWh');
-$(".build_university").attr('tooltip6', 'Knowledge production: +0.05/s');
-$(".build_university").attr('tooltip7', 'Book production +0.0001/s');
+$(".build_university").attr('tooltip6', 'Knowledge production: +0.05/秒');
+$(".build_university").attr('tooltip7', 'Book production +0.0001/秒');
 
 brickcost = Math.pow(1.25,(buildings["concretemixer"]))*1000
 platecost = Math.pow(1.25,(buildings["concretemixer"]))*200
@@ -3313,11 +3313,11 @@ else
 $(".build_concretemixer").html("Concrete Mixer ("+buildings["concretemixer"]+")");
 $(".build_concretemixer").attr('tooltip', 'Brick: '+ parseFloat(craft["brick"]).toFixed(2)+" / "+parseFloat(brickcost).toFixed(2))
 $(".build_concretemixer").attr('tooltip2', 'Plate: '+ parseFloat(craft["plate"]).toFixed(2)+" / "+parseFloat(platecost).toFixed(2))
-$(".build_concretemixer").attr('tooltip3', 'Mineral consumption: -50.00/s');
-$(".build_concretemixer").attr('tooltip4', 'Water consumption: -10.00/s');
-$(".build_concretemixer").attr('tooltip5', 'Cement consumption: -2.00/s');
+$(".build_concretemixer").attr('tooltip3', 'Mineral consumption: -50.00/秒');
+$(".build_concretemixer").attr('tooltip4', 'Water consumption: -10.00/秒');
+$(".build_concretemixer").attr('tooltip5', 'Cement consumption: -2.00/秒');
 $(".build_concretemixer").attr('tooltip6', 'Energy consumption: 500 KWh');
-$(".build_concretemixer").attr('tooltip7', 'Concrete production: +0.05/s');
+$(".build_concretemixer").attr('tooltip7', 'Concrete production: +0.05/秒');
 
 brickcost = Math.pow(1.20,(buildings["toolfactory"]))*2500
 concretecost = Math.pow(1.20,(buildings["toolfactory"]))*10000
@@ -3333,11 +3333,11 @@ set_unattainable(".build_toolfactory", unattainable);
 $(".build_toolfactory").html("Tool factory ("+buildings["toolfactory"]+")");
 $(".build_toolfactory").attr('tooltip', 'Brick: '+ parseFloat(craft["brick"]).toFixed(2)+" / "+parseFloat(brickcost).toFixed(2))
 $(".build_toolfactory").attr('tooltip2', 'Concrete: '+ parseFloat(items["concrete"]).toFixed(2)+" / "+parseFloat(concretecost).toFixed(2))
-$(".build_toolfactory").attr('tooltip3', 'Steel consumption: -2.00/s');
-$(".build_toolfactory").attr('tooltip4', 'Copper consumption: -5.00/s');
+$(".build_toolfactory").attr('tooltip3', 'Steel consumption: -2.00/秒');
+$(".build_toolfactory").attr('tooltip4', 'Copper consumption: -5.00/秒');
 $(".build_toolfactory").attr('tooltip5', 'Energy consumption: 1000 KWh');
-$(".build_toolfactory").attr('tooltip6', 'Pickaxe production: +0.25/s');
-$(".build_toolfactory").attr('tooltip7', 'Toolbox production: +0.001/s');
+$(".build_toolfactory").attr('tooltip6', 'Pickaxe production: +0.25/秒');
+$(".build_toolfactory").attr('tooltip7', 'Toolbox production: +0.001/秒');
 
 
 concretecost = Math.pow(1.20,(buildings["barracks"]))*20000
@@ -3354,8 +3354,8 @@ $(".build_barracks").html("Barracks ("+buildings["barracks"]+")");
 $(".build_barracks").attr('tooltip', 'Concrete: '+ parseFloat(items["concrete"]).toFixed(2)+" / "+parseFloat(concretecost).toFixed(2))
 $(".build_barracks").attr('tooltip3', 'Max population: +5');
 $(".build_barracks").attr('tooltip5', 'Energy consumption: 800 KWh');
-$(".build_barracks").attr('tooltip6', 'Morale consumption: -3.00/s');
-$(".build_barracks").attr('tooltip7', 'Plans production: +0.1/s');
+$(".build_barracks").attr('tooltip6', 'Morale consumption: -3.00/秒');
+$(".build_barracks").attr('tooltip7', 'Plans production: +0.1/秒');
 
 
 brickcost= Math.pow(1.2,(buildings["factory"]))*10000
@@ -3391,7 +3391,7 @@ else
 	$(".hire_woodcutter").removeClass("unavailable")
 }
 $(".hire_woodcutter").html("Woodcutter ("+people["woodcutter"]+")");
-$(".hire_woodcutter").attr('tooltip', 'Food: '+ parseFloat(items["food"]).toFixed(2)+" / "+parseFloat(foodcost).toFixed(2))
+$(".hire_woodcutter").attr('tooltip', '食物: '+ parseFloat(items["food"]).toFixed(2)+" / "+parseFloat(foodcost).toFixed(2))
 $(".hire_woodcutter").attr('tooltip2', "Food consumption: -0.10/s");
 $(".hire_woodcutter").attr('tooltip3', "Wood production: +1.00/s");
 
@@ -3405,7 +3405,7 @@ else
 	$(".hire_smelter").removeClass("unavailable")
 }
 $(".hire_smelter").html("Smelter ("+people["smelter"]+")");
-$(".hire_smelter").attr('tooltip', 'Food: '+ parseFloat(items["food"]).toFixed(2)+" / "+parseFloat(foodcost).toFixed(2))
+$(".hire_smelter").attr('tooltip', '食物: '+ parseFloat(items["food"]).toFixed(2)+" / "+parseFloat(foodcost).toFixed(2))
 $(".hire_smelter").attr('tooltip2', "Mineral consumption: -0.20/s");
 $(".hire_smelter").attr('tooltip3', "Food consumption: -0.10/s");
 $(".hire_smelter").attr('tooltip4', "Copper production: +0.01/s");
@@ -3423,7 +3423,7 @@ else
 	$(".hire_farmer").removeClass("unavailable")
 }
 $(".hire_farmer").html("Farmer ("+people["farmer"]+")");
-$(".hire_farmer").attr('tooltip', 'Wood: '+ parseFloat(items["wood"]).toFixed(2)+" / "+parseFloat(foodcost).toFixed(2))
+$(".hire_farmer").attr('tooltip', '木头: '+ parseFloat(items["wood"]).toFixed(2)+" / "+parseFloat(foodcost).toFixed(2))
 $(".hire_farmer").attr('tooltip2', "Food production: +0.40/s");
 
 
@@ -3437,12 +3437,12 @@ else
 	$(".hire_miner").removeClass("unavailable")
 }
 $(".hire_miner").html("Miner ("+people["miner"]+")");
-$(".hire_miner").attr('tooltip', 'Food: '+ parseFloat(items["food"]).toFixed(2)+" / "+parseFloat(foodcost).toFixed(2))
+$(".hire_miner").attr('tooltip', '食物: '+ parseFloat(items["food"]).toFixed(2)+" / "+parseFloat(foodcost).toFixed(2))
 $(".hire_miner").attr('tooltip2', 'Pickaxe: '+ parseFloat(craft["pickaxe"]).toFixed(2)+" / "+parseFloat(pickaxecost).toFixed(2))
 $(".hire_miner").attr('tooltip3', "Food consumption: -0.10/s");
-$(".hire_miner").attr('tooltip4', 'Mineral production +1.00/s');
+$(".hire_miner").attr('tooltip4', 'Mineral production +1.00/秒');
 if(technologies["multitasking"]==1){
-$(".hire_miner").attr('tooltip5', 'Clay production +0.05/s');
+$(".hire_miner").attr('tooltip5', 'Clay production +0.05/秒');
 }
 
 
@@ -3456,12 +3456,12 @@ else
 	$(".hire_foundryman").removeClass("unavailable")
 }
 $(".hire_foundryman").html("Foundryman ("+people["foundryman"]+")");
-$(".hire_foundryman").attr('tooltip', 'Food: '+ parseFloat(items["food"]).toFixed(2)+" / "+parseFloat(foodcost).toFixed(2))
+$(".hire_foundryman").attr('tooltip', '食物: '+ parseFloat(items["food"]).toFixed(2)+" / "+parseFloat(foodcost).toFixed(2))
 $(".hire_foundryman").attr('tooltip2', 'Coin: '+ parseFloat(craft["coin"]).toFixed(2)+" / "+parseFloat(coincost).toFixed(2))
 $(".hire_foundryman").attr('tooltip3', "Food consumption: -0.10/s");
 $(".hire_foundryman").attr('tooltip4', "Iron consumption: -0.05/s");
 $(".hire_foundryman").attr('tooltip5', "Coal consumption: -0.02/s");
-$(".hire_foundryman").attr('tooltip6', 'Steel production +0.01/s');
+$(".hire_foundryman").attr('tooltip6', 'Steel production +0.01/秒');
 
 
 foodcost=500;
@@ -3474,7 +3474,7 @@ else
 	$(".hire_sailor").removeClass("unavailable")
 }
 $(".hire_sailor").html("Sailor ("+people["sailor"]+")");
-$(".hire_sailor").attr('tooltip', 'Food: '+ parseFloat(items["food"]).toFixed(2)+" / "+parseFloat(foodcost).toFixed(2))
+$(".hire_sailor").attr('tooltip', '食物: '+ parseFloat(items["food"]).toFixed(2)+" / "+parseFloat(foodcost).toFixed(2))
 $(".hire_sailor").attr('tooltip2', 'Coin: '+ parseFloat(craft["coin"]).toFixed(2)+" / "+parseFloat(coincost).toFixed(2))
 $(".hire_sailor").attr('tooltip3', "Food consumption: -0.40/s");
 $(".hire_sailor").attr('tooltip5', 'People needed for naval missions.');
@@ -3494,7 +3494,7 @@ $(".hire_scientist").attr('tooltip', 'Knowledge: '+ parseFloat(items["knowledge"
 $(".hire_scientist").attr('tooltip2', 'Coin: '+ parseFloat(craft["coin"]).toFixed(2)+" / "+parseFloat(coincost).toFixed(2))
 $(".hire_scientist").attr('tooltip3', "Food consumption: -0.20/s");
 $(".hire_scientist").attr('tooltip4', "Coin consumption: -0.01/s");
-$(".hire_scientist").attr('tooltip5', 'Knowledge production + 0.02/s');
+$(".hire_scientist").attr('tooltip5', 'Knowledge production + 0.02/秒');
 
 
 coincost=500;
@@ -3511,9 +3511,9 @@ $(".hire_marketer").attr('tooltip', 'Gold: '+ parseFloat(items["gold"]).toFixed(
 $(".hire_marketer").attr('tooltip2', 'Coin: '+ parseFloat(craft["coin"]).toFixed(2)+" / "+parseFloat(coincost).toFixed(2))
 $(".hire_marketer").attr('tooltip3', "Food consumption: -0.20/s");
 $(".hire_marketer").attr('tooltip4', "Coin consumption: -0.05/s");
-$(".hire_marketer").attr('tooltip5', 'Bronze production +0.001/s');
-$(".hire_marketer").attr('tooltip6', 'Brick production +0.0005/s');
-$(".hire_marketer").attr('tooltip7', 'Glass production +0.0005/s');
+$(".hire_marketer").attr('tooltip5', 'Bronze production +0.001/秒');
+$(".hire_marketer").attr('tooltip6', 'Brick production +0.0005/秒');
+$(".hire_marketer").attr('tooltip7', 'Glass production +0.0005/秒');
 
 
 foodcost=50
@@ -3526,10 +3526,10 @@ else
 	$(".hire_pikeman").removeClass("unavailable")
 }
 $(".hire_pikeman").html("Pikeman ("+people["pikeman"]+")");
-$(".hire_pikeman").attr('tooltip', 'Food: '+ parseFloat(items["food"]).toFixed(2)+" / "+parseFloat(foodcost).toFixed(2))
+$(".hire_pikeman").attr('tooltip', '食物: '+ parseFloat(items["food"]).toFixed(2)+" / "+parseFloat(foodcost).toFixed(2))
 $(".hire_pikeman").attr('tooltip2', 'Spear: '+ parseFloat(craft["spear"]).toFixed(2)+" / "+parseFloat(spearcost).toFixed(2))
 $(".hire_pikeman").attr('tooltip3', "Food consumption: -0.10/s");
-$(".hire_pikeman").attr('tooltip4', 'Morale production +0.02/s');
+$(".hire_pikeman").attr('tooltip4', 'Morale production +0.02/秒');
 $(".hire_pikeman").attr('tooltip5', 'Attack: 5 Hp: 30');
 
 
@@ -3543,10 +3543,10 @@ else
 	$(".hire_swordman").removeClass("unavailable")
 }
 $(".hire_swordman").html("Swordman ("+people["swordman"]+")");
-$(".hire_swordman").attr('tooltip', 'Food: '+ parseFloat(items["food"]).toFixed(2)+" / "+parseFloat(foodcost).toFixed(2))
+$(".hire_swordman").attr('tooltip', '食物: '+ parseFloat(items["food"]).toFixed(2)+" / "+parseFloat(foodcost).toFixed(2))
 $(".hire_swordman").attr('tooltip2', 'Sword: '+ parseFloat(craft["sword"]).toFixed(2)+" / "+parseFloat(swordcost).toFixed(2))
 $(".hire_swordman").attr('tooltip3', "Food consumption: -0.40/s");
-$(".hire_swordman").attr('tooltip4', 'Morale production +0.01/s');
+$(".hire_swordman").attr('tooltip4', 'Morale production +0.01/秒');
 $(".hire_swordman").attr('tooltip5', 'Attack: 10 Hp: 50');
 $(".hire_swordman").attr('tooltip6', 'Armor: 3');
 
@@ -3566,7 +3566,7 @@ $(".hire_knight").attr('tooltip', 'Swordman: '+ people["swordman"]+" / "+swordma
 $(".hire_knight").attr('tooltip2', 'Horse: '+ parseFloat(craft["horse"]).toFixed(2)+" / "+parseFloat(horsecost).toFixed(2))
 $(".hire_knight").attr('tooltip3', 'Armor: '+ parseFloat(craft["armor"]).toFixed(2)+" / "+parseFloat(armorcost).toFixed(2))
 $(".hire_knight").attr('tooltip4', "Food consumption: -2.00/s");
-$(".hire_knight").attr('tooltip5', 'Morale production +0.04/s');
+$(".hire_knight").attr('tooltip5', 'Morale production +0.04/秒');
 $(".hire_knight").attr('tooltip6', 'Attack: 25 Hp: 200');
 $(".hire_knight").attr('tooltip7', 'Armor: 10');
 
@@ -3581,7 +3581,7 @@ else
 	$(".hire_medic").removeClass("unavailable")
 }
 $(".hire_medic").html("Medic ("+people["medic"]+")");
-$(".hire_medic").attr('tooltip', 'Food: '+ parseFloat(items["food"]).toFixed(2)+" / "+parseFloat(foodcost).toFixed(2))
+$(".hire_medic").attr('tooltip', '食物: '+ parseFloat(items["food"]).toFixed(2)+" / "+parseFloat(foodcost).toFixed(2))
 $(".hire_medic").attr('tooltip2', 'Coin: '+ parseFloat(craft["coin"]).toFixed(2)+" / "+parseFloat(coincost).toFixed(2))
 $(".hire_medic").attr('tooltip3', "Food consumption: -0.40/s");
 $(".hire_medic").attr('tooltip5', 'Attack: 1 Hp: 50 Healing: 10');
@@ -3601,7 +3601,7 @@ $(".hire_berserk").attr('tooltip', 'Coin: '+ parseFloat(craft["coin"]).toFixed(2
 $(".hire_berserk").attr('tooltip2', 'Greatsword: '+ parseFloat(craft["greatsword"]).toFixed(2)+" / "+parseFloat(greatswordcost).toFixed(2))
 $(".hire_berserk").attr('tooltip3', "Food consumption: -0.80/s");
 $(".hire_berserk").attr('tooltip4', "Gold consumption: -0.01/s");
-$(".hire_berserk").attr('tooltip5', 'Morale production +0.20/s');
+$(".hire_berserk").attr('tooltip5', 'Morale production +0.20/秒');
 $(".hire_berserk").attr('tooltip6', 'Attack: 80 Hp: 100');
 $(".hire_berserk").attr('tooltip7', 'Deals double damage the first round');
 
@@ -3620,7 +3620,7 @@ $(".hire_warelephant").attr('tooltip', 'Supplies: '+ parseFloat(craft["supplies"
 $(".hire_warelephant").attr('tooltip2', 'Elephant: '+ parseFloat(craft["elephant"]).toFixed(2)+" / "+parseFloat(elephantcost).toFixed(2))
 $(".hire_warelephant").attr('tooltip3', "Food consumption: -10.00/s");
 $(".hire_warelephant").attr('tooltip4', "Water consumption: -2.00/s");
-$(".hire_warelephant").attr('tooltip5', 'Morale production +0.02/s');
+$(".hire_warelephant").attr('tooltip5', 'Morale production +0.02/秒');
 $(".hire_warelephant").attr('tooltip6', 'Attack: 100 Hp: 1200');
 $(".hire_warelephant").attr('tooltip7', '25% chance to disobey and not attack');
 
@@ -3640,7 +3640,7 @@ $(".hire_musketeer").attr('tooltip', 'Coin: '+ parseFloat(craft["coin"]).toFixed
 $(".hire_musketeer").attr('tooltip2', 'Armor: '+ parseFloat(craft["armor"]).toFixed(2)+" / "+parseFloat(armorcost).toFixed(2))
 $(".hire_musketeer").attr('tooltip3', 'Musket: '+ parseFloat(craft["musket"]).toFixed(2)+" / "+parseFloat(musketcost).toFixed(2))
 $(".hire_musketeer").attr('tooltip4', "Food consumption: -0.40/s");
-$(".hire_musketeer").attr('tooltip5', 'Morale production +0.05/s');
+$(".hire_musketeer").attr('tooltip5', 'Morale production +0.05/秒');
 $(".hire_musketeer").attr('tooltip6', 'Attack: 200 Hp: 400');
 $(".hire_musketeer").attr('tooltip7', 'They need to reload between attacks');
 
@@ -3679,8 +3679,8 @@ else
 	$(".hire_galley").removeClass("unavailable")
 }
 $(".hire_galley").html("Galley ("+people["galley"]+")");
-$(".hire_galley").attr('tooltip', 'Wood: '+ parseFloat(items["wood"]).toFixed(2)+" / "+parseFloat(woodcost).toFixed(2))
-$(".hire_galley").attr('tooltip2', 'Plank: '+ parseFloat(craft["plank"]).toFixed(2)+" / "+parseFloat(plankcost).toFixed(2))
+$(".hire_galley").attr('tooltip', '木头: '+ parseFloat(items["wood"]).toFixed(2)+" / "+parseFloat(woodcost).toFixed(2))
+$(".hire_galley").attr('tooltip2', '木板: '+ parseFloat(craft["plank"]).toFixed(2)+" / "+parseFloat(plankcost).toFixed(2))
 $(".hire_galley").attr('tooltip3', 'Structure: '+ parseFloat(craft["structure"]).toFixed(2)+" / "+parseFloat(structurecost).toFixed(2))
 $(".hire_galley").attr('tooltip5', "Power: 150  Structure: 2,000");
 $(".hire_galley").attr('tooltip6', 'Cargo capacity: 5,000  Crew: 2');
@@ -3696,7 +3696,7 @@ else
 	$(".hire_galleon").removeClass("unavailable")
 }
 $(".hire_galleon").html("Galleon ("+people["galleon"]+")");
-$(".hire_galleon").attr('tooltip', 'Plank: '+ parseFloat(craft["plank"]).toFixed(2)+" / "+parseFloat(plankcost).toFixed(2))
+$(".hire_galleon").attr('tooltip', '木板: '+ parseFloat(craft["plank"]).toFixed(2)+" / "+parseFloat(plankcost).toFixed(2))
 $(".hire_galleon").attr('tooltip2', 'Structure: '+ parseFloat(craft["structure"]).toFixed(2)+" / "+parseFloat(structurecost).toFixed(2))
 $(".hire_galleon").attr('tooltip4', "Power: 500  Structure: 15,000");
 $(".hire_galleon").attr('tooltip5', 'Cargo capacity: 25,000  Crew: 5');
@@ -3712,8 +3712,8 @@ else
 	$(".hire_fireship").removeClass("unavailable")
 }
 $(".hire_fireship").html("Fireship ("+people["fireship"]+")");
-$(".hire_fireship").attr('tooltip', 'Plank: '+ parseFloat(craft["plank"]).toFixed(2)+" / "+parseFloat(plankcost).toFixed(2))
-$(".hire_fireship").attr('tooltip2', 'Steel: '+ parseFloat(items["steel"]).toFixed(2)+" / "+parseFloat(steelcost).toFixed(2))
+$(".hire_fireship").attr('tooltip', '木板: '+ parseFloat(craft["plank"]).toFixed(2)+" / "+parseFloat(plankcost).toFixed(2))
+$(".hire_fireship").attr('tooltip2', '钢: '+ parseFloat(items["steel"]).toFixed(2)+" / "+parseFloat(steelcost).toFixed(2))
 $(".hire_fireship").attr('tooltip3', 'Coal: '+ parseFloat(items["coal"]).toFixed(2)+" / "+parseFloat(coalcost).toFixed(2))
 $(".hire_fireship").attr('tooltip4', "Power: 0  Structure: 4,000");
 $(".hire_fireship").attr('tooltip5', 'Cargo capacity: 0  Crew: 3');
@@ -3731,8 +3731,8 @@ else
 	$(".hire_caravel").removeClass("unavailable")
 }
 $(".hire_caravel").html("Caravel ("+people["caravel"]+")");
-$(".hire_caravel").attr('tooltip', 'Wood: '+ parseFloat(items["wood"]).toFixed(2)+" / "+parseFloat(woodcost).toFixed(2))
-$(".hire_caravel").attr('tooltip2', 'Plank: '+ parseFloat(craft["plank"]).toFixed(2)+" / "+parseFloat(plankcost).toFixed(2))
+$(".hire_caravel").attr('tooltip', '木头: '+ parseFloat(items["wood"]).toFixed(2)+" / "+parseFloat(woodcost).toFixed(2))
+$(".hire_caravel").attr('tooltip2', '木板: '+ parseFloat(craft["plank"]).toFixed(2)+" / "+parseFloat(plankcost).toFixed(2))
 $(".hire_caravel").attr('tooltip3', 'Iron: '+ parseFloat(items["iron"]).toFixed(2)+" / "+parseFloat(ironcost).toFixed(2))
 $(".hire_caravel").attr('tooltip4', "Power: 200  Structure: 6,000");
 $(".hire_caravel").attr('tooltip5', 'Cargo capacity: 10.000  Crew: 3');
@@ -3750,7 +3750,7 @@ else
 	$(".hire_cargotrain").removeClass("unavailable")
 }
 $(".hire_cargotrain").html("Cargo train ("+people["cargotrain"]+")");
-$(".hire_cargotrain").attr('tooltip', 'Steel: '+ parseFloat(items["steel"]).toFixed(2)+" / "+parseFloat(steelcost).toFixed(2))
+$(".hire_cargotrain").attr('tooltip', '钢: '+ parseFloat(items["steel"]).toFixed(2)+" / "+parseFloat(steelcost).toFixed(2))
 $(".hire_cargotrain").attr('tooltip2', 'Plate: '+ parseFloat(craft["plate"]).toFixed(2)+" / "+parseFloat(platecost).toFixed(2))
 $(".hire_cargotrain").attr('tooltip3', 'Engine: '+ parseFloat(craft["engine"]).toFixed(2)+" / "+parseFloat(enginecost).toFixed(2))
 $(".hire_cargotrain").attr('tooltip5', "Coal consumption -0.02/s");
@@ -3791,7 +3791,7 @@ for (b in techdata) {
   $(".tech_"+b).addClass((technologies[b] > 0 ? 'researched' : ''));
   
   var techname = tech.hasOwnProperty('name') ? tech.name : toProperCase(b);
-  var suffix = (technologies[b] > 0 ? (techname.length < 14 ? ' (researched)' : ' (res...)')  : '');
+  var suffix = (technologies[b] > 0 ? (techname.length < 14 ? ' (已研究)' : ' (res...)')  : '');
   $(".tech_"+b).html(techname + suffix);
 
 }
@@ -3830,8 +3830,8 @@ else
 	$(".craft_pickaxe").removeClass("unavailable")
 }
 $(".craft_pickaxe").html("Pickaxe");
-$(".craft_pickaxe").attr('tooltip', 'Wood: '+ parseFloat(items["wood"]).toFixed(2)+" / "+parseFloat(woodcost).toFixed(2))
-$(".craft_pickaxe").attr('tooltip2', 'Copper: '+ parseFloat(items["copper"]).toFixed(2)+" / "+parseFloat(coppercost).toFixed(2))
+$(".craft_pickaxe").attr('tooltip', '木头: '+ parseFloat(items["wood"]).toFixed(2)+" / "+parseFloat(woodcost).toFixed(2))
+$(".craft_pickaxe").attr('tooltip2', '铜: '+ parseFloat(items["copper"]).toFixed(2)+" / "+parseFloat(coppercost).toFixed(2))
 $(".craft_pickaxe").attr('tooltip4', "Basic copper pickaxe");
 
 
@@ -3845,8 +3845,8 @@ else
 	$(".craft_spear").removeClass("unavailable")
 }
 $(".craft_spear").html("Spear");
-$(".craft_spear").attr('tooltip', 'Wood: '+ parseFloat(items["wood"]).toFixed(2)+" / "+parseFloat(woodcost).toFixed(2))
-$(".craft_spear").attr('tooltip2', 'Copper: '+ parseFloat(items["copper"]).toFixed(2)+" / "+parseFloat(coppercost).toFixed(2))
+$(".craft_spear").attr('tooltip', '木头: '+ parseFloat(items["wood"]).toFixed(2)+" / "+parseFloat(woodcost).toFixed(2))
+$(".craft_spear").attr('tooltip2', '铜: '+ parseFloat(items["copper"]).toFixed(2)+" / "+parseFloat(coppercost).toFixed(2))
 $(".craft_spear").attr('tooltip4', "Spear made of wood and copper");
 
 
@@ -3872,7 +3872,7 @@ else
 	$(".craft_block").removeClass("unavailable")
 }
 $(".craft_block").html("Block");
-$(".craft_block").attr('tooltip', 'Wood: '+ parseFloat(items["wood"]).toFixed(2)+" / "+parseFloat(woodcost).toFixed(2))
+$(".craft_block").attr('tooltip', '木头: '+ parseFloat(items["wood"]).toFixed(2)+" / "+parseFloat(woodcost).toFixed(2))
 $(".craft_block").attr('tooltip2', 'Mineral: '+ parseFloat(items["mineral"]).toFixed(2)+" / "+parseFloat(mineralcost).toFixed(2))
 $(".craft_block").attr('tooltip3', "Compact building material");
 
@@ -3900,7 +3900,7 @@ else
 	$(".craft_bronze").removeClass("unavailable")
 }
 $(".craft_bronze").html("Bronze");
-$(".craft_bronze").attr('tooltip', 'Copper: '+ parseFloat(items["copper"]).toFixed(2)+" / "+parseFloat(coppercost).toFixed(2))
+$(".craft_bronze").attr('tooltip', '铜: '+ parseFloat(items["copper"]).toFixed(2)+" / "+parseFloat(coppercost).toFixed(2))
 $(".craft_bronze").attr('tooltip2', 'Tin: '+ parseFloat(items["tin"]).toFixed(2)+" / "+parseFloat(tincost).toFixed(2))
 $(".craft_bronze").attr('tooltip4', "A refined alloy of copper and tin");
 
@@ -3915,7 +3915,7 @@ else
 	$(".craft_structure").removeClass("unavailable")
 }
 $(".craft_structure").html("Structure");
-$(".craft_structure").attr('tooltip', 'Wood: '+ parseFloat(items["wood"]).toFixed(2)+" / "+parseFloat(woodcost).toFixed(2))
+$(".craft_structure").attr('tooltip', '木头: '+ parseFloat(items["wood"]).toFixed(2)+" / "+parseFloat(woodcost).toFixed(2))
 $(".craft_structure").attr('tooltip2', 'Iron: '+ parseFloat(items["iron"]).toFixed(2)+" / "+parseFloat(ironcost).toFixed(2))
 $(".craft_structure").attr('tooltip4', "Reinforced structure for big buildings");
 
@@ -3929,9 +3929,9 @@ else
 {
 	$(".craft_armor").removeClass("unavailable")
 }
-$(".craft_armor").html("Armor");
-$(".craft_armor").attr('tooltip', 'Steel: '+ parseFloat(items["steel"]).toFixed(2)+" / "+parseFloat(steelcost).toFixed(2))
-$(".craft_armor").attr('tooltip2', 'Bronze: '+ parseFloat(craft["bronze"]).toFixed(2)+" / "+parseFloat(bronzecost).toFixed(2))
+$(".craft_armor").html("护甲");
+$(".craft_armor").attr('tooltip', '钢: '+ parseFloat(items["steel"]).toFixed(2)+" / "+parseFloat(steelcost).toFixed(2))
+$(".craft_armor").attr('tooltip2', '青铜: '+ parseFloat(craft["bronze"]).toFixed(2)+" / "+parseFloat(bronzecost).toFixed(2))
 $(".craft_armor").attr('tooltip4', "Fine crafted armor");
 
 
@@ -3946,9 +3946,9 @@ else
 	$(".craft_supplies").removeClass("unavailable")
 }
 $(".craft_supplies").html("Supplies");
-$(".craft_supplies").attr('tooltip', 'Plank: '+ parseFloat(craft["plank"]).toFixed(2)+" / "+parseFloat(plankcost).toFixed(2))
-$(".craft_supplies").attr('tooltip2', 'Food: '+ parseFloat(items["food"]).toFixed(2)+" / "+parseFloat(foodcost).toFixed(2))
-$(".craft_supplies").attr('tooltip3', 'Water: '+ parseFloat(items["water"]).toFixed(2)+" / "+parseFloat(watercost).toFixed(2))
+$(".craft_supplies").attr('tooltip', '木板: '+ parseFloat(craft["plank"]).toFixed(2)+" / "+parseFloat(plankcost).toFixed(2))
+$(".craft_supplies").attr('tooltip2', '食物: '+ parseFloat(items["food"]).toFixed(2)+" / "+parseFloat(foodcost).toFixed(2))
+$(".craft_supplies").attr('tooltip3', '水: '+ parseFloat(items["water"]).toFixed(2)+" / "+parseFloat(watercost).toFixed(2))
 $(".craft_supplies").attr('tooltip5', "A barrel containing supplies");
 
 
@@ -3964,12 +3964,12 @@ else
 	$(".craft_chest").removeClass("unavailable")
 }
 $(".craft_chest").html("Chest");
-$(".craft_chest").attr('tooltip', 'Plank: '+ parseFloat(craft["plank"]).toFixed(2)+" / "+parseFloat(plankcost).toFixed(2))
-$(".craft_chest").attr('tooltip2', 'Steel: '+ parseFloat(items["steel"]).toFixed(2)+" / "+parseFloat(steelcost).toFixed(2))
-$(".craft_chest").attr('tooltip3', 'Bronze: '+ parseFloat(craft["bronze"]).toFixed(2)+" / "+parseFloat(bronzecost).toFixed(2))
-$(".craft_chest").attr('tooltip4', 'Lock: '+ parseFloat(craft["lock"]).toFixed(2)+" / "+parseFloat(lockcost).toFixed(2))
+$(".craft_chest").attr('tooltip', '木板: '+ parseFloat(craft["plank"]).toFixed(2)+" / "+parseFloat(plankcost).toFixed(2))
+$(".craft_chest").attr('tooltip2', '钢: '+ parseFloat(items["steel"]).toFixed(2)+" / "+parseFloat(steelcost).toFixed(2))
+$(".craft_chest").attr('tooltip3', '青铜: '+ parseFloat(craft["bronze"]).toFixed(2)+" / "+parseFloat(bronzecost).toFixed(2))
+$(".craft_chest").attr('tooltip4', '锁: '+ parseFloat(craft["lock"]).toFixed(2)+" / "+parseFloat(lockcost).toFixed(2))
 
-$(".craft_chest").attr('tooltip6', "A chest used to store resources");
+$(".craft_chest").attr('tooltip6', "用于储存资源的箱子。");
 
 
 tincost=50;
@@ -3997,10 +3997,10 @@ else
 {
 	$(".craft_bottle").removeClass("unavailable")
 }
-$(".craft_bottle").html("Bottle");
-$(".craft_bottle").attr('tooltip', 'Glass: '+ parseFloat(craft["glass"]).toFixed(2)+" / "+parseFloat(glasscost).toFixed(2))
-$(".craft_bottle").attr('tooltip3', "A bottle of glass to store water and others liquids.");
-$(".craft_bottle").attr('tooltip4', "+1 water storage");
+$(".craft_bottle").html("瓶子");
+$(".craft_bottle").attr('tooltip', '玻璃: '+ parseFloat(craft["glass"]).toFixed(2)+" / "+parseFloat(glasscost).toFixed(2))
+$(".craft_bottle").attr('tooltip3', "一个玻璃瓶，用来储存水和其他液体。");
+$(".craft_bottle").attr('tooltip4', "+1 水存储上限");
 
 
 steelcost=100
@@ -4011,9 +4011,9 @@ else
 {
 	$(".craft_greatsword").removeClass("unavailable")
 }
-$(".craft_greatsword").html("Greatsword");
-$(".craft_greatsword").attr('tooltip', 'Steel: '+ parseFloat(items["steel"]).toFixed(2)+" / "+parseFloat(steelcost).toFixed(2))
-$(".craft_greatsword").attr('tooltip3', "This double handed sword is a marvel of smithing.");
+$(".craft_greatsword").html("巨剑");
+$(".craft_greatsword").attr('tooltip', '钢: '+ parseFloat(items["steel"]).toFixed(2)+" / "+parseFloat(steelcost).toFixed(2))
+$(".craft_greatsword").attr('tooltip3', "这把双手剑是锻造的一个奇迹。");
 
 
 blockcost=500;
@@ -4029,7 +4029,7 @@ else
 $(".craft_frame").html("Frame");
 $(".craft_frame").attr('tooltip', 'Block: '+ parseFloat(craft["block"]).toFixed(2)+" / "+parseFloat(blockcost).toFixed(2))
 $(".craft_frame").attr('tooltip2', 'Structure: '+ parseFloat(craft["structure"]).toFixed(2)+" / "+parseFloat(structurecost).toFixed(2))
-$(".craft_frame").attr('tooltip3', 'Steel: '+ parseFloat(items["steel"]).toFixed(2)+" / "+parseFloat(steelcost).toFixed(2))
+$(".craft_frame").attr('tooltip3', '钢: '+ parseFloat(items["steel"]).toFixed(2)+" / "+parseFloat(steelcost).toFixed(2))
 $(".craft_frame").attr('tooltip5', "Massive construction material used in big buildings.");
 
 
@@ -4062,7 +4062,7 @@ else
 $(".craft_gunpowder").html("Gunpowder");
 $(".craft_gunpowder").attr('tooltip', 'Sand: '+ parseFloat(items["sand"]).toFixed(2)+" / "+parseFloat(sandcost).toFixed(2))
 $(".craft_gunpowder").attr('tooltip2', 'Coal: '+ parseFloat(items["coal"]).toFixed(2)+" / "+parseFloat(coalcost).toFixed(2))
-$(".craft_gunpowder").attr('tooltip3', 'Bronze: '+ parseFloat(craft["bronze"]).toFixed(2)+" / "+parseFloat(bronzecost).toFixed(2))
+$(".craft_gunpowder").attr('tooltip3', '青铜: '+ parseFloat(craft["bronze"]).toFixed(2)+" / "+parseFloat(bronzecost).toFixed(2))
 $(".craft_gunpowder").attr('tooltip4', 'Chemicals: '+ parseFloat(items["chemicals"]).toFixed(2)+" / "+parseFloat(chemicalscost).toFixed(2))
 $(".craft_gunpowder").attr('tooltip5', "A powder used for explosives and ammunition.");
 
@@ -4093,9 +4093,9 @@ else
 	$(".craft_musket").removeClass("unavailable")
 }
 $(".craft_musket").html("Musket");
-$(".craft_musket").attr('tooltip', 'Wood: '+ parseFloat(items["wood"]).toFixed(2)+" / "+parseFloat(woodcost).toFixed(2))
+$(".craft_musket").attr('tooltip', '木头: '+ parseFloat(items["wood"]).toFixed(2)+" / "+parseFloat(woodcost).toFixed(2))
 $(".craft_musket").attr('tooltip2', 'Iron: '+ parseFloat(items["iron"]).toFixed(2)+" / "+parseFloat(ironcost).toFixed(2))
-$(".craft_musket").attr('tooltip3', 'Steel: '+ parseFloat(items["steel"]).toFixed(2)+" / "+parseFloat(steelcost).toFixed(2))
+$(".craft_musket").attr('tooltip3', '钢: '+ parseFloat(items["steel"]).toFixed(2)+" / "+parseFloat(steelcost).toFixed(2))
 $(".craft_musket").attr('tooltip5', "A rudimentary fire weapon.");
 
 
@@ -4110,7 +4110,7 @@ else
 	$(".craft_plate").removeClass("unavailable")
 }
 $(".craft_plate").html("Plate");
-$(".craft_plate").attr('tooltip', 'Copper: '+ parseFloat(items["copper"]).toFixed(2)+" / "+parseFloat(coppercost).toFixed(2))
+$(".craft_plate").attr('tooltip', '铜: '+ parseFloat(items["copper"]).toFixed(2)+" / "+parseFloat(coppercost).toFixed(2))
 $(".craft_plate").attr('tooltip2', 'Iron: '+ parseFloat(items["iron"]).toFixed(2)+" / "+parseFloat(ironcost).toFixed(2))
 $(".craft_plate").attr('tooltip3', 'Nickel: '+ parseFloat(items["nickel"]).toFixed(2)+" / "+parseFloat(nickelcost).toFixed(2))
 $(".craft_plate").attr('tooltip5', "A plate made of complex alloy.");
@@ -4127,8 +4127,8 @@ else
 	$(".craft_engine").removeClass("unavailable")
 }
 $(".craft_engine").html("Engine");
-$(".craft_engine").attr('tooltip', 'Steel: '+ parseFloat(items["steel"]).toFixed(2)+" / "+parseFloat(steelcost).toFixed(2))
-$(".craft_engine").attr('tooltip2', 'Bronze: '+ parseFloat(craft["bronze"]).toFixed(2)+" / "+parseFloat(bronzecost).toFixed(2))
+$(".craft_engine").attr('tooltip', '钢: '+ parseFloat(items["steel"]).toFixed(2)+" / "+parseFloat(steelcost).toFixed(2))
+$(".craft_engine").attr('tooltip2', '青铜: '+ parseFloat(craft["bronze"]).toFixed(2)+" / "+parseFloat(bronzecost).toFixed(2))
 $(".craft_engine").attr('tooltip3', 'Plate: '+ parseFloat(craft["plate"]).toFixed(2)+" / "+parseFloat(platecost).toFixed(2))
 $(".craft_engine").attr('tooltip5', "A steam powered engine.");
 
@@ -4141,7 +4141,7 @@ else
 {
 	$(".craft_book").removeClass("unavailable")
 }
-$(".craft_book").html("Scientific papers");
+$(".craft_book").html("科学论文");
 $(".craft_book").attr('tooltip', 'Knowledge: '+ parseFloat(items["knowledge"]).toFixed(2)+" / "+parseFloat(knowledgecost).toFixed(2))
 $(".craft_book").attr('tooltip3', "Book with scientific papers which can be used to research new technologies");
 
@@ -4154,7 +4154,7 @@ else
 {
 	$(".craft_strategy").removeClass("unavailable")
 }
-$(".craft_strategy").html("Strategy");
+$(".craft_strategy").html("战略");
 $(".craft_strategy").attr('tooltip', 'Plans: '+ parseFloat(craft["plans"]).toFixed(2)+" / "+parseFloat(planscost).toFixed(2))
 $(".craft_strategy").attr('tooltip3', "Book with military plans");
 
@@ -4167,7 +4167,7 @@ else
 {
 	$(".craft_patent").removeClass("unavailable")
 }
-$(".craft_patent").html("Patent");
+$(".craft_patent").html("专利");
 $(".craft_patent").attr('tooltip', 'Coin: '+ parseFloat(craft["coin"]).toFixed(2)+" / "+parseFloat(coincost).toFixed(2))
 $(".craft_patent").attr('tooltip3', "Book with all sorts of blueprints and inventions which can be used for new technologies.");
 
@@ -4200,48 +4200,48 @@ else
 
 }
 
-$(".leader_sucellus").html("Sucellus (lv:" + people["sucellus"]+")");
+$(".leader_sucellus").html("Sucellus (等级:" + people["sucellus"]+")");
 $(".leader_sucellus").attr('tooltip', 'Increments wood production by 20%')
 $(".leader_sucellus").attr('tooltip2', 'Increments water production by 20%')
 $(".leader_sucellus").attr('tooltip3', 'Increments food production by 20%')
 $(".leader_sucellus").attr('tooltip4', 'Increments maximum water by +5')
 $(".leader_sucellus").attr('tooltip6', "'Nature its not optional'");
 
-$(".leader_eredal").html("Eredal (lv:" + people["eredal"]+")");
+$(".leader_eredal").html("Eredal (等级:" + people["eredal"]+")");
 $(".leader_eredal").attr('tooltip', 'Increments mineral production by 10%')
 $(".leader_eredal").attr('tooltip2', 'Increments copper production by 10%')
 $(".leader_eredal").attr('tooltip3', 'Increments iron production by 10%')
 $(".leader_eredal").attr('tooltip4', 'Increments steel production by 10%')
 $(".leader_eredal").attr('tooltip6', "'Metal till death'");
 
-$(".leader_khrysos").html("Khrysos (lv:" + people["khrysos"]+")");
+$(".leader_khrysos").html("Khrysos (等级:" + people["khrysos"]+")");
 $(".leader_khrysos").attr('tooltip', 'Increments gold production by 25%')
 $(".leader_khrysos").attr('tooltip2', 'Increments market ratios by 10%')
 $(".leader_khrysos").attr('tooltip4', "'Everything has a price'");
 
-$(".leader_elisia").html("Elisia (lv:" + people["elisia"]+")");
+$(".leader_elisia").html("Elisia (等级:" + people["elisia"]+")");
 $(".leader_elisia").attr('tooltip', 'Increments craft efficiency by 5%')
 $(".leader_elisia").attr('tooltip2', 'Increments wood and mineral storage by 500')
 $(".leader_elisia").attr('tooltip4', "'Making makes us human'");
 
-$(".leader_xochiquetzal").html("Xochiquetzal (lv:" + people["xochiquetzal"]+")");
+$(".leader_xochiquetzal").html("Xochiquetzal (等级:" + people["xochiquetzal"]+")");
 $(".leader_xochiquetzal").attr('tooltip', 'Increments max population by 2')
 $(".leader_xochiquetzal").attr('tooltip2', 'Increments troops hp by 5%')
 $(".leader_xochiquetzal").attr('tooltip4', "'Life finds a way'");
 
-$(".leader_warmuk").html("Warmuk (lv:" + people["warmuk"]+")");
+$(".leader_warmuk").html("Warmuk (等级:" + people["warmuk"]+")");
 $(".leader_warmuk").attr('tooltip', 'Increments troops attack by 10%')
 $(".leader_warmuk").attr('tooltip2', 'Increments max morale by 2')
 $(".leader_warmuk").attr('tooltip3', 'Increments morale production by 5%')
 $(".leader_warmuk").attr('tooltip5', "'If you run away, you will die tired'");
 
-$(".leader_foehn").html("Foehn (lv:" + people["foehn"]+")");
+$(".leader_foehn").html("Foehn (等级:" + people["foehn"]+")");
 $(".leader_foehn").attr('tooltip', 'Increments ships power by 10%')
 $(".leader_foehn").attr('tooltip2', 'Increments ships structure by 10%')
 $(".leader_foehn").attr('tooltip3', 'Increments ships cargo capacity by 15%')
 $(".leader_foehn").attr('tooltip5', "'Take what you can, give nothing back.'");
 
-$(".leader_alfear").html("Alfear (lv:" + people["alfear"]+")");
+$(".leader_alfear").html("Alfear (等级:" + people["alfear"]+")");
 $(".leader_alfear").attr('tooltip', 'Increments knowledge production by 10%')
 $(".leader_alfear").attr('tooltip2', 'Increments knowledge maximum by 100')
 $(".leader_alfear").attr('tooltip4', "'For even the very wise cannot see all ends.'");
@@ -4379,8 +4379,8 @@ if(unattainable){
   $(".expedition").removeClass("unattainable"); 
 }
 $(".expedition").html("Expedition");
-$(".expedition").attr('tooltip', 'Food: '+ parseFloat(items["food"]).toFixed(2)+" / "+parseFloat(foodcost).toFixed(2))
-$(".expedition").attr('tooltip2', 'Water: '+ parseFloat(items["water"]).toFixed(2)+" / "+parseFloat(watercost).toFixed(2))
+$(".expedition").attr('tooltip', '食物: '+ parseFloat(items["food"]).toFixed(2)+" / "+parseFloat(foodcost).toFixed(2))
+$(".expedition").attr('tooltip2', '水: '+ parseFloat(items["water"]).toFixed(2)+" / "+parseFloat(watercost).toFixed(2))
 $(".expedition").attr('tooltip3', 'Morale: '+ parseFloat(items["morale"]).toFixed(2)+" / "+parseFloat(moralecost).toFixed(2))
 if(coalcost>0){
 $(".expedition").attr('tooltip4', 'Coal: '+ parseFloat(items["coal"]).toFixed(2)+" / "+parseFloat(coalcost).toFixed(2))
@@ -4770,11 +4770,11 @@ for(key in items){
 
 inv_text+="</table>"
 $(".inventory").html(inv_text);
-$(".population").html("Population: "+population+" / "+ +maximums["population"]);
-$(".ships").html("Ships: "+ships+" / "+ +maximums["ships"]);
-$(".trains").html("Trains: "+trains+" / "+ +maximums["trains"]);
-$(".titles").html("Titles: "+bonus["title"]);
-$(".territory").html("Territory: "+intToString(bonus["territory"]));
+$(".population").html("人口: "+population+" / "+ +maximums["population"]);
+$(".ships").html("船: "+ships+" / "+ +maximums["ships"]);
+$(".trains").html("火车: "+trains+" / "+ +maximums["trains"]);
+$(".titles").html("称号: "+bonus["title"]);
+$(".territory").html("领土: "+intToString(bonus["territory"]));
 var inv_text="<table>"
 for(key in craft){
 	if(craft[key]!=0){
@@ -4901,14 +4901,14 @@ function toggletech(){
 	if(techvisible==1){
 		$(".researched").hide()
 		$(".researched + br").hide()
-		$(".toggletech").html("Show researched technologies")
+		$(".toggletech").html("显示已研究的科技")
 		techvisible=0;
 	}
 	else
 	{
 		$(".researched").show()
 		$(".researched + br").show()
-		$(".toggletech").html("Hide researched technologies")
+		$(".toggletech").html("隐藏已研究的科技")
 		techvisible=1;
 	}
 }
