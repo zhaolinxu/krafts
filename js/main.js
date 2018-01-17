@@ -3792,7 +3792,8 @@ for (b in techdata) {
   
   var techname = tech.hasOwnProperty('name') ? tech.name : toProperCase(b);
   var suffix = (technologies[b] > 0 ? (techname.length < 14 ? ' (已研究)' : ' (确实...)')  : '');
-  $(".tech_"+b).html(techname + suffix);
+  $(".tech_"+b).html(cnTec(techname) + suffix);
+    console.log(cnTec(techname))
 
 }
 
@@ -5317,6 +5318,8 @@ function cnname(key){
         name="食物";
     }else if(temp=="block"){
         name="砌块";
+    }else if(temp=="bronze"){
+        name="青铜";
     }else if(temp=="pickaxe"){
         name="镐斧";
     }else if(temp=="spear"){
@@ -5331,15 +5334,69 @@ function cnname(key){
     return name;
 }
 //汉化科技
-//function cntecName(techname){
-//    var temp=techname;
-//    var name ="";
-//    if(temp==""){
-//        name="";
-//    }else if(temp==""){
-//        name="";
-//    }else{
-//        return techname;
-//    }
-//    return name;
-//}
+function cnTec(techname){
+    var temp=techname;
+    var name ="";
+    if(temp=="Exploration"){
+        name="勘探";
+    }else if(temp=="Metallurgy"){
+        name="冶金";
+    }else if(temp=="Sword"){
+        name="剑";
+    }else if(temp=="Currency"){
+        name="货币";
+    }else if(temp=="Bronze"){
+        name="青铜";
+    }else if(temp=="Exchange"){
+        name="交换";
+    }else if(temp=="Charcoal"){
+        name="木炭";
+    }else if(temp=="Militarization"){
+        name="军事化";
+    }else if(temp=="Metalwork"){
+        name="金属制品";
+    }else if(temp=="Industrialization"){
+        name="工业化";
+    }else if(temp=="Patents"){
+        name="专利";
+    }else if(temp=="Pickaxe"){
+        name="铁镐";
+    }else if(temp=="Centralisation"){
+        name="集权";
+    }else if(temp=="Steel"){
+        name="钢";
+    }else if(temp=="Manufacturing"){
+        name="制造业";
+    }else if(temp=="Husbandry"){
+        name="农牧";
+    }else if(temp=="Cavalry"){
+        name="骑兵";
+    }else if(temp=="Leadership"){
+        name="领导能力";
+    }else if(temp=="Armament"){
+        name="军械";
+    }else if(temp=="Gambling"){
+        name="赌博";
+    }else if(temp=="Redeem"){
+        name="赎回";
+    }else if(temp=="Wrapping"){
+        name="包装";
+    }else if(temp=="Shipyard"){
+        name="船厂";
+    }else if(temp=="Sailing"){
+        name="帆船";
+    }else if(temp=="Trade"){
+        name="贸易";
+    }else if(temp=="Cache"){
+        name="缓存";
+    }else if(temp=="Specialization"){
+        name="专业化";
+    }else if(temp=="Geology"){
+        name="地质学";
+    }else if(temp=="Camps"){
+        name="营地";
+    }else{
+        return techname;
+    }
+    return name;
+}
