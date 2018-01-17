@@ -1507,96 +1507,96 @@ var techdata = {
   pickaxe: {
     cost: {wood: 100, copper: 3},
     unlock: ["#craftingpane", ".craft_pickaxe", ".hire_miner"],
-    desc: ["Allows the crafting of pickaxes and hiring of miners"]
+    desc: ["允许制作镐和聘请矿工"]
   },
   spear: {
-    name: "Basic weapons",
+    name: "基本武器",
     cost: {wood: 200, copper: 5},
     unlock: ["#craftingpane", "#militarypane", ".craft_spear", ".hire_pikeman"],
-    desc: ["Allows the crafting of spears and hiring of pikeman"]
+    desc: ["允许制作长矛和雇佣长矛兵。"]
   },
   exploration: {
     cost: {food: 100},
     unlock: [".expedition"],
-    desc: ["Allows exploration expeditions"]
+    desc: ["允许勘探探险"]
   },
   ironfoundry: {
-    name: "Iron Foundry",
+    name: "铁铸造",
     cost: {wood: 1000, mineral: 500, food: 200},
     unlock: [".build_foundry"],
-    desc: ["Allows the construction of foundrys"]
+    desc: ["允许建造铸造厂"]
   },
   metallurgy: {
     cost: {food: 200, copper: 10, iron: 5},
     bonus: {iron: 0.10, copper: 0.10},
-    desc: ["Allows smelters to smelt a bit of gold"]
+    desc: ["允许冶炼厂冶炼一点黄金。"]
   },
   sword: {
     cost: {food: 500, iron: 10},
     unlock: ["#craftingpane", "#militarypane", ".craft_sword", ".hire_swordman"],
-    desc: ["Allows the crafting of Iron Swords and the hiring of swordman"]
+    desc: ["允许制作铁剑和雇佣剑士。"]
   },
   storage: {
-    name: "Storage management",
+    name: "存储管理",
     cost: {wood: 500, mineral: 500, iron: 15},
     unlock: ["#craftingpane", ".craft_block", ".build_barn"],
-    desc: ["Unlocks better storage methods"]
+    desc: ["解锁更好的存储方法。"]
   },
   currency: {
     cost: {gold: 2},
     unlock: [".build_casino"],
-    desc: ["Unlocks casinos"]
+    desc: ["解锁赌场"]
   },
   coin: {
-    name: "Coin forging",
+    name: "硬币锻造",
     cost: {iron: 20, gold: 5},
     unlock: [".craft_coin"],
-    desc: ["Allows forging gold coins"]
+    desc: ["允许锻造金币"]
   },
   exchange: {
     cost: {food: 800, coin: 3},
     unlock: [".build_market"],
-    desc: ["Allow the construction of markets"]
+    desc: ["允许市场的建设。"]
   },
   bronze: {
     cost: {iron: 40, copper: 40},
     unlock: [".craft_bronze", ".build_statue"],
-    desc: ["Allows foundrys to smelt a bit of tin",
-      "Unlocks bronze crafting"]
+    desc: ["允许铸造厂冶炼一点锡。",
+      "解锁青铜制品"]
   },
   bronzetools: {
-    name: "Bronze tools",
+    name: "青铜工具",
     cost: {bronze: 2},
     bonus: {wood: 0.20, mineral: 0.20, food: 0.20, copper: 0.10, iron: 0.10, tin: 0.10}
   },
   charcoal: {
     cost: {wood: 4000, mineral: 2000},
     unlock: [".build_kiln"],
-    desc: ["Unlocks kilns"]
+    desc: ["解锁窑炉"]
   },
   centralisation: {
     cost: {wood: 5000, mineral: 5000, bronze: 3, gold: 10},
     unlock: [".build_towncenter", ".craft_structure"],
-    desc: ["Allows the building of towncenters"]
+    desc: ["允许建造城镇中心。"]
   },
   steel: {
     cost: {iron: 50, coal: 50},
     unlock: [".hire_foundryman"],
-    desc: ["Unlocks foundrymen, experts in steel"]
+    desc: ["解锁铸造工人，钢铁专家。"]
   },
   manufacturing: {
     cost: {steel: 5, coin: 5},
     unlock: [".build_workbench"],
-    desc: ["Enhances crafting by allowing the building of workbenchs"]
+    desc: ["通过允许构建工作台来提高工艺"]
   },
   steeltools: {
-    name: "Steel tools",
+    name: "钢制工具",
     cost: {steel: 10},
     bonus: {wood: 0.30, mineral: 0.3, food: 0.3, copper: 0.1, iron: 0.1, tin: 0.1, steel: 0.05}
   },
   husbandry: {
     cost: {food: 2500},
-    desc: ["Allow soldiers to bring back horses found on expeditions"]
+    desc: ["允许士兵带回在探险中发现的马匹。"]
   },
   cavalry: {
     cost: {gold: 25, steel: 25},
@@ -5314,7 +5314,7 @@ function cnname(key){
     }else if(temp=="food"){
         name="食物";
     }else if(temp=="block"){
-        name="石块";
+        name="砌块";
     }else if(temp=="pickaxe"){
         name="镐斧";
     }else if(temp=="spear"){
