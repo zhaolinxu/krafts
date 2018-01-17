@@ -740,7 +740,7 @@ function expedition(){
 			}
 			if(enemytipo>=100 && enemytipo<150){
 				enemy["mercenary"]=Math.round((Math.random()*power*0.090)+(power*0.018))+1;
-				stringencuentro+=enemy["mercenary"]+" 雇佣兵 (攻击力:9 血量:40 armor:5)<br>";
+				stringencuentro+=enemy["mercenary"]+" 雇佣兵 (攻击力:9 血量:40 护甲:5)<br>";
 				rew+=(Math.random()*enemy["mercenary"]*0.32)+(enemy["mercenary"]*0.07)
 			}
 			if(enemytipo>=150 && enemytipo<200){
@@ -751,7 +751,7 @@ function expedition(){
 				stringencuentro+=enemy["bandit"]+" 强盗 (攻击力:4 血量:15)<br>";
 				rew+=(Math.random()*enemy["bandit"]*0.14)+(enemy["bandit"]*0.03)
 				enemy["mercenary"]=Math.round((Math.random()*power*0.01)+(power*0.01))+1;
-				stringencuentro+=enemy["mercenary"]+" 雇佣兵 (攻击力:9 血量:40 armor:5)<br>";
+				stringencuentro+=enemy["mercenary"]+" 雇佣兵 (攻击力:9 血量:40 护甲:5)<br>";
 				rew+=(Math.random()*enemy["mercenary"]*0.32)+(enemy["mercenary"]*0.07)
 			}
 			if(enemytipo>=200 && enemytipo<280){
@@ -941,85 +941,85 @@ function fight(){
 			combatlog+="你的部队对敌人造成了 "+intToString(dmg1)+" 伤害.<br>"
 		}
 		if(dmg2>power2*1.1){
-			combatlog+="The enemy finds a weak spot and deals "+intToString(dmg2)+" 伤害!<br>"
+			combatlog+="敌人发现了一个弱点并对你造成了 "+intToString(dmg2)+" 伤害!<br>"
 		} else if(dmg2<power2*.9){
-			combatlog+="The enemy hesitates, and only deals "+intToString(dmg2)+" 伤害.<br>"
+			combatlog+="敌人犹豫不决，只对你造成了 "+intToString(dmg2)+" 伤害.<br>"
 		} else {
-			combatlog+="The enemy deals "+intToString(dmg2)+" 伤害.<br>"
+			combatlog+="敌人对你造成了 "+intToString(dmg2)+" 伤害.<br>"
 		}		
 
 		if(healing>0){
 			healed=healing+(Math.random()*(healing/8))-(Math.random()*(healing/8));
 			hp+=healed;
-			combatlog+="Your medics restore "+intToString(healed)+" 血量.<br>"
+			combatlog+="医生给你的部队恢复了 "+intToString(healed)+" 血量.<br>"
 		}
 
 		hp2-=dmg1;
 		hp-=dmg2;
-		combatlog+="Your hp: "+Math.round(hp) +" / Enemy hp: "+Math.round(hp2)+"<br><br>";
+		combatlog+="你的血量: "+Math.round(hp) +" / 敌人血量: "+Math.round(hp2)+"<br><br>";
 		if(hp<0){
-			combatlog+="You lost the combat...<br>"
+			combatlog+="你输掉了战斗...<br>"
 			if(people["pikeman"]>0 && Math.random()>0.75){
 				losses=Math.round(Math.random()*(people["pikeman"]-1))+1
 				people["pikeman"]-=losses;
 				population-=losses;
-				combatlog+="You lost "+losses+" pikeman.<br>"
+				combatlog+="你失去了 "+losses+" 枪兵.<br>"
 			}
 			if(people["swordman"]>0 && Math.random()>0.75){
 				losses=Math.round(Math.random()*(people["swordman"]-1))+1
 				people["swordman"]-=losses;
 				population-=losses;
-				combatlog+="You lost "+losses+" swordman.<br>"
+				combatlog+="你失去了 "+losses+" 剑士.<br>"
 			}
 			if(people["knight"]>0 && Math.random()>0.75){
 				losses=Math.round(Math.random()*(people["knight"]-1))+1
 				people["knight"]-=losses;
 				population-=losses;
-				combatlog+="You lost "+losses+" knights.<br>"
+				combatlog+="你失去了 "+losses+" 骑士.<br>"
 			}
 			if(people["medic"]>0 && Math.random()>0.75){
 				losses=Math.round(Math.random()*(people["medic"]-1))+1
 				people["medic"]-=losses;
 				population-=losses;
-				combatlog+="You lost "+losses+" medics.<br>"
+				combatlog+="你失去了 "+losses+" 医务人员.<br>"
 			}
 			if(people["berserk"]>0 && Math.random()>0.75){
 				losses=Math.round(Math.random()*(people["berserk"]-1))+1
 				people["berserk"]-=losses;
 				population-=losses;
-				combatlog+="You lost "+losses+" berserks.<br>"
+				combatlog+="你失去了 "+losses+" 狂战士.<br>"
 			}
 			if(people["warelephant"]>0 && Math.random()>0.75){
 				losses=Math.round(Math.random()*(people["warelephant"]-1))+1
 				people["warelephant"]-=losses;
 				population-=losses;
-				combatlog+="You lost "+losses+" war elephants.<br>"
+				combatlog+="你失去了 "+losses+" 战象.<br>"
 			}
 			if(people["musketeer"]>0 && Math.random()>0.75){
 				losses=Math.round(Math.random()*(people["musketeer"]-1))+1
 				people["musketeer"]-=losses;
 				population-=losses;
-				combatlog+="You lost "+losses+" musketeers.<br>"
+				combatlog+="你失去了 "+losses+" 火枪手.<br>"
 			}
 			if(people["lighttank"]>0 && Math.random()>0.75){
 				losses=Math.round(Math.random()*(people["lighttank"]-1))+1
 				people["lighttank"]-=losses;
 				population-=losses*3;
-				combatlog+="You lost "+losses+" light tanks.<br>"
+				combatlog+="你失去了 "+losses+" 轻型坦克.<br>"
 			}
 			break;
 		}
 		else if(hp2<0){
 			var reward="";
-			combatlog+="Your troops won the combat!<br><br>";
-			combatlog+="You won "+ intToString(enemy["reward"])+" coins<br>";
+			combatlog+="你的部队赢得了战斗。!<br><br>";
+			combatlog+="你获得了 "+ intToString(enemy["reward"])+" 金币<br>";
 			$(".encounter").hide()
 			craft["coin"]+=enemy["reward"];
 			if(Math.random()>0.80 && technologies["cache"]==1){
 				rnd=(Math.random()*((power/2)+(hp/15)))/300;
 				reward+=parseFloat(rnd).toFixed(2) + " chest<br>";
 				craft["chest"]+=rnd;
-				combatlog+="You took "+ intToString(rnd)+" chests that they were carrying.<br>";
+				combatlog+="你拿走了他们携带的 "+ intToString(rnd)+" 个箱子。<br>";
 				maximums["wood"]+=50*(rnd);
 				maximums["mineral"]+=25*(rnd);
 				maximums["food"]+=10*(rnd);
@@ -1032,39 +1032,39 @@ function fight(){
 			}
 			if(Math.random()>0.80 && technologies["cache"]==1){
 				rnd=Math.floor(power/300)+1;
-				reward+=parseFloat(rnd).toFixed(2) + " lock<br>";
+				reward+=parseFloat(rnd).toFixed(2) + " 锁<br>";
 				craft["lock"]+=rnd;
-				combatlog+="You found "+ Math.round(rnd)+" locks.<br>";
+				combatlog+="你找到了 "+ Math.round(rnd)+" 锁.<br>";
 			}
 			if(Math.random()>0.80 && technologies["canteen"]==1){
 				rnd=(Math.random()*((power/2)+(hp/15)))/400;
-				combatlog+="You found "+ intToString(rnd)+" bottles.<br>";
+				combatlog+="你找到了 "+ intToString(rnd)+" 瓶子.<br>";
 				craft["bottle"]+=rnd;
 				maximums["water"]+=rnd;
 			}
 			if(Math.random()>0.70 && technologies["intelligence"]==1){
 				rnd=(Math.random()*((power/2)+(hp/15)))/4;
-				reward+=parseFloat(rnd).toFixed(2) + " knowledge<br>";
+				reward+=parseFloat(rnd).toFixed(2) + " 知识<br>";
 				items["knowledge"]+=rnd;
-				combatlog+="Your intelligence service stole "+ Math.round(rnd)+" knowledge from the enemy.<br>";
+				combatlog+="你的情报部门偷取了 "+ Math.round(rnd)+" 知识从敌人。<br>";
 			}
 			if(Math.random()>0.50 && technologies["wargames"]==1){
 				rnd=(Math.random()*((power/2)+(hp/15)))/4;
-				reward+=parseFloat(rnd).toFixed(2) + " plans<br>";
+				reward+=parseFloat(rnd).toFixed(2) + " 计划<br>";
 				craft["plans"]+=rnd;
-				combatlog+="Your intelligence service produced  "+ Math.round(rnd)+" new plans.<br>";
+				combatlog+="你的情报部门获得了  "+ Math.round(rnd)+" 新计划。<br>";
 			}
 			if(Math.random()>0.98){
-				combatlog+="You found a diamond!<br>";
+				combatlog+="你发现了一个钻石!<br>";
 				craft["diamond"]+=1;
 				diamonize();
 			}
 			if(Math.random()>0.999){
-				combatlog+="You found a strange artifact!<br>";
+				combatlog+="你发现了一个奇怪的神器!<br>";
 				craft["artifact"]+=1;
 			}
 			if(Math.random()>0.99){
-				combatlog+="<div style='display:inline;color:orange'>You found a heirloom!</div><br>";
+				combatlog+="<div style='display:inline;color:orange'>你发现一个传家宝!</div><br>";
 				createheirloom();
 				unlocked["#heirlooms"]=1;
 				$("#heirloomspane").removeClass("invisible");
@@ -1077,7 +1077,7 @@ function fight(){
 	}
 
 	if(i>49){
-		combatlog+="The combat ended in a draw...<br>"
+		combatlog+="战斗以平局告终..<br>"
 	}
 
 	$(".expeditionresult").html(combatlog)
@@ -2624,7 +2624,7 @@ unattainable=maximums["wood"]*(bonus["storage"]+1)<woodcost
 set_unattainable(".build_lumbermill", unattainable);
 $(".build_lumbermill").html("伐木场 ("+buildings["lumbermill"]+")");
 $(".build_lumbermill").attr('tooltip', '木头: '+ parseFloat(items["wood"]).toFixed(2)+" / "+parseFloat(woodcost).toFixed(2))
-$(".build_lumbermill").attr('tooltip2', "Wood production: +0.20/秒");
+$(".build_lumbermill").attr('tooltip2', "木头产量: +0.20/秒");
 
 
 woodcost= Math.pow(1.1,(buildings["mine"]))*2
@@ -2640,8 +2640,8 @@ unattainable=maximums["wood"]*(bonus["storage"]+1)<woodcost || maximums["mineral
 set_unattainable(".build_mine", unattainable);
 $(".build_mine").html("矿井 ("+buildings["mine"]+")");
 $(".build_mine").attr('tooltip', '木头: '+ parseFloat(items["wood"]).toFixed(2)+" / "+parseFloat(woodcost).toFixed(2) )
-$(".build_mine").attr('tooltip2',"Minerals: "+ parseFloat(items["mineral"]).toFixed(2)+" / "+parseFloat(mineralcost).toFixed(2) )
-$(".build_mine").attr('tooltip3', "Mineral production: +0.20/秒");
+$(".build_mine").attr('tooltip2',"矿物: "+ parseFloat(items["mineral"]).toFixed(2)+" / "+parseFloat(mineralcost).toFixed(2) )
+$(".build_mine").attr('tooltip3', "矿物产量: +0.20/秒");
 
 
 woodcost= Math.pow(1.6,(buildings["warehouse"]))*20
@@ -2672,9 +2672,9 @@ else
 unattainable=maximums["mineral"]*(bonus["storage"]+1)<mineralcost
 set_unattainable(".build_fountain", unattainable);
 $(".build_fountain").html("喷泉 ("+buildings["fountain"]+")");
-$(".build_fountain").attr('tooltip',"Minerals: "+ parseFloat(items["mineral"]).toFixed(2)+" / "+parseFloat(mineralcost).toFixed(2) )
-$(".build_fountain").attr('tooltip2', "Water production: +0.40/秒");
-$(".build_fountain").attr('tooltip3', "Water storage: 5");
+$(".build_fountain").attr('tooltip',"矿物: "+ parseFloat(items["mineral"]).toFixed(2)+" / "+parseFloat(mineralcost).toFixed(2) )
+$(".build_fountain").attr('tooltip2', "水产量: +0.40/秒");
+$(".build_fountain").attr('tooltip3', "水存储上限: 5");
 
 woodcost= Math.pow(1.35,(buildings["pasture"]))*10
 if(items["wood"]<woodcost){
@@ -2864,7 +2864,7 @@ else
 $(".build_towncenter").html("镇中心 ("+buildings["towncenter"]+")");
 $(".build_towncenter").attr('tooltip', '砌块: '+ parseFloat(craft["block"]).toFixed(2)+" / "+parseFloat(blockcost).toFixed(2))
 $(".build_towncenter").attr('tooltip2', 'Structure: '+ parseFloat(craft["structure"]).toFixed(2)+" / "+parseFloat(structurecost).toFixed(2))
-$(".build_towncenter").attr('tooltip3', 'Coin: '+ parseFloat(craft["coin"]).toFixed(2)+" / "+parseFloat(coincost).toFixed(2))
+$(".build_towncenter").attr('tooltip3', '金币: '+ parseFloat(craft["coin"]).toFixed(2)+" / "+parseFloat(coincost).toFixed(2))
 $(".build_towncenter").attr('tooltip4', 'Provides big storage space');
 $(".build_towncenter").attr('tooltip5', 'Max population +5');
 
@@ -2966,7 +2966,7 @@ set_unattainable(".build_bank", unattainable);
 $(".build_bank").html("银行 ("+buildings["bank"]+")");
 $(".build_bank").attr('tooltip', '砌块: '+ parseFloat(craft["block"]).toFixed(2)+" / "+parseFloat(blockcost).toFixed(2))
 $(".build_bank").attr('tooltip2', '钢: '+ parseFloat(items["steel"]).toFixed(2)+" / "+parseFloat(steelcost).toFixed(2))
-$(".build_bank").attr('tooltip3', 'Coin: '+ parseFloat(craft["coin"]).toFixed(2)+" / "+parseFloat(coincost).toFixed(2))
+$(".build_bank").attr('tooltip3', '金币: '+ parseFloat(craft["coin"]).toFixed(2)+" / "+parseFloat(coincost).toFixed(2))
 $(".build_bank").attr('tooltip5', 'Gold storage +2');
 $(".build_bank").attr('tooltip6', 'Gold consumption -0.10/秒');
 $(".build_bank").attr('tooltip7', 'Coin production +0.02/秒');
@@ -3074,7 +3074,7 @@ else
 }
 $(".build_tradeoutpost").html("贸易前哨 ("+buildings["tradeoutpost"]+")");
 $(".build_tradeoutpost").attr('tooltip', 'Frame: '+ parseFloat(craft["frame"]).toFixed(2)+" / "+parseFloat(framecost).toFixed(2))
-$(".build_tradeoutpost").attr('tooltip2', 'Coin: '+ parseFloat(craft["coin"]).toFixed(2)+" / "+parseFloat(coincost).toFixed(2))
+$(".build_tradeoutpost").attr('tooltip2', '金币: '+ parseFloat(craft["coin"]).toFixed(2)+" / "+parseFloat(coincost).toFixed(2))
 $(".build_tradeoutpost").attr('tooltip3', 'Territory: '+ parseFloat(bonus["territory"]).toFixed(2)+" / "+parseFloat(territorycost).toFixed(2))
 $(".build_tradeoutpost").attr('tooltip5', '黄金产量 +0.01/秒');
 $(".build_tradeoutpost").attr('tooltip6', 'Max population +10');
@@ -3408,9 +3408,9 @@ $(".hire_smelter").html("冶炼厂 ("+people["smelter"]+")");
 $(".hire_smelter").attr('tooltip', '食物: '+ parseFloat(items["food"]).toFixed(2)+" / "+parseFloat(foodcost).toFixed(2))
 $(".hire_smelter").attr('tooltip2', "矿物消耗: -0.20/秒");
 $(".hire_smelter").attr('tooltip3', "食物消耗: -0.10/秒");
-$(".hire_smelter").attr('tooltip4', "Copper production: +0.01/秒");
+$(".hire_smelter").attr('tooltip4', "铜产量: +0.01/秒");
 if(technologies["metallurgy"]!=0){
-	$(".hire_smelter").attr('tooltip5', "Gold production: +0.001/秒");	
+	$(".hire_smelter").attr('tooltip5', "黄金产量: +0.001/秒");	
 }
 
 
@@ -3424,7 +3424,7 @@ else
 }
 $(".hire_farmer").html("农民 ("+people["farmer"]+")");
 $(".hire_farmer").attr('tooltip', '木头: '+ parseFloat(items["wood"]).toFixed(2)+" / "+parseFloat(foodcost).toFixed(2))
-$(".hire_farmer").attr('tooltip2', "Food production: +0.40/秒");
+$(".hire_farmer").attr('tooltip2', "食物产量: +0.40/秒");
 
 
 foodcost=50
@@ -3440,9 +3440,9 @@ $(".hire_miner").html("矿工 ("+people["miner"]+")");
 $(".hire_miner").attr('tooltip', '食物: '+ parseFloat(items["food"]).toFixed(2)+" / "+parseFloat(foodcost).toFixed(2))
 $(".hire_miner").attr('tooltip2', '镐斧: '+ parseFloat(craft["pickaxe"]).toFixed(2)+" / "+parseFloat(pickaxecost).toFixed(2))
 $(".hire_miner").attr('tooltip3', "食物消耗: -0.10/秒");
-$(".hire_miner").attr('tooltip4', 'Mineral production +1.00/秒');
+$(".hire_miner").attr('tooltip4', '矿物产量 +1.00/秒');
 if(technologies["multitasking"]==1){
-$(".hire_miner").attr('tooltip5', 'Clay production +0.05/秒');
+$(".hire_miner").attr('tooltip5', '粘土产量 +0.05/秒');
 }
 
 
@@ -3457,11 +3457,11 @@ else
 }
 $(".hire_foundryman").html("铸造工人 ("+people["foundryman"]+")");
 $(".hire_foundryman").attr('tooltip', '食物: '+ parseFloat(items["food"]).toFixed(2)+" / "+parseFloat(foodcost).toFixed(2))
-$(".hire_foundryman").attr('tooltip2', 'Coin: '+ parseFloat(craft["coin"]).toFixed(2)+" / "+parseFloat(coincost).toFixed(2))
+$(".hire_foundryman").attr('tooltip2', '金币: '+ parseFloat(craft["coin"]).toFixed(2)+" / "+parseFloat(coincost).toFixed(2))
 $(".hire_foundryman").attr('tooltip3', "食物消耗: -0.10/秒");
-$(".hire_foundryman").attr('tooltip4', "Iron consumption: -0.05/秒");
-$(".hire_foundryman").attr('tooltip5', "Coal consumption: -0.02/秒");
-$(".hire_foundryman").attr('tooltip6', 'Steel production +0.01/秒');
+$(".hire_foundryman").attr('tooltip4', "铁消耗: -0.05/秒");
+$(".hire_foundryman").attr('tooltip5', "煤消耗: -0.02/秒");
+$(".hire_foundryman").attr('tooltip6', '钢产量: +0.01/秒');
 
 
 foodcost=500;
@@ -3475,9 +3475,9 @@ else
 }
 $(".hire_sailor").html("水手 ("+people["sailor"]+")");
 $(".hire_sailor").attr('tooltip', '食物: '+ parseFloat(items["food"]).toFixed(2)+" / "+parseFloat(foodcost).toFixed(2))
-$(".hire_sailor").attr('tooltip2', 'Coin: '+ parseFloat(craft["coin"]).toFixed(2)+" / "+parseFloat(coincost).toFixed(2))
+$(".hire_sailor").attr('tooltip2', '金币: '+ parseFloat(craft["coin"]).toFixed(2)+" / "+parseFloat(coincost).toFixed(2))
 $(".hire_sailor").attr('tooltip3', "食物消耗: -0.40/秒");
-$(".hire_sailor").attr('tooltip5', 'People needed for naval missions.');
+$(".hire_sailor").attr('tooltip5', '人们需要海军任务。');
 
 
 knowledgecost=100;
@@ -3489,12 +3489,12 @@ else
 {
 	$(".hire_scientist").removeClass("unavailable")
 }
-$(".hire_scientist").html("Scientist ("+people["scientist"]+")");
-$(".hire_scientist").attr('tooltip', 'Knowledge: '+ parseFloat(items["knowledge"]).toFixed(2)+" / "+parseFloat(knowledgecost).toFixed(2))
-$(".hire_scientist").attr('tooltip2', 'Coin: '+ parseFloat(craft["coin"]).toFixed(2)+" / "+parseFloat(coincost).toFixed(2))
+$(".hire_scientist").html("科学家 ("+people["scientist"]+")");
+$(".hire_scientist").attr('tooltip', '知识: '+ parseFloat(items["knowledge"]).toFixed(2)+" / "+parseFloat(knowledgecost).toFixed(2))
+$(".hire_scientist").attr('tooltip2', '金币: '+ parseFloat(craft["coin"]).toFixed(2)+" / "+parseFloat(coincost).toFixed(2))
 $(".hire_scientist").attr('tooltip3', "食物消耗: -0.20/秒");
-$(".hire_scientist").attr('tooltip4', "Coin consumption: -0.01/秒");
-$(".hire_scientist").attr('tooltip5', 'Knowledge production + 0.02/秒');
+$(".hire_scientist").attr('tooltip4', "金币消耗: -0.01/秒");
+$(".hire_scientist").attr('tooltip5', '知识产量 + 0.02/秒');
 
 
 coincost=500;
@@ -3506,14 +3506,14 @@ else
 {
 	$(".hire_marketer").removeClass("unavailable")
 }
-$(".hire_marketer").html("Marketer ("+people["marketer"]+")");
-$(".hire_marketer").attr('tooltip', 'Gold: '+ parseFloat(items["gold"]).toFixed(2)+" / "+parseFloat(goldcost).toFixed(2))
-$(".hire_marketer").attr('tooltip2', 'Coin: '+ parseFloat(craft["coin"]).toFixed(2)+" / "+parseFloat(coincost).toFixed(2))
+$(".hire_marketer").html("商人 ("+people["marketer"]+")");
+$(".hire_marketer").attr('tooltip', '黄金: '+ parseFloat(items["gold"]).toFixed(2)+" / "+parseFloat(goldcost).toFixed(2))
+$(".hire_marketer").attr('tooltip2', '金币: '+ parseFloat(craft["coin"]).toFixed(2)+" / "+parseFloat(coincost).toFixed(2))
 $(".hire_marketer").attr('tooltip3', "食物消耗: -0.20/秒");
-$(".hire_marketer").attr('tooltip4', "Coin consumption: -0.05/秒");
-$(".hire_marketer").attr('tooltip5', 'Bronze production +0.001/秒');
-$(".hire_marketer").attr('tooltip6', 'Brick production +0.0005/秒');
-$(".hire_marketer").attr('tooltip7', 'Glass production +0.0005/秒');
+$(".hire_marketer").attr('tooltip4', "金币消耗: -0.05/秒");
+$(".hire_marketer").attr('tooltip5', '青铜产量 +0.001/秒');
+$(".hire_marketer").attr('tooltip6', '砖产量 +0.0005/秒');
+$(".hire_marketer").attr('tooltip7', '玻璃产量 +0.0005/秒');
 
 
 foodcost=50
@@ -3548,7 +3548,7 @@ $(".hire_swordman").attr('tooltip2', '剑: '+ parseFloat(craft["sword"]).toFixed
 $(".hire_swordman").attr('tooltip3', "食物消耗: -0.40/秒");
 $(".hire_swordman").attr('tooltip4', '士气生产 +0.01/秒');
 $(".hire_swordman").attr('tooltip5', '攻击力: 10 血量: 50');
-$(".hire_swordman").attr('tooltip6', 'Armor: 3');
+$(".hire_swordman").attr('tooltip6', '护甲: 3');
 
 
 swordmancost=1;
@@ -3561,7 +3561,7 @@ else
 {
 	$(".hire_knight").removeClass("unavailable")
 }
-$(".hire_knight").html("Knight ("+people["knight"]+")");
+$(".hire_knight").html("骑士 ("+people["knight"]+")");
 $(".hire_knight").attr('tooltip', '剑士: '+ people["swordman"]+" / "+swordmancost)
 $(".hire_knight").attr('tooltip2', '马: '+ parseFloat(craft["horse"]).toFixed(2)+" / "+parseFloat(horsecost).toFixed(2))
 $(".hire_knight").attr('tooltip3', '盔甲: '+ parseFloat(craft["armor"]).toFixed(2)+" / "+parseFloat(armorcost).toFixed(2))
@@ -3580,9 +3580,9 @@ else
 {
 	$(".hire_medic").removeClass("unavailable")
 }
-$(".hire_medic").html("Medic ("+people["medic"]+")");
+$(".hire_medic").html("医生 ("+people["medic"]+")");
 $(".hire_medic").attr('tooltip', '食物: '+ parseFloat(items["food"]).toFixed(2)+" / "+parseFloat(foodcost).toFixed(2))
-$(".hire_medic").attr('tooltip2', 'Coin: '+ parseFloat(craft["coin"]).toFixed(2)+" / "+parseFloat(coincost).toFixed(2))
+$(".hire_medic").attr('tooltip2', '金币: '+ parseFloat(craft["coin"]).toFixed(2)+" / "+parseFloat(coincost).toFixed(2))
 $(".hire_medic").attr('tooltip3', "食物消耗: -0.40/秒");
 $(".hire_medic").attr('tooltip5', '攻击力: 1 血量: 50 Healing: 10');
 
@@ -3596,14 +3596,14 @@ else
 {
 	$(".hire_berserk").removeClass("unavailable")
 }
-$(".hire_berserk").html("Berserk ("+people["berserk"]+")");
-$(".hire_berserk").attr('tooltip', 'Coin: '+ parseFloat(craft["coin"]).toFixed(2)+" / "+parseFloat(coincost).toFixed(2))
+$(".hire_berserk").html("狂战士 ("+people["berserk"]+")");
+$(".hire_berserk").attr('tooltip', '金币: '+ parseFloat(craft["coin"]).toFixed(2)+" / "+parseFloat(coincost).toFixed(2))
 $(".hire_berserk").attr('tooltip2', '巨剑: '+ parseFloat(craft["greatsword"]).toFixed(2)+" / "+parseFloat(greatswordcost).toFixed(2))
 $(".hire_berserk").attr('tooltip3', "食物消耗: -0.80/秒");
-$(".hire_berserk").attr('tooltip4', "Gold consumption: -0.01/秒");
+$(".hire_berserk").attr('tooltip4', "黄金消耗: -0.01/秒");
 $(".hire_berserk").attr('tooltip5', '士气生产 +0.20/秒');
 $(".hire_berserk").attr('tooltip6', '攻击力: 80 血量: 100');
-$(".hire_berserk").attr('tooltip7', 'Deals double damage the first round');
+$(".hire_berserk").attr('tooltip7', '第一轮会造成双重伤害');
 
 
 suppliescost=100;
@@ -3615,14 +3615,14 @@ else
 {
 	$(".hire_warelephant").removeClass("unavailable")
 }
-$(".hire_warelephant").html("War elephant ("+people["warelephant"]+")");
-$(".hire_warelephant").attr('tooltip', 'Supplies: '+ parseFloat(craft["supplies"]).toFixed(2)+" / "+parseFloat(suppliescost).toFixed(2))
-$(".hire_warelephant").attr('tooltip2', 'Elephant: '+ parseFloat(craft["elephant"]).toFixed(2)+" / "+parseFloat(elephantcost).toFixed(2))
+$(".hire_warelephant").html("战象 ("+people["warelephant"]+")");
+$(".hire_warelephant").attr('tooltip', '供给: '+ parseFloat(craft["supplies"]).toFixed(2)+" / "+parseFloat(suppliescost).toFixed(2))
+$(".hire_warelephant").attr('tooltip2', '大象: '+ parseFloat(craft["elephant"]).toFixed(2)+" / "+parseFloat(elephantcost).toFixed(2))
 $(".hire_warelephant").attr('tooltip3', "食物消耗: -10.00/秒");
-$(".hire_warelephant").attr('tooltip4', "Water consumption: -2.00/秒");
+$(".hire_warelephant").attr('tooltip4', "水消耗: -2.00/秒");
 $(".hire_warelephant").attr('tooltip5', '士气生产 +0.02/秒');
 $(".hire_warelephant").attr('tooltip6', '攻击力: 100 血量: 1200');
-$(".hire_warelephant").attr('tooltip7', '25% chance to disobey and not attack');
+$(".hire_warelephant").attr('tooltip7', '25% 的几率不服从，不进攻');
 
 
 coincost=100;
@@ -3635,14 +3635,14 @@ else
 {
 	$(".hire_musketeer").removeClass("unavailable")
 }
-$(".hire_musketeer").html("Musketeer ("+people["musketeer"]+")");
-$(".hire_musketeer").attr('tooltip', 'Coin: '+ parseFloat(craft["coin"]).toFixed(2)+" / "+parseFloat(coincost).toFixed(2))
-$(".hire_musketeer").attr('tooltip2', 'Armor: '+ parseFloat(craft["armor"]).toFixed(2)+" / "+parseFloat(armorcost).toFixed(2))
-$(".hire_musketeer").attr('tooltip3', 'Musket: '+ parseFloat(craft["musket"]).toFixed(2)+" / "+parseFloat(musketcost).toFixed(2))
+$(".hire_musketeer").html("火枪手 ("+people["musketeer"]+")");
+$(".hire_musketeer").attr('tooltip', '金币: '+ parseFloat(craft["coin"]).toFixed(2)+" / "+parseFloat(coincost).toFixed(2))
+$(".hire_musketeer").attr('tooltip2', '护甲: '+ parseFloat(craft["armor"]).toFixed(2)+" / "+parseFloat(armorcost).toFixed(2))
+$(".hire_musketeer").attr('tooltip3', '滑膛枪: '+ parseFloat(craft["musket"]).toFixed(2)+" / "+parseFloat(musketcost).toFixed(2))
 $(".hire_musketeer").attr('tooltip4', "食物消耗: -0.40/秒");
 $(".hire_musketeer").attr('tooltip5', '士气生产 +0.05/秒');
 $(".hire_musketeer").attr('tooltip6', '攻击力: 200 血量: 400');
-$(".hire_musketeer").attr('tooltip7', 'They need to reload between attacks');
+$(".hire_musketeer").attr('tooltip7', '它们需要在攻击之间重新加载。');
 
 
 platecost=200;
@@ -3654,13 +3654,13 @@ else
 {
 	$(".hire_lighttank").removeClass("unavailable")
 }
-$(".hire_lighttank").html("Light tank ("+people["lighttank"]+")");
-$(".hire_lighttank").attr('tooltip', 'Plate: '+ parseFloat(craft["plate"]).toFixed(2)+" / "+parseFloat(platecost).toFixed(2))
-$(".hire_lighttank").attr('tooltip2', 'Engine: '+ parseFloat(craft["engine"]).toFixed(2)+" / "+parseFloat(enginecost).toFixed(2))
+$(".hire_lighttank").html("轻型坦克 ("+people["lighttank"]+")");
+$(".hire_lighttank").attr('tooltip', '金属板: '+ parseFloat(craft["plate"]).toFixed(2)+" / "+parseFloat(platecost).toFixed(2))
+$(".hire_lighttank").attr('tooltip2', '引擎: '+ parseFloat(craft["engine"]).toFixed(2)+" / "+parseFloat(enginecost).toFixed(2))
 $(".hire_lighttank").attr('tooltip4', '攻击力: 500 血量: 5000');
-$(".hire_lighttank").attr('tooltip5', 'Armor: 50 Crew: 3');
-$(".hire_lighttank").attr('tooltip6', 'Coal per expedition: 50');
-$(".hire_lighttank").attr('tooltip7', 'They need to reload between attacks (4 ammo)');
+$(".hire_lighttank").attr('tooltip5', '护甲: 50 人员: 3');
+$(".hire_lighttank").attr('tooltip6', '每次考察的煤炭: 50');
+$(".hire_lighttank").attr('tooltip7', '他们需要在两次攻击之间重新加载（4个弹药）');
 
 
 
@@ -3678,12 +3678,12 @@ else
 {
 	$(".hire_galley").removeClass("unavailable")
 }
-$(".hire_galley").html("Galley ("+people["galley"]+")");
+$(".hire_galley").html("厨房 ("+people["galley"]+")");
 $(".hire_galley").attr('tooltip', '木头: '+ parseFloat(items["wood"]).toFixed(2)+" / "+parseFloat(woodcost).toFixed(2))
 $(".hire_galley").attr('tooltip2', '木板: '+ parseFloat(craft["plank"]).toFixed(2)+" / "+parseFloat(plankcost).toFixed(2))
-$(".hire_galley").attr('tooltip3', 'Structure: '+ parseFloat(craft["structure"]).toFixed(2)+" / "+parseFloat(structurecost).toFixed(2))
-$(".hire_galley").attr('tooltip5', "Power: 150  Structure: 2,000");
-$(".hire_galley").attr('tooltip6', 'Cargo capacity: 5,000  Crew: 2');
+$(".hire_galley").attr('tooltip3', '结构体: '+ parseFloat(craft["structure"]).toFixed(2)+" / "+parseFloat(structurecost).toFixed(2))
+$(".hire_galley").attr('tooltip5', "动力: 150  结构体: 2,000");
+$(".hire_galley").attr('tooltip6', '货运能力: 5,000  人员: 2');
 
 
 plankcost=1500;
@@ -3695,11 +3695,11 @@ else
 {
 	$(".hire_galleon").removeClass("unavailable")
 }
-$(".hire_galleon").html("Galleon ("+people["galleon"]+")");
+$(".hire_galleon").html("帆船 ("+people["galleon"]+")");
 $(".hire_galleon").attr('tooltip', '木板: '+ parseFloat(craft["plank"]).toFixed(2)+" / "+parseFloat(plankcost).toFixed(2))
-$(".hire_galleon").attr('tooltip2', 'Structure: '+ parseFloat(craft["structure"]).toFixed(2)+" / "+parseFloat(structurecost).toFixed(2))
-$(".hire_galleon").attr('tooltip4', "Power: 500  Structure: 15,000");
-$(".hire_galleon").attr('tooltip5', 'Cargo capacity: 25,000  Crew: 5');
+$(".hire_galleon").attr('tooltip2', '结构体: '+ parseFloat(craft["structure"]).toFixed(2)+" / "+parseFloat(structurecost).toFixed(2))
+$(".hire_galleon").attr('tooltip4', "动力: 500  结构体: 15,000");
+$(".hire_galleon").attr('tooltip5', '货运能力: 25,000  人员: 5');
 
 plankcost=1000;
 steelcost=200;
@@ -3716,9 +3716,9 @@ $(".hire_fireship").attr('tooltip', '木板: '+ parseFloat(craft["plank"]).toFix
 $(".hire_fireship").attr('tooltip2', '钢: '+ parseFloat(items["steel"]).toFixed(2)+" / "+parseFloat(steelcost).toFixed(2))
 $(".hire_fireship").attr('tooltip3', '煤: '+ parseFloat(items["coal"]).toFixed(2)+" / "+parseFloat(coalcost).toFixed(2))
 $(".hire_fireship").attr('tooltip4', "动力: 0  结构: 4,000");
-$(".hire_fireship").attr('tooltip5', 'Cargo capacity: 0  Crew: 3');
-$(".hire_fireship").attr('tooltip6', 'Throws fire that deal 100 damage per round');
-$(".hire_fireship").attr('tooltip7', 'This effect stacks');
+$(".hire_fireship").attr('tooltip5', '货运能力: 0  人员: 3');
+$(".hire_fireship").attr('tooltip6', '投掷火焰，每轮造成100点伤害');
+$(".hire_fireship").attr('tooltip7', '这种效果叠加');
 
 plankcost=1000;
 woodcost=100000;
@@ -3733,11 +3733,11 @@ else
 $(".hire_caravel").html("轻快帆船 ("+people["caravel"]+")");
 $(".hire_caravel").attr('tooltip', '木头: '+ parseFloat(items["wood"]).toFixed(2)+" / "+parseFloat(woodcost).toFixed(2))
 $(".hire_caravel").attr('tooltip2', '木板: '+ parseFloat(craft["plank"]).toFixed(2)+" / "+parseFloat(plankcost).toFixed(2))
-$(".hire_caravel").attr('tooltip3', 'Iron: '+ parseFloat(items["iron"]).toFixed(2)+" / "+parseFloat(ironcost).toFixed(2))
-$(".hire_caravel").attr('tooltip4', "Power: 200  Structure: 6,000");
-$(".hire_caravel").attr('tooltip5', 'Cargo capacity: 10.000  Crew: 3');
-$(".hire_caravel").attr('tooltip6', 'Throws chains that lower enemy attack by 75 per round');
-$(".hire_caravel").attr('tooltip7', 'Reduces trade mission time slightly');
+$(".hire_caravel").attr('tooltip3', '铁: '+ parseFloat(items["iron"]).toFixed(2)+" / "+parseFloat(ironcost).toFixed(2))
+$(".hire_caravel").attr('tooltip4', "动力: 200  结构: 6,000");
+$(".hire_caravel").attr('tooltip5', '货运能力: 10.000  人员: 3');
+$(".hire_caravel").attr('tooltip6', '投掷链条，每轮降低敌方攻击75');
+$(".hire_caravel").attr('tooltip7', '稍微减少交易任务时间');
 
 steelcost=500;
 platecost=500;
@@ -3751,11 +3751,11 @@ else
 }
 $(".hire_cargotrain").html("货运列车 ("+people["cargotrain"]+")");
 $(".hire_cargotrain").attr('tooltip', '钢: '+ parseFloat(items["steel"]).toFixed(2)+" / "+parseFloat(steelcost).toFixed(2))
-$(".hire_cargotrain").attr('tooltip2', 'Plate: '+ parseFloat(craft["plate"]).toFixed(2)+" / "+parseFloat(platecost).toFixed(2))
-$(".hire_cargotrain").attr('tooltip3', 'Engine: '+ parseFloat(craft["engine"]).toFixed(2)+" / "+parseFloat(enginecost).toFixed(2))
-$(".hire_cargotrain").attr('tooltip5', "Coal consumption -0.02/秒");
-$(".hire_cargotrain").attr('tooltip6', 'Crew: 3');
-$(".hire_cargotrain").attr('tooltip7', 'Trade amount: 3 coins/minute');
+$(".hire_cargotrain").attr('tooltip2', '金属板: '+ parseFloat(craft["plate"]).toFixed(2)+" / "+parseFloat(platecost).toFixed(2))
+$(".hire_cargotrain").attr('tooltip3', '动力: '+ parseFloat(craft["engine"]).toFixed(2)+" / "+parseFloat(enginecost).toFixed(2))
+$(".hire_cargotrain").attr('tooltip5', "煤消耗 -0.02/秒");
+$(".hire_cargotrain").attr('tooltip6', '人员: 3');
+$(".hire_cargotrain").attr('tooltip7', '交易金额：3金币/分钟');
 
 
 
@@ -5309,6 +5309,8 @@ function cnname(key){
         name="黄金";
     }else if(temp=="iron"){
         name="铁";
+    }else if(temp=="tin"){
+        name="锡";
     }else if(temp=="morale"){
         name="士气";
     }else if(temp=="food"){
