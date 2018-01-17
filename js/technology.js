@@ -468,7 +468,7 @@ $(".tech_"+techname).attr('tooltip', 'Book: '+ parseFloat(craft["book"]).toFixed
 var effect=""
 var amount=Math.floor(Math.pow(1.05,(j/5))*5);
 switch(k){
-case 0: effect="Morale production +"+amount+"%";break;
+case 0: effect="士气生产 +"+amount+"%";break;
 case 1: effect="Water production +"+amount+"%";break;
 case 2: effect="Food production +"+amount+"%";break;
 case 3: effect="Troops power +"+amount+"%";break;

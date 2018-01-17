@@ -74,7 +74,7 @@ function createheirloom(x){
 		value*=1.5;
 		rarity*=1;
 		bns="morale";
-		bnsd="Morale production: +"
+		bnsd="士气生产: +"
 		power*=0.1;
 	}else if(rnd2<40){
 		name+="Coin ";

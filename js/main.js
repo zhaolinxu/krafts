@@ -542,98 +542,98 @@ function expedition(){
 		if(Math.random()>0.40){
 
 
-			reward="The expedition found:<br>";
+			reward="探险队发现:<br>";
 
 
 			if(Math.random()>0.50){
 				rnd=(Math.random()*power)*25;
-				reward+=parseFloat(rnd).toFixed(2) + " wood<br>";
+				reward+=parseFloat(rnd).toFixed(2) + " 木头<br>";
 				items["wood"]+=rnd;
 			}
 			if(Math.random()>0.70){
 				rnd=(Math.random()*power)*15;
-				reward+=parseFloat(rnd).toFixed(2) + " minerals<br>";
+				reward+=parseFloat(rnd).toFixed(2) + " 矿物<br>";
 				items["mineral"]+=rnd;
 			}
 			if(Math.random()>0.80){
 				rnd=(Math.random()*power)*5;
-				reward+=parseFloat(rnd).toFixed(2) + " food<br>";
+				reward+=parseFloat(rnd).toFixed(2) + " 食物<br>";
 				items["food"]+=rnd;
 			}
 			if(Math.random()>0.85 && technologies["finding"]==1){
 				rnd=(Math.random()*power);
-				reward+=parseFloat(rnd).toFixed(2) + " sand<br>";
+				reward+=parseFloat(rnd).toFixed(2) + " 沙子<br>";
 				items["sand"]+=rnd;
 			}
 			if(Math.random()>0.925){
 				rnd=(Math.random()*power)/5;
-				reward+=parseFloat(rnd).toFixed(2) + " copper<br>";
+				reward+=parseFloat(rnd).toFixed(2) + " 铜<br>";
 				items["copper"]+=rnd;
 			}
 			if(Math.random()>0.925){
 				rnd=(Math.random()*power)/8;
-				reward+=parseFloat(rnd).toFixed(2) + " iron<br>";
+				reward+=parseFloat(rnd).toFixed(2) + " 铁<br>";
 				items["iron"]+=rnd;
 			}
 			if(Math.random()>0.95){
 				rnd=(Math.random()*power)/20;
-				reward+=parseFloat(rnd).toFixed(2) + " gold<br>";
+				reward+=parseFloat(rnd).toFixed(2) + " 黄金<br>";
 				items["gold"]+=rnd;
 			}
 			if(Math.random()>0.95 && technologies["spear"]==1){
 				rnd=Math.round((Math.random()*power)/50)+1;
-				reward+=parseFloat(rnd).toFixed(2) + " spear<br>";
+				reward+=parseFloat(rnd).toFixed(2) + " 矛<br>";
 				craft["spear"]+=rnd;
 			}
 			if(Math.random()>0.95 && technologies["sword"]==1){
 				rnd=Math.round((Math.random()*power)/50)+1;
-				reward+=parseFloat(rnd).toFixed(2) + " sword<br>";
+				reward+=parseFloat(rnd).toFixed(2) + " 剑<br>";
 				craft["sword"]+=rnd;
 			}
 			if(Math.random()>0.95 && technologies["storage"]==1){
 				rnd=Math.round((Math.random()*power)/200)+1;
-				reward+=parseFloat(rnd).toFixed(2) + " block<br>";
+				reward+=parseFloat(rnd).toFixed(2) + " 砌块<br>";
 				craft["block"]+=rnd;
 			}
 			if(Math.random()>0.95 && technologies["coin"]==1){
 				rnd=Math.round((Math.random()*power)/300)+1;
-				reward+=parseFloat(rnd).toFixed(2) + " coin<br>";
+				reward+=parseFloat(rnd).toFixed(2) + " 金币<br>";
 				craft["coin"]+=rnd;
 			}
 			if(Math.random()>0.90 && technologies["finding"]==1){
 				rnd=(Math.random()*power)/50;
-				reward+=parseFloat(rnd).toFixed(2) + " clay<br>";
+				reward+=parseFloat(rnd).toFixed(2) + " 粘土<br>";
 				items["clay"]+=rnd;
 			}
 			if(Math.random()>0.95 && technologies["finding"]==1){
 				rnd=(Math.random()*power)/500;
-				reward+=parseFloat(rnd).toFixed(2) + " brick<br>";
+				reward+=parseFloat(rnd).toFixed(2) + " 砖<br>";
 				craft["brick"]+=rnd;
 			}
 			if(Math.random()>0.90 && technologies["husbandry"]==1){
 				rnd=Math.round((Math.random()*power)/300)+1;
-				reward+=parseFloat(rnd).toFixed(2) + " horse<br>";
+				reward+=parseFloat(rnd).toFixed(2) + " 马<br>";
 				craft["horse"]+=rnd;
 			}
 			if(Math.random()>0.95 && technologies["cache"]==1){
 				rnd=Math.round((Math.random()*power)/300)+1;
-				reward+=parseFloat(rnd).toFixed(2) + " lock<br>";
+				reward+=parseFloat(rnd).toFixed(2) + " 锁<br>";
 				craft["lock"]+=rnd;
 			}
 			if(Math.random()>0.95 && technologies["canteen"]==1){
 				rnd=(Math.random()*power)/500;
-				reward+=parseFloat(rnd).toFixed(2) + " bottle<br>";
+				reward+=parseFloat(rnd).toFixed(2) + " 瓶子<br>";
 				craft["bottle"]+=rnd;
 				maximums["water"]+=rnd;
 			}
 			if(Math.random()>0.90 && technologies["safestorage"]==1){
 				rnd=(Math.random()*power)/500;
-				reward+=parseFloat(rnd).toFixed(2) + " nickel<br>";
+				reward+=parseFloat(rnd).toFixed(2) + " 镍<br>";
 				items["nickel"]+=rnd;
 			}
 			if(Math.random()>0.99 && technologies["cache"]==1){
 				rnd=(Math.random()*power)/500;
-				reward+=parseFloat(rnd).toFixed(2) + " chest<br>";
+				reward+=parseFloat(rnd).toFixed(2) + " 箱子<br>";
 				craft["chest"]+=rnd;
 				maximums["wood"]+=50*(rnd);
 				maximums["mineral"]+=25*(rnd);
@@ -648,18 +648,18 @@ function expedition(){
 			}
 			if(Math.random()>0.95 && technologies["domestication"]==1){
 				rnd=Math.round((Math.random()*power)/800)+1;
-				reward+=parseFloat(rnd).toFixed(2) + " elephant<br>";
+				reward+=parseFloat(rnd).toFixed(2) + " 大象<br>";
 				craft["elephant"]+=rnd;
 			}
 			if(Math.random()>0.999){
-				reward+="<div style='display:inline;color:orange'>You found an heirloom!</div><br>";
+				reward+="<div style='display:inline;color:orange'>你发现一个传家宝!</div><br>";
 				createheirloom();
 				$("#heirlooms").show()
 				unlocked["#heirlooms"]=1;
 				$("#heirloomspane").removeClass("invisible");
 				unlocked["#heirloomspane"]=1;
 			}
-			if(reward!="The expedition found:<br>")
+			if(reward!="探险队发现:<br>")
 
 			{
 				$(".expeditionresult").html(reward)
@@ -2624,7 +2624,7 @@ unattainable=maximums["wood"]*(bonus["storage"]+1)<woodcost
 set_unattainable(".build_lumbermill", unattainable);
 $(".build_lumbermill").html("伐木场 ("+buildings["lumbermill"]+")");
 $(".build_lumbermill").attr('tooltip', '木头: '+ parseFloat(items["wood"]).toFixed(2)+" / "+parseFloat(woodcost).toFixed(2))
-$(".build_lumbermill").attr('tooltip2', "Wood production: +0.20/s");
+$(".build_lumbermill").attr('tooltip2', "Wood production: +0.20/秒");
 
 
 woodcost= Math.pow(1.1,(buildings["mine"]))*2
@@ -2641,7 +2641,7 @@ set_unattainable(".build_mine", unattainable);
 $(".build_mine").html("矿井 ("+buildings["mine"]+")");
 $(".build_mine").attr('tooltip', '木头: '+ parseFloat(items["wood"]).toFixed(2)+" / "+parseFloat(woodcost).toFixed(2) )
 $(".build_mine").attr('tooltip2',"Minerals: "+ parseFloat(items["mineral"]).toFixed(2)+" / "+parseFloat(mineralcost).toFixed(2) )
-$(".build_mine").attr('tooltip3', "Mineral production: +0.20/s");
+$(".build_mine").attr('tooltip3', "Mineral production: +0.20/秒");
 
 
 woodcost= Math.pow(1.6,(buildings["warehouse"]))*20
@@ -2673,7 +2673,7 @@ unattainable=maximums["mineral"]*(bonus["storage"]+1)<mineralcost
 set_unattainable(".build_fountain", unattainable);
 $(".build_fountain").html("喷泉 ("+buildings["fountain"]+")");
 $(".build_fountain").attr('tooltip',"Minerals: "+ parseFloat(items["mineral"]).toFixed(2)+" / "+parseFloat(mineralcost).toFixed(2) )
-$(".build_fountain").attr('tooltip2', "Water production: +0.40/s");
+$(".build_fountain").attr('tooltip2', "Water production: +0.40/秒");
 $(".build_fountain").attr('tooltip3', "Water storage: 5");
 
 woodcost= Math.pow(1.35,(buildings["pasture"]))*10
@@ -2688,8 +2688,8 @@ unattainable=maximums["wood"]*(bonus["storage"]+1)<woodcost
 set_unattainable(".build_pasture", unattainable);
 $(".build_pasture").html("牧场 ("+buildings["pasture"]+")");
 $(".build_pasture").attr('tooltip', '木头: '+ parseFloat(items["wood"]).toFixed(2)+" / "+parseFloat(woodcost).toFixed(2))
-$(".build_pasture").attr('tooltip2', "耗水量: -0.20/s");
-$(".build_pasture").attr('tooltip3', "食品生产: +0.20/s");
+$(".build_pasture").attr('tooltip2', "耗水量: -0.20/秒");
+$(".build_pasture").attr('tooltip3', "食品生产: +0.20/秒");
 
 woodcost= Math.pow(1.8,(buildings["house"]))*20
 mineralcost=Math.pow(1.8, (buildings["house"]))*50
@@ -2762,12 +2762,12 @@ else
 unattainable=maximums["mineral"]*(bonus["storage"]+1)<mineralcost || maximums["copper"]*(bonus["storage"]+1)<coppercost
 set_unattainable(".build_foundry", unattainable);
 $(".build_foundry").html("铸造厂 ("+buildings["foundry"]+")");
-$(".build_foundry").attr('tooltip', 'Mineral: '+ parseFloat(items["mineral"]).toFixed(2)+" / "+parseFloat(mineralcost).toFixed(2))
+$(".build_foundry").attr('tooltip', '矿物: '+ parseFloat(items["mineral"]).toFixed(2)+" / "+parseFloat(mineralcost).toFixed(2))
 $(".build_foundry").attr('tooltip2', '铜: '+ parseFloat(items["copper"]).toFixed(2)+" / "+parseFloat(coppercost).toFixed(2))
-$(".build_foundry").attr('tooltip3', "Mineral consumption: -0.50/s");
-$(".build_foundry").attr('tooltip4', "Iron production: +0.02/s");
+$(".build_foundry").attr('tooltip3', "矿物消耗: -0.50/秒");
+$(".build_foundry").attr('tooltip4', "铁的产量: +0.02/秒");
 if(technologies["bronze"]>0){
-	$(".build_foundry").attr('tooltip5', "Tin production: +0.005/s");
+	$(".build_foundry").attr('tooltip5', "锡产量: +0.005/秒");
 }
 
 
@@ -2780,9 +2780,9 @@ else
 	$(".build_barn").removeClass("unavailable")
 }
 $(".build_barn").html("谷仓 ("+buildings["barn"]+")");
-$(".build_barn").attr('tooltip', 'Block: '+ parseFloat(craft["block"]).toFixed(2)+" / "+parseFloat(blockcost).toFixed(2))
-$(".build_barn").attr('tooltip2', 'Max wood +500');
-$(".build_barn").attr('tooltip3', 'Max mineral +500');
+$(".build_barn").attr('tooltip', '砌块: '+ parseFloat(craft["block"]).toFixed(2)+" / "+parseFloat(blockcost).toFixed(2))
+$(".build_barn").attr('tooltip2', '木头上限 +500');
+$(".build_barn").attr('tooltip3', '矿物上限 +500');
 
 blockcost= Math.pow(1.6,(buildings["casino"]))*3
 goldcost= Math.pow(1.6,(buildings["casino"]))*1
@@ -2796,12 +2796,12 @@ else
 unattainable=maximums["gold"]*(bonus["storage"]+1)<goldcost
 set_unattainable(".build_casino", unattainable);
 $(".build_casino").html("赌场 ("+buildings["casino"]+")");
-$(".build_casino").attr('tooltip', 'Block: '+ parseFloat(craft["block"]).toFixed(2)+" / "+parseFloat(blockcost).toFixed(2))
-$(".build_casino").attr('tooltip2', 'Gold: '+ parseFloat(items["gold"]).toFixed(2)+" / "+parseFloat(goldcost).toFixed(2))
-$(".build_casino").attr('tooltip3', 'Allows betting in the casino');
-$(".build_casino").attr('tooltip4', 'Gold production +0.004/秒');
-$(".build_casino").attr('tooltip5', 'Max bet +0.5');
-$(".build_casino").attr('tooltip6', 'Max gold +1');
+$(".build_casino").attr('tooltip', '砌块: '+ parseFloat(craft["block"]).toFixed(2)+" / "+parseFloat(blockcost).toFixed(2))
+$(".build_casino").attr('tooltip2', '黄金: '+ parseFloat(items["gold"]).toFixed(2)+" / "+parseFloat(goldcost).toFixed(2))
+$(".build_casino").attr('tooltip3', '允许在赌场下注。');
+$(".build_casino").attr('tooltip4', '黄金产量 +0.004/秒');
+$(".build_casino").attr('tooltip5', '下注上限 +0.5');
+$(".build_casino").attr('tooltip6', '黄金上限 +1');
 
 
 woodcost= Math.pow(1.6,(buildings["market"]))*500
@@ -2817,9 +2817,9 @@ unattainable=maximums["wood"]*(bonus["storage"]+1)<woodcost
 set_unattainable(".build_market", unattainable);
 $(".build_market").html("市场 ("+buildings["market"]+")");
 $(".build_market").attr('tooltip', '木头: '+ parseFloat(items["wood"]).toFixed(2)+" / "+parseFloat(woodcost).toFixed(2))
-$(".build_market").attr('tooltip2', 'Coin: '+ parseFloat(craft["coin"]).toFixed(2)+" / "+parseFloat(coincost).toFixed(2))
-$(".build_market").attr('tooltip3', 'Allows trading');
-$(".build_market").attr('tooltip4', '+5% market trade efficiency');
+$(".build_market").attr('tooltip2', '金币: '+ parseFloat(craft["coin"]).toFixed(2)+" / "+parseFloat(coincost).toFixed(2))
+$(".build_market").attr('tooltip3', '允许交易');
+$(".build_market").attr('tooltip4', '+5% 市场交易效率');
 
 blockcost= Math.pow(1.5,(buildings["kiln"]))*15
 mineralcost= Math.pow(1.5,(buildings["kiln"]))*2000
@@ -2834,7 +2834,7 @@ unattainable=maximums["mineral"]*(bonus["storage"]+1)<mineralcost
 set_unattainable(".build_kiln", unattainable);
 $(".build_kiln").html("窑炉 ("+buildings["kiln"]+")");
 $(".build_kiln").attr('tooltip', 'Mineral: '+ parseFloat(items["mineral"]).toFixed(2)+" / "+parseFloat(mineralcost).toFixed(2))
-$(".build_kiln").attr('tooltip2', 'Block: '+ parseFloat(craft["block"]).toFixed(2)+" / "+parseFloat(blockcost).toFixed(2))
+$(".build_kiln").attr('tooltip2', '砌块: '+ parseFloat(craft["block"]).toFixed(2)+" / "+parseFloat(blockcost).toFixed(2))
 $(".build_kiln").attr('tooltip3', '木材消耗: -2.00/秒');
 $(".build_kiln").attr('tooltip4', 'Coal production: +0.01/秒');
 
@@ -2849,7 +2849,7 @@ else
 $(".build_statue").html("雕像 ("+buildings["statue"]+")");
 $(".build_statue").attr('tooltip', '青铜: '+ parseFloat(craft["bronze"]).toFixed(2)+" / "+parseFloat(bronzecost).toFixed(2))
 $(".build_statue").attr('tooltip2', '最大士气 +2');
-$(".build_statue").attr('tooltip3', 'Morale production +5%');
+$(".build_statue").attr('tooltip3', '士气生产 +5%');
 
 blockcost= Math.pow(1.25,(buildings["towncenter"]))*20
 structurecost= Math.pow(1.25,(buildings["towncenter"]))*5
@@ -2862,7 +2862,7 @@ else
 	$(".build_towncenter").removeClass("unavailable")
 }
 $(".build_towncenter").html("镇中心 ("+buildings["towncenter"]+")");
-$(".build_towncenter").attr('tooltip', 'Block: '+ parseFloat(craft["block"]).toFixed(2)+" / "+parseFloat(blockcost).toFixed(2))
+$(".build_towncenter").attr('tooltip', '砌块: '+ parseFloat(craft["block"]).toFixed(2)+" / "+parseFloat(blockcost).toFixed(2))
 $(".build_towncenter").attr('tooltip2', 'Structure: '+ parseFloat(craft["structure"]).toFixed(2)+" / "+parseFloat(structurecost).toFixed(2))
 $(".build_towncenter").attr('tooltip3', 'Coin: '+ parseFloat(craft["coin"]).toFixed(2)+" / "+parseFloat(coincost).toFixed(2))
 $(".build_towncenter").attr('tooltip4', 'Provides big storage space');
@@ -2897,7 +2897,7 @@ else
 unattainable=maximums["gold"]*(bonus["storage"]+1)<goldcost
 set_unattainable(".build_castle", unattainable);
 $(".build_castle").html("城堡 ("+buildings["castle"]+")");
-$(".build_castle").attr('tooltip', 'Block: '+ parseFloat(craft["block"]).toFixed(2)+" / "+parseFloat(blockcost).toFixed(2))
+$(".build_castle").attr('tooltip', '砌块: '+ parseFloat(craft["block"]).toFixed(2)+" / "+parseFloat(blockcost).toFixed(2))
 $(".build_castle").attr('tooltip2', 'Gold: '+ parseFloat(items["gold"]).toFixed(2)+" / "+parseFloat(goldcost).toFixed(2))
 $(".build_castle").attr('tooltip4', 'Unlocks leaders to rule the realm.');
 $(".build_castle").attr('tooltip5', '+1 title per level');
@@ -2964,7 +2964,7 @@ else
 unattainable=maximums["steel"]*(bonus["storage"]+1)<steelcost
 set_unattainable(".build_bank", unattainable);
 $(".build_bank").html("银行 ("+buildings["bank"]+")");
-$(".build_bank").attr('tooltip', 'Block: '+ parseFloat(craft["block"]).toFixed(2)+" / "+parseFloat(blockcost).toFixed(2))
+$(".build_bank").attr('tooltip', '砌块: '+ parseFloat(craft["block"]).toFixed(2)+" / "+parseFloat(blockcost).toFixed(2))
 $(".build_bank").attr('tooltip2', '钢: '+ parseFloat(items["steel"]).toFixed(2)+" / "+parseFloat(steelcost).toFixed(2))
 $(".build_bank").attr('tooltip3', 'Coin: '+ parseFloat(craft["coin"]).toFixed(2)+" / "+parseFloat(coincost).toFixed(2))
 $(".build_bank").attr('tooltip5', 'Gold storage +2');
@@ -3076,7 +3076,7 @@ $(".build_tradeoutpost").html("贸易前哨 ("+buildings["tradeoutpost"]+")");
 $(".build_tradeoutpost").attr('tooltip', 'Frame: '+ parseFloat(craft["frame"]).toFixed(2)+" / "+parseFloat(framecost).toFixed(2))
 $(".build_tradeoutpost").attr('tooltip2', 'Coin: '+ parseFloat(craft["coin"]).toFixed(2)+" / "+parseFloat(coincost).toFixed(2))
 $(".build_tradeoutpost").attr('tooltip3', 'Territory: '+ parseFloat(bonus["territory"]).toFixed(2)+" / "+parseFloat(territorycost).toFixed(2))
-$(".build_tradeoutpost").attr('tooltip5', 'Gold production +0.01/秒');
+$(".build_tradeoutpost").attr('tooltip5', '黄金产量 +0.01/秒');
 $(".build_tradeoutpost").attr('tooltip6', 'Max population +10');
 $(".build_tradeoutpost").attr('tooltip7', 'Grants 1 title per outpost');
 
@@ -3153,7 +3153,7 @@ else
 $(".build_blastfurnace").html("高炉 ("+buildings["blastfurnace"]+")");
 $(".build_blastfurnace").attr('tooltip', 'Brick: '+ parseFloat(craft["brick"]).toFixed(2)+" / "+parseFloat(brickcost).toFixed(2))
 $(".build_blastfurnace").attr('tooltip2', '矿物消耗 per foundryman -0.25/秒');
-$(".build_blastfurnace").attr('tooltip3', 'Iron production per foundryman +0.01/秒');
+$(".build_blastfurnace").attr('tooltip3', '铁的产量 per foundryman +0.01/秒');
 
 
 brickcost=Math.pow(1.2,(buildings["compressor"]))*500
@@ -3197,7 +3197,7 @@ else
 	$(".build_repository").removeClass("unavailable")
 }
 $(".build_repository").html("存储库 ("+buildings["repository"]+")");
-$(".build_repository").attr('tooltip', 'Block: '+ parseFloat(craft["block"]).toFixed(2)+" / "+parseFloat(blockcost).toFixed(2))
+$(".build_repository").attr('tooltip', '砌块: '+ parseFloat(craft["block"]).toFixed(2)+" / "+parseFloat(blockcost).toFixed(2))
 $(".build_repository").attr('tooltip2', 'Glass: '+ parseFloat(craft["glass"]).toFixed(2)+" / "+parseFloat(glasscost).toFixed(2))
 $(".build_repository").attr('tooltip3', 'Bottle: '+ parseFloat(craft["bottle"]).toFixed(2)+" / "+parseFloat(bottlecost).toFixed(2))
 $(".build_repository").attr('tooltip5', 'Provides storage for complex materials');
@@ -3392,8 +3392,8 @@ else
 }
 $(".hire_woodcutter").html("伐木工 ("+people["woodcutter"]+")");
 $(".hire_woodcutter").attr('tooltip', '食物: '+ parseFloat(items["food"]).toFixed(2)+" / "+parseFloat(foodcost).toFixed(2))
-$(".hire_woodcutter").attr('tooltip2', "食物消耗: -0.10/s");
-$(".hire_woodcutter").attr('tooltip3', "Wood production: +1.00/s");
+$(".hire_woodcutter").attr('tooltip2', "食物消耗: -0.10/秒");
+$(".hire_woodcutter").attr('tooltip3', "Wood production: +1.00/秒");
 
 
 foodcost=50;
@@ -3406,11 +3406,11 @@ else
 }
 $(".hire_smelter").html("冶炼厂 ("+people["smelter"]+")");
 $(".hire_smelter").attr('tooltip', '食物: '+ parseFloat(items["food"]).toFixed(2)+" / "+parseFloat(foodcost).toFixed(2))
-$(".hire_smelter").attr('tooltip2', "Mineral consumption: -0.20/s");
-$(".hire_smelter").attr('tooltip3', "食物消耗: -0.10/s");
-$(".hire_smelter").attr('tooltip4', "Copper production: +0.01/s");
+$(".hire_smelter").attr('tooltip2', "矿物消耗: -0.20/秒");
+$(".hire_smelter").attr('tooltip3', "食物消耗: -0.10/秒");
+$(".hire_smelter").attr('tooltip4', "Copper production: +0.01/秒");
 if(technologies["metallurgy"]!=0){
-	$(".hire_smelter").attr('tooltip5', "Gold production: +0.001/s");	
+	$(".hire_smelter").attr('tooltip5', "Gold production: +0.001/秒");	
 }
 
 
@@ -3424,7 +3424,7 @@ else
 }
 $(".hire_farmer").html("农民 ("+people["farmer"]+")");
 $(".hire_farmer").attr('tooltip', '木头: '+ parseFloat(items["wood"]).toFixed(2)+" / "+parseFloat(foodcost).toFixed(2))
-$(".hire_farmer").attr('tooltip2', "Food production: +0.40/s");
+$(".hire_farmer").attr('tooltip2', "Food production: +0.40/秒");
 
 
 foodcost=50
@@ -3439,7 +3439,7 @@ else
 $(".hire_miner").html("矿工 ("+people["miner"]+")");
 $(".hire_miner").attr('tooltip', '食物: '+ parseFloat(items["food"]).toFixed(2)+" / "+parseFloat(foodcost).toFixed(2))
 $(".hire_miner").attr('tooltip2', '镐斧: '+ parseFloat(craft["pickaxe"]).toFixed(2)+" / "+parseFloat(pickaxecost).toFixed(2))
-$(".hire_miner").attr('tooltip3', "食物消耗: -0.10/s");
+$(".hire_miner").attr('tooltip3', "食物消耗: -0.10/秒");
 $(".hire_miner").attr('tooltip4', 'Mineral production +1.00/秒');
 if(technologies["multitasking"]==1){
 $(".hire_miner").attr('tooltip5', 'Clay production +0.05/秒');
@@ -3458,9 +3458,9 @@ else
 $(".hire_foundryman").html("铸造工人 ("+people["foundryman"]+")");
 $(".hire_foundryman").attr('tooltip', '食物: '+ parseFloat(items["food"]).toFixed(2)+" / "+parseFloat(foodcost).toFixed(2))
 $(".hire_foundryman").attr('tooltip2', 'Coin: '+ parseFloat(craft["coin"]).toFixed(2)+" / "+parseFloat(coincost).toFixed(2))
-$(".hire_foundryman").attr('tooltip3', "食物消耗: -0.10/s");
-$(".hire_foundryman").attr('tooltip4', "Iron consumption: -0.05/s");
-$(".hire_foundryman").attr('tooltip5', "Coal consumption: -0.02/s");
+$(".hire_foundryman").attr('tooltip3', "食物消耗: -0.10/秒");
+$(".hire_foundryman").attr('tooltip4', "Iron consumption: -0.05/秒");
+$(".hire_foundryman").attr('tooltip5', "Coal consumption: -0.02/秒");
 $(".hire_foundryman").attr('tooltip6', 'Steel production +0.01/秒');
 
 
@@ -3476,7 +3476,7 @@ else
 $(".hire_sailor").html("水手 ("+people["sailor"]+")");
 $(".hire_sailor").attr('tooltip', '食物: '+ parseFloat(items["food"]).toFixed(2)+" / "+parseFloat(foodcost).toFixed(2))
 $(".hire_sailor").attr('tooltip2', 'Coin: '+ parseFloat(craft["coin"]).toFixed(2)+" / "+parseFloat(coincost).toFixed(2))
-$(".hire_sailor").attr('tooltip3', "食物消耗: -0.40/s");
+$(".hire_sailor").attr('tooltip3', "食物消耗: -0.40/秒");
 $(".hire_sailor").attr('tooltip5', 'People needed for naval missions.');
 
 
@@ -3492,8 +3492,8 @@ else
 $(".hire_scientist").html("Scientist ("+people["scientist"]+")");
 $(".hire_scientist").attr('tooltip', 'Knowledge: '+ parseFloat(items["knowledge"]).toFixed(2)+" / "+parseFloat(knowledgecost).toFixed(2))
 $(".hire_scientist").attr('tooltip2', 'Coin: '+ parseFloat(craft["coin"]).toFixed(2)+" / "+parseFloat(coincost).toFixed(2))
-$(".hire_scientist").attr('tooltip3', "食物消耗: -0.20/s");
-$(".hire_scientist").attr('tooltip4', "Coin consumption: -0.01/s");
+$(".hire_scientist").attr('tooltip3', "食物消耗: -0.20/秒");
+$(".hire_scientist").attr('tooltip4', "Coin consumption: -0.01/秒");
 $(".hire_scientist").attr('tooltip5', 'Knowledge production + 0.02/秒');
 
 
@@ -3509,8 +3509,8 @@ else
 $(".hire_marketer").html("Marketer ("+people["marketer"]+")");
 $(".hire_marketer").attr('tooltip', 'Gold: '+ parseFloat(items["gold"]).toFixed(2)+" / "+parseFloat(goldcost).toFixed(2))
 $(".hire_marketer").attr('tooltip2', 'Coin: '+ parseFloat(craft["coin"]).toFixed(2)+" / "+parseFloat(coincost).toFixed(2))
-$(".hire_marketer").attr('tooltip3', "食物消耗: -0.20/s");
-$(".hire_marketer").attr('tooltip4', "Coin consumption: -0.05/s");
+$(".hire_marketer").attr('tooltip3', "食物消耗: -0.20/秒");
+$(".hire_marketer").attr('tooltip4', "Coin consumption: -0.05/秒");
 $(".hire_marketer").attr('tooltip5', 'Bronze production +0.001/秒');
 $(".hire_marketer").attr('tooltip6', 'Brick production +0.0005/秒');
 $(".hire_marketer").attr('tooltip7', 'Glass production +0.0005/秒');
@@ -3527,9 +3527,9 @@ else
 }
 $(".hire_pikeman").html("枪兵 ("+people["pikeman"]+")");
 $(".hire_pikeman").attr('tooltip', '食物: '+ parseFloat(items["food"]).toFixed(2)+" / "+parseFloat(foodcost).toFixed(2))
-$(".hire_pikeman").attr('tooltip2', 'Spear: '+ parseFloat(craft["spear"]).toFixed(2)+" / "+parseFloat(spearcost).toFixed(2))
-$(".hire_pikeman").attr('tooltip3', "食物消耗: -0.10/s");
-$(".hire_pikeman").attr('tooltip4', 'Morale production +0.02/秒');
+$(".hire_pikeman").attr('tooltip2', '矛: '+ parseFloat(craft["spear"]).toFixed(2)+" / "+parseFloat(spearcost).toFixed(2))
+$(".hire_pikeman").attr('tooltip3', "食物消耗: -0.10/秒");
+$(".hire_pikeman").attr('tooltip4', '士气生产 +0.02/秒');
 $(".hire_pikeman").attr('tooltip5', '攻击力: 5 血量: 30');
 
 
@@ -3544,9 +3544,9 @@ else
 }
 $(".hire_swordman").html("剑士 ("+people["swordman"]+")");
 $(".hire_swordman").attr('tooltip', '食物: '+ parseFloat(items["food"]).toFixed(2)+" / "+parseFloat(foodcost).toFixed(2))
-$(".hire_swordman").attr('tooltip2', 'Sword: '+ parseFloat(craft["sword"]).toFixed(2)+" / "+parseFloat(swordcost).toFixed(2))
-$(".hire_swordman").attr('tooltip3', "食物消耗: -0.40/s");
-$(".hire_swordman").attr('tooltip4', 'Morale production +0.01/秒');
+$(".hire_swordman").attr('tooltip2', '剑: '+ parseFloat(craft["sword"]).toFixed(2)+" / "+parseFloat(swordcost).toFixed(2))
+$(".hire_swordman").attr('tooltip3', "食物消耗: -0.40/秒");
+$(".hire_swordman").attr('tooltip4', '士气生产 +0.01/秒');
 $(".hire_swordman").attr('tooltip5', '攻击力: 10 血量: 50');
 $(".hire_swordman").attr('tooltip6', 'Armor: 3');
 
@@ -3565,7 +3565,7 @@ $(".hire_knight").html("Knight ("+people["knight"]+")");
 $(".hire_knight").attr('tooltip', '剑士: '+ people["swordman"]+" / "+swordmancost)
 $(".hire_knight").attr('tooltip2', '马: '+ parseFloat(craft["horse"]).toFixed(2)+" / "+parseFloat(horsecost).toFixed(2))
 $(".hire_knight").attr('tooltip3', '盔甲: '+ parseFloat(craft["armor"]).toFixed(2)+" / "+parseFloat(armorcost).toFixed(2))
-$(".hire_knight").attr('tooltip4', "食物消耗: -2.00/s");
+$(".hire_knight").attr('tooltip4', "食物消耗: -2.00/秒");
 $(".hire_knight").attr('tooltip5', '士气生产 +0.04/秒');
 $(".hire_knight").attr('tooltip6', '攻击力: 25 血量: 200');
 $(".hire_knight").attr('tooltip7', '盔甲: 10');
@@ -3583,7 +3583,7 @@ else
 $(".hire_medic").html("Medic ("+people["medic"]+")");
 $(".hire_medic").attr('tooltip', '食物: '+ parseFloat(items["food"]).toFixed(2)+" / "+parseFloat(foodcost).toFixed(2))
 $(".hire_medic").attr('tooltip2', 'Coin: '+ parseFloat(craft["coin"]).toFixed(2)+" / "+parseFloat(coincost).toFixed(2))
-$(".hire_medic").attr('tooltip3', "食物消耗: -0.40/s");
+$(".hire_medic").attr('tooltip3', "食物消耗: -0.40/秒");
 $(".hire_medic").attr('tooltip5', '攻击力: 1 血量: 50 Healing: 10');
 
 
@@ -3599,9 +3599,9 @@ else
 $(".hire_berserk").html("Berserk ("+people["berserk"]+")");
 $(".hire_berserk").attr('tooltip', 'Coin: '+ parseFloat(craft["coin"]).toFixed(2)+" / "+parseFloat(coincost).toFixed(2))
 $(".hire_berserk").attr('tooltip2', '巨剑: '+ parseFloat(craft["greatsword"]).toFixed(2)+" / "+parseFloat(greatswordcost).toFixed(2))
-$(".hire_berserk").attr('tooltip3', "食物消耗: -0.80/s");
-$(".hire_berserk").attr('tooltip4', "Gold consumption: -0.01/s");
-$(".hire_berserk").attr('tooltip5', 'Morale production +0.20/秒');
+$(".hire_berserk").attr('tooltip3', "食物消耗: -0.80/秒");
+$(".hire_berserk").attr('tooltip4', "Gold consumption: -0.01/秒");
+$(".hire_berserk").attr('tooltip5', '士气生产 +0.20/秒');
 $(".hire_berserk").attr('tooltip6', '攻击力: 80 血量: 100');
 $(".hire_berserk").attr('tooltip7', 'Deals double damage the first round');
 
@@ -3618,9 +3618,9 @@ else
 $(".hire_warelephant").html("War elephant ("+people["warelephant"]+")");
 $(".hire_warelephant").attr('tooltip', 'Supplies: '+ parseFloat(craft["supplies"]).toFixed(2)+" / "+parseFloat(suppliescost).toFixed(2))
 $(".hire_warelephant").attr('tooltip2', 'Elephant: '+ parseFloat(craft["elephant"]).toFixed(2)+" / "+parseFloat(elephantcost).toFixed(2))
-$(".hire_warelephant").attr('tooltip3', "食物消耗: -10.00/s");
-$(".hire_warelephant").attr('tooltip4', "Water consumption: -2.00/s");
-$(".hire_warelephant").attr('tooltip5', 'Morale production +0.02/秒');
+$(".hire_warelephant").attr('tooltip3', "食物消耗: -10.00/秒");
+$(".hire_warelephant").attr('tooltip4', "Water consumption: -2.00/秒");
+$(".hire_warelephant").attr('tooltip5', '士气生产 +0.02/秒');
 $(".hire_warelephant").attr('tooltip6', '攻击力: 100 血量: 1200');
 $(".hire_warelephant").attr('tooltip7', '25% chance to disobey and not attack');
 
@@ -3639,8 +3639,8 @@ $(".hire_musketeer").html("Musketeer ("+people["musketeer"]+")");
 $(".hire_musketeer").attr('tooltip', 'Coin: '+ parseFloat(craft["coin"]).toFixed(2)+" / "+parseFloat(coincost).toFixed(2))
 $(".hire_musketeer").attr('tooltip2', 'Armor: '+ parseFloat(craft["armor"]).toFixed(2)+" / "+parseFloat(armorcost).toFixed(2))
 $(".hire_musketeer").attr('tooltip3', 'Musket: '+ parseFloat(craft["musket"]).toFixed(2)+" / "+parseFloat(musketcost).toFixed(2))
-$(".hire_musketeer").attr('tooltip4', "食物消耗: -0.40/s");
-$(".hire_musketeer").attr('tooltip5', 'Morale production +0.05/秒');
+$(".hire_musketeer").attr('tooltip4', "食物消耗: -0.40/秒");
+$(".hire_musketeer").attr('tooltip5', '士气生产 +0.05/秒');
 $(".hire_musketeer").attr('tooltip6', '攻击力: 200 血量: 400');
 $(".hire_musketeer").attr('tooltip7', 'They need to reload between attacks');
 
@@ -3753,7 +3753,7 @@ $(".hire_cargotrain").html("货运列车 ("+people["cargotrain"]+")");
 $(".hire_cargotrain").attr('tooltip', '钢: '+ parseFloat(items["steel"]).toFixed(2)+" / "+parseFloat(steelcost).toFixed(2))
 $(".hire_cargotrain").attr('tooltip2', 'Plate: '+ parseFloat(craft["plate"]).toFixed(2)+" / "+parseFloat(platecost).toFixed(2))
 $(".hire_cargotrain").attr('tooltip3', 'Engine: '+ parseFloat(craft["engine"]).toFixed(2)+" / "+parseFloat(enginecost).toFixed(2))
-$(".hire_cargotrain").attr('tooltip5', "Coal consumption -0.02/s");
+$(".hire_cargotrain").attr('tooltip5', "Coal consumption -0.02/秒");
 $(".hire_cargotrain").attr('tooltip6', 'Crew: 3');
 $(".hire_cargotrain").attr('tooltip7', 'Trade amount: 3 coins/minute');
 
@@ -4378,17 +4378,17 @@ if(unattainable){
 } else {
   $(".expedition").removeClass("unattainable"); 
 }
-$(".expedition").html("Expedition");
+$(".expedition").html("探险");
 $(".expedition").attr('tooltip', '食物: '+ parseFloat(items["food"]).toFixed(2)+" / "+parseFloat(foodcost).toFixed(2))
 $(".expedition").attr('tooltip2', '水: '+ parseFloat(items["water"]).toFixed(2)+" / "+parseFloat(watercost).toFixed(2))
-$(".expedition").attr('tooltip3', 'Morale: '+ parseFloat(items["morale"]).toFixed(2)+" / "+parseFloat(moralecost).toFixed(2))
+$(".expedition").attr('tooltip3', '士气: '+ parseFloat(items["morale"]).toFixed(2)+" / "+parseFloat(moralecost).toFixed(2))
 if(coalcost>0){
 $(".expedition").attr('tooltip4', '煤: '+ parseFloat(items["coal"]).toFixed(2)+" / "+parseFloat(coalcost).toFixed(2))
 }
-$(".expedition").attr('tooltip5', "Send your soldiers in a expedition");
-$(".expedition").attr('tooltip6', "Total Attack: "+Math.round(power)+" Total 血量: "+Math.round(hp));
+$(".expedition").attr('tooltip5', "派你的士兵去探险");
+$(".expedition").attr('tooltip6', "总攻击力: "+Math.round(power)+" 总血量: "+Math.round(hp));
 if(healing>0){
-$(".expedition").attr('tooltip7', "Total Healing: "+Math.round(healing));
+$(".expedition").attr('tooltip7', "总愈合: "+Math.round(healing));
 
 }
 tradewood=600*(bonus["trade"]+1);
