@@ -4423,28 +4423,28 @@ else
 	$(".trade_sand").removeClass("unavailable");
 	if ( technologies["commodities"] != 0 ) { $(".trademax_sand").show(); }
 }
-$(".trade_wood").html("Wood: " + Math.round(tradewood));
-$(".trademax_wood").attr('tooltip', 'Coin Cost:');
+$(".trade_wood").html("木头: " + Math.round(tradewood));
+$(".trademax_wood").attr('tooltip', '金币花费:');
 $(".trademax_wood").attr('tooltip2', parseFloat(maxWoodCoin).toFixed(0));
-$(".trademax_wood").attr('tooltip4', 'Wood Purchased:');
+$(".trademax_wood").attr('tooltip4', '购买木头:');
 $(".trademax_wood").attr('tooltip5', parseFloat(maxWoodCoin * tradewood).toFixed(0));
 
-$(".trade_mineral").html("Mineral: " + Math.round(trademineral));
-$(".trademax_mineral").attr('tooltip', 'Coin Cost:');
+$(".trade_mineral").html("矿物: " + Math.round(trademineral));
+$(".trademax_mineral").attr('tooltip', '金币花费:');
 $(".trademax_mineral").attr('tooltip2', parseFloat(maxMineralCoin).toFixed(0));
-$(".trademax_mineral").attr('tooltip4', 'Minerals Purchased:');
+$(".trademax_mineral").attr('tooltip4', '购买矿物:');
 $(".trademax_mineral").attr('tooltip5', parseFloat(maxMineralCoin * trademineral).toFixed(0));
 
-$(".trade_food").html("Food: " + Math.round(tradefood));
-$(".trademax_food").attr('tooltip', 'Coin Cost:');
+$(".trade_food").html("食物: " + Math.round(tradefood));
+$(".trademax_food").attr('tooltip', '金币花费:');
 $(".trademax_food").attr('tooltip2', parseFloat(maxFoodCoin).toFixed(0));
-$(".trademax_food").attr('tooltip4', 'Food Purchased:');
+$(".trademax_food").attr('tooltip4', '购买食物:');
 $(".trademax_food").attr('tooltip5', parseFloat(maxFoodCoin * tradefood).toFixed(0));
 
-$(".trade_sand").html("Sand: " + Math.round(tradesand));
-$(".trademax_sand").attr('tooltip', 'Coin Cost:');
+$(".trade_sand").html("沙子: " + Math.round(tradesand));
+$(".trademax_sand").attr('tooltip', '金币花费:');
 $(".trademax_sand").attr('tooltip2', parseFloat(maxSandCoin).toFixed(0));
-$(".trademax_sand").attr('tooltip4', 'Sand Purchased:');
+$(".trademax_sand").attr('tooltip4', '购买沙子:');
 $(".trademax_sand").attr('tooltip5', parseFloat(maxSandCoin * tradesand).toFixed(0));
 
 }

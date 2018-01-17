@@ -428,16 +428,16 @@ else
 }
 
 $(".tech_"+techname).addClass((autotechnologies[techname] >0 ? "researched" : ""))
-$(".tech_"+techname).html(capitalize(autoeconomy[k])+" mastery "+ Math.ceil(j/5) + (autotechnologies[techname] >0 ? " (res..)" : ""));
-$(".tech_"+techname).attr('tooltip', 'Book: '+ parseFloat(craft["book"]).toFixed(2)+" / "+parseFloat(bookcost).toFixed(2))
+$(".tech_"+techname).html(capitalize(autoeconomy[k])+" 掌握 "+ Math.ceil(j/5) + (autotechnologies[techname] >0 ? " (确实..)" : ""));
+$(".tech_"+techname).attr('tooltip', '书籍: '+ parseFloat(craft["book"]).toFixed(2)+" / "+parseFloat(bookcost).toFixed(2))
 var effect=""
 var amount=Math.floor(Math.pow(1.05,(j/5))*5);
 switch(k){
-case 0: effect="Gold production +"+amount+"%";break;
-case 1: effect="Trade ratios +"+amount+"%";break;
-case 2: effect="Copper production +"+amount+"%";break;
-case 3: effect="Coal production +"+amount+"%";break;
-case 4: effect="Nickel production +"+amount+"%";break;
+case 0: effect="黄金产量 +"+amount+"%";break;
+case 1: effect="交易比率 +"+amount+"%";break;
+case 2: effect="铜产量 +"+amount+"%";break;
+case 3: effect="煤产量 +"+amount+"%";break;
+case 4: effect="镍产量 +"+amount+"%";break;
 }
 $(".tech_"+techname).attr('tooltip3', effect);
 
@@ -463,16 +463,16 @@ else
 }
 
 $(".tech_"+techname).addClass((autotechnologies[techname] >0 ? "researched" : ""))
-$(".tech_"+techname).html(capitalize(automilitary[k])+" mastery "+ Math.ceil(j/5) + (autotechnologies[techname] >0 ? " (res..)" : ""));
-$(".tech_"+techname).attr('tooltip', 'Book: '+ parseFloat(craft["book"]).toFixed(2)+" / "+parseFloat(bookcost).toFixed(2))
+$(".tech_"+techname).html(capitalize(automilitary[k])+" 掌握 "+ Math.ceil(j/5) + (autotechnologies[techname] >0 ? " (确实..)" : ""));
+$(".tech_"+techname).attr('tooltip', '书籍: '+ parseFloat(craft["book"]).toFixed(2)+" / "+parseFloat(bookcost).toFixed(2))
 var effect=""
 var amount=Math.floor(Math.pow(1.05,(j/5))*5);
 switch(k){
 case 0: effect="士气生产 +"+amount+"%";break;
-case 1: effect="Water production +"+amount+"%";break;
-case 2: effect="Food production +"+amount+"%";break;
-case 3: effect="Troops power +"+amount+"%";break;
-case 4: effect="Troops hp +"+amount+"%";break;
+case 1: effect="水产量 +"+amount+"%";break;
+case 2: effect="食物产量 +"+amount+"%";break;
+case 3: effect="军队的力量 +"+amount+"%";break;
+case 4: effect="军队血量 +"+amount+"%";break;
 }
 $(".tech_"+techname).attr('tooltip3', effect);
 
