@@ -320,13 +320,14 @@
 		</div>
 	<div class="casinogame1">
 	<div class="betresult">000</div>
-	Amount to bet:<input value="0.5" type="number" class="betamount"></input><br>
-	<button onclick="bet('low')">Bet low</button> <button onclick="bet('high')">Bet high</button><br>
+	下注金额:<input value="0.5" type="number" class="betamount"></input><br>
+	<button onclick="bet('low')">押小</button> <button onclick="bet('high')">押大</button><br>
         <div class="casinolog"></div>
-        Bet higher or lower than 500
+        下注规则：数字大于500为大，小于500为小。<br>
+        每局赌注最大是：0.5黄金
     </div><br><br>
     <div class="casinogame2">
-    5 coins to play<br>
+    用5金币来玩<br>
     <div class="tablero"></div>
     <button class="playgame2" onclick="playgame2('5')">Play</button> <button class="playx10" onclick="playgame2('50')">Play x10</button> <button class="playx100" onclick="playgame2('500')">Play x100</button>
     <div class='totalwon'></div>

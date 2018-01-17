@@ -13,23 +13,23 @@ function bet(b){
     $(".betresult").html(rnd)
     if(b=="high" && rnd>=500){
         amountwon=amountbet*2;
-        $(".casinolog").html("You win! \n You won "+amountwon+" gold");
+        $(".casinolog").html("你赢了! \n 你得到了 "+amountwon+" 黄金");
         items["gold"]+=amountwon;
     } 
     else if(b=="low" && rnd<500)
     {
         amountwon=amountbet*2;
-        $(".casinolog").html("You win! \n You won "+amountwon+" gold");
+        $(".casinolog").html("你赢了! \n 你得到了 "+amountwon+" 黄金");
         items["gold"]+=amountwon;
         
     }
     else
     {
-        $(".casinolog").html("Sorry you lost, try again!");
+        $(".casinolog").html("对不起，你输了，再试一次!");
     }
 }else
 {
-    $(".casinolog").html("Maximum bet is "+maximbet+" gold")
+    $(".casinolog").html("最大的赌注是 "+maximbet+" 黄金")
 }
     
     

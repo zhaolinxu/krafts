@@ -718,7 +718,7 @@ function expedition(){
 			enemy["rifleman"]=0;
 
 			var enemytipo=Math.random()*power;
-			var stringencuentro="Enemies:<br>"
+			var stringencuentro="敌人:<br>"
 			var rew=0;
 			if(enemytipo<25){
 				enemy["peasant"]=Math.round((Math.random()*power*0.50)+(power*0.14))+1;
@@ -867,7 +867,7 @@ function fight(){
 	healing+=people["medic"]*10
 
 	healing=healing*(bonus["healing"]+1)
-	combatlog="The battle began!<br>"
+	combatlog="战斗开始了!<br>"
 	var ronda=0;
 	for(i=0;i<=50;i++){
 		dmg1=power+(Math.random()*(power/4))-(Math.random()*(power/4));
@@ -876,9 +876,9 @@ function fight(){
 		dmg1+=burst+(Math.random()*(burst/4))-(Math.random()*(burst/4));
 		}
 
-		combatlog+="Round "+(i+1)+"<br>"
+		combatlog+="回合 "+(i+1)+"<br>"
 		if(disobey>0 && Math.random()>0.75){
-		combatlog+="The elephants stubbornly refuse to attack.<br>"
+		combatlog+="大象顽固地拒绝进攻。<br>"
 		}
 		else
 		{
@@ -890,21 +890,21 @@ function fight(){
 		else if(reload>0 && craft["ammo"]>=(people["musketeer"]+(people["lighttank"]*4)))
 		{
 			if(i==0){
-			combatlog+="Your troops load their weapons.<br>"
+			combatlog+="你的部队装载了他们的武器。<br>"
 			}
 			else
 			{
-			combatlog+="Your troops are reloading.<br>"
+			combatlog+="你的军队重新加载。<br>"
 			}
 		ammocost=0;
 		ammocost+=people["musketeer"]
 		ammocost+=people["lighttank"]*4
-		combatlog+="-"+ammocost+" ammo <br>"
+		combatlog+="-"+ammocost+" 弹药 <br>"
 		craft["ammo"]-=ammocost;
 		}
 		else if(reload>0)
 		{
-		combatlog+="Your troops are out of ammo!<br>"
+		combatlog+="你的部队没子弹了!<br>"
 		reload=0;
 		}
 
@@ -915,9 +915,9 @@ function fight(){
 			dmg2-=armor;
 			if(dmg2<0){
 				dmg2=0;
-				combatlog+="Your troop's armor blocks all damage!<br>"
+				combatlog+="你的部队的装甲阻止了所有的伤害!<br>"
 			} else {
-				combatlog+="Your troop's armor blocks "+intToString(armor)+" damage.<br>"
+				combatlog+="你的部队的盔甲格挡了 "+intToString(armor)+" 伤害。<br>"
 			}
 		}
 		if(armor2>0){
@@ -926,32 +926,32 @@ function fight(){
 			
 			if(dmg1<0){
 				dmg1=0;
-				combatlog+="The enemy's armor blocks all damage!<br>"
+				combatlog+="敌人的装甲阻挡了所有的伤害!<br>"
 			} else {
-				combatlog+="The enemy's armor blocks "+intToString(armor2)+" damage.<br>"
+				combatlog+="敌人的盔甲格挡了 "+intToString(armor2)+" 伤害。<br>"
 			}
 		}
 		if(i==0 && burst>0){
-			combatlog+="Your troops smash into the enemy lines and deal "+intToString(dmg1)+" damage!<br>"
+			combatlog+="你的部队冲进了敌人的防线并对敌人造成了 "+intToString(dmg1)+" 伤害!<br>"
 		} else if(dmg1>power*1.1){
-			combatlog+="Your troops find a weak spot and deal "+intToString(dmg1)+" damage!<br>"
+			combatlog+="你的部队发现了一个弱点并对敌人造成了 "+intToString(dmg1)+" 伤害!<br>"
 		} else if(dmg1<power*.9){
-			combatlog+="Your troops hesitate, and only deal "+intToString(dmg1)+" damage.<br>"
+			combatlog+="你的部队犹豫不决，只对敌人造成了 "+intToString(dmg1)+" 伤害.<br>"
 		} else {
-			combatlog+="Your troops deal "+intToString(dmg1)+" damage.<br>"
+			combatlog+="你的部队对敌人造成了 "+intToString(dmg1)+" 伤害.<br>"
 		}
 		if(dmg2>power2*1.1){
-			combatlog+="The enemy finds a weak spot and deals "+intToString(dmg2)+" damage!<br>"
+			combatlog+="The enemy finds a weak spot and deals "+intToString(dmg2)+" 伤害!<br>"
 		} else if(dmg2<power2*.9){
-			combatlog+="The enemy hesitates, and only deals "+intToString(dmg2)+" damage.<br>"
+			combatlog+="The enemy hesitates, and only deals "+intToString(dmg2)+" 伤害.<br>"
 		} else {
-			combatlog+="The enemy deals "+intToString(dmg2)+" damage.<br>"
+			combatlog+="The enemy deals "+intToString(dmg2)+" 伤害.<br>"
 		}		
 
 		if(healing>0){
 			healed=healing+(Math.random()*(healing/8))-(Math.random()*(healing/8));
 			hp+=healed;
-			combatlog+="Your medics restore "+intToString(healed)+" hp.<br>"
+			combatlog+="Your medics restore "+intToString(healed)+" 血量.<br>"
 		}
 
 		hp2-=dmg1;
@@ -5321,6 +5321,8 @@ function cnname(key){
         name="矛";
     }else if(temp=="sword"){
         name="剑";
+    }else if(temp=="coin"){
+        name="金币";
     }else{
         return key;
     }
