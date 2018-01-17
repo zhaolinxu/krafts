@@ -1601,12 +1601,12 @@ var techdata = {
   cavalry: {
     cost: {gold: 25, steel: 25},
     unlock: [".craft_armor", ".hire_knight"],
-    desc: ["Grants swordmen training to become armored knights"]
+    desc: ["授予剑兵训练成为装甲骑士。"]
   },
   leadership: {
     cost: {coin: 25},
     unlock: [".build_castle"],
-    desc: ["Unlocks castles, which can grant titles to powerful leaders"]
+    desc: ["解锁城堡，这可以授予强大领导人的头衔"]
   },
   armament: {
     cost: {spear: 50, sword: 25, armor: 2},
@@ -1615,12 +1615,12 @@ var techdata = {
   gambling: {
     cost: {coin: 50},
     unlock: [".casinogame2"],
-    desc: ["Unlocks a new game at the casino"]
+    desc: ["在赌场解锁一个新游戏。"]
   },
   redeem: {
     cost: {token: 50},
     unlock: [".build_relic"],
-    desc: ["Allows redeeming tokens in the casino."]
+    desc: ["允许在赌场兑换纪念品。"]
   },
   wrapping: {
     cost: {wood: 20000, mineral: 10000},
@@ -1629,28 +1629,28 @@ var techdata = {
   shipyard: {
     cost: {wood: 25000},
     unlock: [".build_shipyard"],
-    desc: ["Unlocks the buildings of shipyards"]
+    desc: ["解锁造船厂的建筑"]
   },
   sailing: {
     cost: {plank: 100},
     unlock: [".build_docks"],
-    desc: ["Allows building docks to store ships"]
+    desc: ["允许建造码头来储存船只。"]
   },
   trade: {
     cost: {food: 7000, gold: 45, coin: 50},
     unlock: [".craft_supplies", ".hire_sailor", ".tradesea"],
-    desc: ["Allows hiring sailors to embark on trade missions"]
+    desc: ["允许雇佣水手从事贸易任务。"]
   },
   cache: {
     cost: {mineral: 22500, steel: 100, plank: 500},
     unlock: [".craft_chest"],
-    desc: ["Allows crafting chests to store resources"]
+    desc: ["允许制作箱子来储存资源"]
   },
   specialization: {
     cost: {knowledge: 500},
     unlock: [".research_economy", ".research_science", ".research_military"],
-    desc: ["Allows you to choose where your research should be headed",
-      "New technologies will be unlocked based on your research"]
+    desc: ["允许你选择你的研究方向。",
+      "根据你的研究，新技术将被解锁"]
   },
   geology: {
     cost: {mineral: 28000, knowledge: 50},
@@ -1670,12 +1670,12 @@ var techdata = {
     cost: {coin: 100, knowledge: 200},
     bonus: {hp: 0.05},
     unlock: [".hire_medic"],
-    desc: ["Allows hiring medics to aid during combat"]
+    desc: ["允许雇佣医务人员在战斗中提供帮助"]
   },
   savings: {
     cost: {coin: 100, knowledge: 200},
     unlock: [".build_bank"],
-    desc: ["Allows building banks to store gold and produce coins."]
+    desc: ["允许建造银行储存黄金并制造硬币。"]
   },
   studies: {
     cost: {knowledge: 400},
@@ -1687,7 +1687,7 @@ var techdata = {
     bonus: {storage: 0.2}
   },
   culturaltrade: {
-    name: "Cultural Trade",
+    name: "文化贸易",
     cost: {bronze: 50, knowledge: 500},
     desc: ["Allows getting knowledge when trading with other civilizations"]
   },
@@ -1701,7 +1701,7 @@ var techdata = {
     desc: ["Allows building crushing mills to produce sand"]
   },
   floatglass: {
-    name: "Float glass",
+    name: "浮筒玻璃",
     cost: {tin: 200, sand: 600, knowledge: 500},
     unlock: [".craft_glass"],
     desc: ["A process to create sheets of glass"]
@@ -1752,12 +1752,12 @@ var techdata = {
     desc: ["Allows you to ride elephants into war"]
   },
   wareconomy: {
-    name: "War economy",
+    name: "战争经济",
     cost: {gold: 60, morale: 50, knowledge: 800},
     bonus: {food: 0.1, gold: 0.1}
   },
   undergroundstorage: {
-    name: "Underground storage",
+    name: "地下储存",
     cost: {chest: 50, knowledge: 500},
     unlock: [".build_bunker"],
     desc: ["Allows building bunkers to store bulk materials"]
@@ -1815,13 +1815,13 @@ var techdata = {
     desc: ["Allows you to find more complex materials in expeditions, like sand, clay or bricks"]
   },
   openmining: {
-    name: "Open mining",
+    name: "露天开采",
     cost: {mineral: 80000, pickaxe: 3000, knowledge: 1200},
     unlock: [".build_quarry"],
     desc: ["Allows you to build quarrys to extract clay from the ground"]
   },
   seacaptain: {
-    name: "Sea captain",
+    name: "船长",
     cost: {plank: 3000, coin: 800, knowledge: 1200},
     unlock: [".leader_foehn"],
     desc: ["Unlocks a new leader"]
@@ -1855,7 +1855,7 @@ var techdata = {
     bonus: {iron: 0.25, steel: 0.25}
   },
   castiron: {
-    name: "Cast iron",
+    name: "铸铁",
     cost: {brick: 50, knowledge: 1200},
     unlock: [".build_blastfurnace"],
     desc: ["New techniques allows you to build blast furnaces"]
@@ -1899,7 +1899,7 @@ var techdata = {
     desc: ["Allows you to build caravels"]
   },
   mineralcoal: {
-    name: "Mineral coal",
+    name: "矿物煤",
     cost: {pickaxe: 10000, coal: 500, knowledge: 1500},
     desc: ["Quarries now also produce coal"]
   },
@@ -1913,7 +1913,7 @@ var techdata = {
     desc: ["Allows you to redeem tokens on the casino for casino shares"]
   },
   safestorage: {
-    name: "Safe storage",
+    name: "安全存储",
     cost: {frame: 100, glass: 300, knowledge: 1600},
     unlock: [".build_repository"],
     desc: ["Allows you to build repositories to store complex materials",
@@ -1926,19 +1926,19 @@ var techdata = {
     desc: ["Allows you to craft alloy plates"]
   },
   steamengine: {
-    name: "Steam engine",
+    name: "蒸汽机",
     cost: {iron: 800, plate: 50, knowledge: 1800},
     unlock: [".craft_engine"],
     desc: ["Allows you to build steam powered engines"]
   },
   armoredcombat: {
-    name: "Armored combat",
+    name: "武装战斗",
     cost: {morale: 130, plate: 500, knowledge: 2000},
     unlock: [".hire_lighttank"],
     desc: ["Allows you to build armored tanks to ride into battle"]
   },
   railtransport: {
-    name: "Rail transport",
+    name: "铁路运输",
     cost: {coin: 10000, plate: 300, knowledge: 2000},
     unlock: [".build_trainstation"],
     desc: ["Trains are a good way to keep your economy moving"]
@@ -1949,7 +1949,7 @@ var techdata = {
     desc: ["Further developments has increased the efficiency of crafting"]
   },
   academicpublishing: {
-    name: "Academic publishing",
+    name: "学术出版",
     cost: {knowledge: 2500},
     unlock: [".craft_book"],
     desc: ["Allows you to store your knowledge in books of scientific papers"]
@@ -1962,7 +1962,7 @@ var techdata = {
   logistics: {
     cost: {coin: 5000, book: 10},
     desc: ["Logistics provide a shortcut to crafting",
-      "Allows you to craft materials directly by clicking its name on the inventory"]
+      "允许你直接通过点击它的名字来制作材料。"]
   },
   electricity: {
     cost: {book: 10, knowledge: 2800},
@@ -1985,13 +1985,13 @@ var techdata = {
     desc: ["Allows the building of universities"]
   },
   cementhydration: {
-    name: "Cement Hydration",
+    name: "水泥水化",
     cost: {clay: 15000, book: 20},
     unlock: [".build_concretemixer"],
     desc: ["Allows you to build concrete mixers"]
   },
   workforce: {
-    name: "Work force",
+    name: "劳动力",
     cost: {concrete: 15000, book: 30},
     unlock: [".build_toolfactory"],
     desc: ["Allows you to build tool factories to provide industrial tools"]
@@ -2003,7 +2003,7 @@ var techdata = {
       "Multiplies by 1000 the maximum bet on double or nothing"]
   },
   wargames: {
-    name: "War games",
+    name: "战争游戏",
     cost: {morale: 250, book: 20},
     unlock: [".craft_strategy"],
     desc: ["Allows you to gather plans from the enemy and use them to make strategies"]
@@ -2014,7 +2014,7 @@ var techdata = {
     desc: ["Allows you to build barracks"]
   },
   industrialrevolution: {
-    name: "Industrial revolution",
+    name: "工业革命",
     cost: {coin: 500000, toolbox: 100, book: 100},
     unlock: [".build_factory"],
     desc: ["Allows you to build mass production factories"]
