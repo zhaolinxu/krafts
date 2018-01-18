@@ -5312,6 +5312,8 @@ function cnname(key){
         name="铁";
     }else if(temp=="tin"){
         name="锡";
+    }else if(temp=="coal"){
+        name="煤";
     }else if(temp=="morale"){
         name="士气";
     }else if(temp=="food"){
