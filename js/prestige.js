@@ -83,17 +83,17 @@ else
 	$(".legacy_"+b).removeClass("unavailable")
 }
 $(".legacy_"+b).html(capitalize(b)+" ("+prestige[b]+")");
-$(".legacy_"+b).attr('tooltip', 'Legacy: '+ prestige["legacy"]+" / "+Math.round(legacycost))
+$(".legacy_"+b).attr('tooltip', '遗物: '+ prestige["legacy"]+" / "+Math.round(legacycost))
 
 switch(b){
-	case "motivation":$(".legacy_"+b).attr('tooltip3', 'Global production +1%');break;
-	case "depot":$(".legacy_"+b).attr('tooltip3', 'All storages +0.5%');break;
-	case "mastery":$(".legacy_"+b).attr('tooltip3', 'Craft efficiency +1.5%');break;
-	case "vengeance":$(".legacy_"+b).attr('tooltip3', 'Military power +5%');break;
-	case "aegis":$(".legacy_"+b).attr('tooltip3', 'Troops hp +5%');break;
-	case "bargain":$(".legacy_"+b).attr('tooltip3', 'Market ratios +5%');break;
-	case "learning":$(".legacy_"+b).attr('tooltip3', 'Knowledge production +5%');break;
-	case "memory":$(".legacy_"+b).attr('tooltip3', 'Legacy obtained +2%');break;
+	case "motivation":$(".legacy_"+b).attr('tooltip3', '全局产量 +1%');break;
+	case "depot":$(".legacy_"+b).attr('tooltip3', '全部存储 +0.5%');break;
+	case "mastery":$(".legacy_"+b).attr('tooltip3', '工艺效率 +1.5%');break;
+	case "vengeance":$(".legacy_"+b).attr('tooltip3', '军事力量 +5%');break;
+	case "aegis":$(".legacy_"+b).attr('tooltip3', '军队血量 +5%');break;
+	case "bargain":$(".legacy_"+b).attr('tooltip3', '贸易比率 +5%');break;
+	case "learning":$(".legacy_"+b).attr('tooltip3', '知识生产 +5%');break;
+	case "memory":$(".legacy_"+b).attr('tooltip3', '遗物获得 +2%');break;
 }
 
 

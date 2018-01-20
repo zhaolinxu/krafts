@@ -401,7 +401,7 @@ switch(k){
 case 0: effect="Knowledge production +"+amount+"%";break;
 case 1: effect="Wood production +"+amount+"%";break;
 case 2: effect="Mineral production +"+amount+"%";break;
-case 3: effect="Craft efficiency +"+amount+"%";break;
+case 3: effect="工艺效率 +"+amount+"%";break;
 case 4: effect="Maximum storage +"+amount+"%";break;
 }
 $(".tech_"+techname).attr('tooltip3', effect);

@@ -158,14 +158,14 @@ function createheirloom(x){
 		value*=10;
 		rarity*=3;
 		bns="trade";
-		bnsd="Trade ratios: +"
+		bnsd="贸易比率: +"
 		power*=0.025;
 	}else if(rnd2<98){
 		name+="Chest ";
 		value*=15;
 		rarity*=4;
 		bns="storage";
-		bnsd="Storage capacity: +"
+		bnsd="存储容量: +"
 		power*=0.01;
 
 	}else if(rnd2<99.5){
@@ -173,7 +173,7 @@ function createheirloom(x){
 		value*=20;
 		rarity*=5;
 		bns="global";
-		bnsd="Global production: +"
+		bnsd="全局产量: +"
 		power*=0.01;
 	}
 	else
@@ -182,7 +182,7 @@ function createheirloom(x){
 		value*=30;
 		rarity*=15;
 		bns="auto";
-		bnsd="Autocraft efficiency: +"
+		bnsd="自动工艺效率: +"
 		power*=0.01;
 	}
 
