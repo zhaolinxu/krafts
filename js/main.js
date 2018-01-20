@@ -2881,8 +2881,8 @@ set_unattainable(".build_workbench", unattainable);
 $(".build_workbench").html("工作台 ("+buildings["workbench"]+")");
 $(".build_workbench").attr('tooltip', '钢: '+ parseFloat(items["steel"]).toFixed(2)+" / "+parseFloat(steelcost).toFixed(2))
 $(".build_workbench").attr('tooltip2', '工艺效率 +8%');
-$(".build_workbench").attr('tooltip4', 'Allows +1 items crafted per workbench');
-$(".build_workbench").attr('tooltip5', 'when active');
+$(".build_workbench").attr('tooltip4', '允许每个工作台制作的物品数量+1');
+$(".build_workbench").attr('tooltip5', '激活时');
 
 
 blockcost= Math.pow(1.6,(buildings["castle"]))*50
@@ -3022,7 +3022,7 @@ else
 $(".build_bunker").html("地堡 ("+buildings["bunker"]+")");
 $(".build_bunker").attr('tooltip', '框架: '+ parseFloat(craft["frame"]).toFixed(2)+" / "+parseFloat(framecost).toFixed(2))
 $(".build_bunker").attr('tooltip2', '镐斧: '+ parseFloat(craft["pickaxe"]).toFixed(2)+" / "+parseFloat(pickaxecost).toFixed(2))
-$(".build_bunker").attr('tooltip4', 'Provides storage for bulk materials.');
+$(".build_bunker").attr('tooltip4', '提供散装物料的储存。');
 
 
 framecost=Math.pow(1.4,(buildings["laboratory"]))*5
@@ -3812,7 +3812,7 @@ if(bonus["science"]>100000) {$(".research_science").attr('tooltip6', 'An additio
 $(".research_military").html("军事 " + intToString(bonus["military"]));
 $(".research_military").attr('tooltip', "The military are a powerful force. There are times when");
 $(".research_military").attr('tooltip2', "only might can make right. Is it now?");
-$(".research_military").attr('tooltip4', "Increases troops attack and hp");
+$(".research_military").attr('tooltip4', "增加部队攻击和生命。");
 if(bonus["military"]>100000) {$(".research_military").attr('tooltip6', 'An additional investment of ' + parseFloat(Math.pow(1.1,Math.round(Math.ceil(Math.log(bonus["military"]/100000)/Math.log(1.1),0)))*100000-bonus["military"]).toFixed(2) + ' knowledge will unlock the next Mastery Technology.');}
 
 
@@ -3833,7 +3833,7 @@ else
 $(".craft_pickaxe").html("镐斧");
 $(".craft_pickaxe").attr('tooltip', '木头: '+ parseFloat(items["wood"]).toFixed(2)+" / "+parseFloat(woodcost).toFixed(2))
 $(".craft_pickaxe").attr('tooltip2', '铜: '+ parseFloat(items["copper"]).toFixed(2)+" / "+parseFloat(coppercost).toFixed(2))
-$(".craft_pickaxe").attr('tooltip4', "Basic copper pickaxe");
+$(".craft_pickaxe").attr('tooltip4', "基本的铜镐");
 
 
 woodcost=50;
@@ -3861,7 +3861,7 @@ else
 }
 $(".craft_sword").html("剑");
 $(".craft_sword").attr('tooltip', 'Iron: '+ parseFloat(items["iron"]).toFixed(2)+" / "+parseFloat(ironcost).toFixed(2))
-$(".craft_sword").attr('tooltip3', "Strong Iron sword");
+$(".craft_sword").attr('tooltip3', "强大的铁剑");
 
 woodcost=100
 mineralcost=200
@@ -4808,7 +4808,7 @@ build_text+=key+": "+buildings[key]+"<br>"
 $(".buildings").html(build_text);*/
 
 $(".betamount").attr("max",maximums["bet"]);
-$(".craftamount").html("Items crafted: "+intToString((1+bonus["craft"]))+"<br>")
+$(".craftamount").html("物品制作: "+intToString((1+bonus["craft"]))+"<br>")
 
 for(key in items){
 
@@ -5240,7 +5240,8 @@ function updateTechTooltip(techname) {
     var isItem = items.hasOwnProperty(costname)
     var amt = (isItem ? items : craft)[costname];
     var costAmt = tech.cost[costname];
-    tooltips.push(toProperCase(costname) + ": " + parseFloat(amt).toFixed(2) + " / " + parseFloat(costAmt).toFixed(2));
+    tooltips.push(cnname(costname) + ": " + parseFloat(amt).toFixed(2) + " / " + parseFloat(costAmt).toFixed(2));
+//      toProperCase(costname)
   }
 
   if (tech.hasOwnProperty('bonus')) {
@@ -5256,7 +5257,7 @@ function updateTechTooltip(techname) {
       } else if (techbonus == 'craft') {
         tooltips.push('+' + (tech.bonus[techbonus])*100 + '% ' + techbonus + ' efficiency');
       } else if (items.hasOwnProperty(techbonus)) {
-        tooltips.push('+' + (tech.bonus[techbonus])*100 + '% ' + techbonus + ' production');
+        tooltips.push('+' + (tech.bonus[techbonus])*100 + '% ' + cnname(techbonus) + ' 生产');
       } else if (techbonus != 'invest') {
         tooltips.push('+' + (tech.bonus[techbonus])*100 + '% ' + techbonus);
       }
@@ -5316,6 +5317,8 @@ function cnname(key){
         name="煤";
     }else if(temp=="morale"){
         name="士气";
+    }else if(temp=="steel"){
+        name="钢";
     }else if(temp=="food"){
         name="食物";
     }else if(temp=="block"){

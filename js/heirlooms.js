@@ -59,7 +59,7 @@ function createheirloom(x){
 		value*=0.4;
 		rarity*=1;
 		bns="wood";
-		bnsd="Wood production: +"
+		bnsd="木头生产: +"
 		power*=0.1;
 	}
 	else if(rnd2<20){
@@ -67,7 +67,7 @@ function createheirloom(x){
 		value*=0.5;
 		rarity*=1;
 		bns="mineral";
-		bnsd="Mineral production: +"
+		bnsd="矿物生产: +"
 		power*=0.1;
 	}else if(rnd2<30){
 		name+="Staff ";
@@ -81,21 +81,21 @@ function createheirloom(x){
 		value*=2;
 		rarity*=1;
 		bns="gold";
-		bnsd="Gold production: +"
+		bnsd="黄金生产: +"
 		power*=0.05;
 	}else if(rnd2<50){
 		name+="Sword ";
 		value*=1;
 		rarity*=1;
 		bns="power";
-		bnsd="Troops power: +"
+		bnsd="部队力量: +"
 		power*=0.03;
 	}else if(rnd2<55){
 		name+="Shield ";
 		value*=1;
 		rarity*=2;
 		bns="armor";
-		bnsd="Troops armor: +"
+		bnsd="军队防御: +"
 		power*=0.05;
 	}else if(rnd2<60){
 		name+="Jar ";
