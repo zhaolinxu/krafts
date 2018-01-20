@@ -4237,9 +4237,9 @@ $(".leader_warmuk").attr('tooltip3', '增加  morale 的产量 5%')
 $(".leader_warmuk").attr('tooltip5', "'If you run away, you will die tired'");
 
 $(".leader_foehn").html("Foehn (等级:" + people["foehn"]+")");
-$(".leader_foehn").attr('tooltip', '增加  ships power by 10%')
-$(".leader_foehn").attr('tooltip2', '增加  ships structure by 10%')
-$(".leader_foehn").attr('tooltip3', '增加  ships cargo capacity by 15%')
+$(".leader_foehn").attr('tooltip', '增加船10%的能源')
+$(".leader_foehn").attr('tooltip2', '增加船舶结构 10%')
+$(".leader_foehn").attr('tooltip3', '增加船舶载货能力 15%')
 $(".leader_foehn").attr('tooltip5', "'Take what you can, give nothing back.'");
 
 $(".leader_alfear").html("Alfear (等级:" + people["alfear"]+")");
@@ -4256,8 +4256,8 @@ else
 	$(".reespec").removeClass("unavailable")
 }
 $(".reespec").html("Respec");
-$(".reespec").attr('tooltip', 'Treasures: '+ parseFloat(prestige["treasure"]).toFixed(2)+" / "+parseFloat(treasurecost).toFixed(2))
-$(".reespec").attr('tooltip3', 'Lets you get your titles back, for a cost..')
+$(".reespec").attr('tooltip', '宝藏: '+ parseFloat(prestige["treasure"]).toFixed(2)+" / "+parseFloat(treasurecost).toFixed(2))
+$(".reespec").attr('tooltip3', '你可以拿回你的头衔，为此付出代价..')
 
 treasurecost = Math.floor(Math.pow(1.5,(bonus["warpcost"]))*5)
 if(prestige["treasure"]<treasurecost){
@@ -4269,7 +4269,7 @@ else
 }
 $(".legacy_warp").html("Rush economy");
 $(".legacy_warp").attr('tooltip', 'Treasures: '+ parseFloat(prestige["treasure"]).toFixed(2)+" / "+parseFloat(treasurecost).toFixed(2))
-$(".legacy_warp").attr('tooltip3', 'Gives you 30 min of production')
+$(".legacy_warp").attr('tooltip3', '给你30分钟的生产。')
 
 diamondcost=1
 if(craft["diamond"]<diamondcost){
@@ -4843,9 +4843,9 @@ $(".progress-bar").prop("aria-valuenow",energyrel)
 $(".progress-bar").css("width",energyrel+"%")
 $(".progress-bar").text(intToString(bonus["energy"])+"KWh")
 var energytext=""
-energytext+="Energy production: <span style='color:green'>+" +intToString(energypro*3.6*4)+" MWh</span><br>"
-energytext+="Energy 消耗<span style='color:red'>-" +intToString(energycon*3.6*4)+" MWh</span><br>"
-energytext+="Energy capacity:" +intToString(maximums["energy"])+" KWh<br>"
+energytext+="能源生产: <span style='color:green'>+" +intToString(energypro*3.6*4)+" MWh</span><br>"
+energytext+="能源消耗<span style='color:red'>-" +intToString(energycon*3.6*4)+" MWh</span><br>"
+energytext+="能源上限:" +intToString(maximums["energy"])+" KWh<br>"
 $(".energylog").html(energytext)
 }
 
@@ -5140,7 +5140,7 @@ traderatio["mineral"]["nickel"]=0.00018;
 		trademission = update(trademission,JSON.parse(Cookies.get('trademission')));
 		if(trademission["time"]>0){
 			tickinterval = setInterval(function(){ ticktrade()}, 1000);
-			$(".docklog").html("Trade Mission<br>Time remaining: "+totime(trademission["time"]));
+			$(".docklog").html("贸易任务<br>剩余时间: "+totime(trademission["time"]));
 			$(".tradego").hide()
 		}
 
@@ -5247,15 +5247,15 @@ function updateTechTooltip(techname) {
   if (tech.hasOwnProperty('bonus')) {
     for (var techbonus in tech.bonus) {
       if (techbonus == 'shipspeed') {
-        tooltips.push('-' + tech.bonus[techbonus] + 's trade mission time');
+        tooltips.push('-' + tech.bonus[techbonus] + ' 的贸易任务时间');
       } else if (techbonus == 'shiphp') {
-        tooltips.push('+' + (tech.bonus[techbonus])*100 + '% ' + 'ship hp');
+        tooltips.push('+' + (tech.bonus[techbonus])*100 + '% ' + '船的生命值');
       } else if (techbonus == 'exprew') {
-        tooltips.push('+' + (tech.bonus[techbonus])*100 + '% more resources found on expeditions');
+        tooltips.push('+' + (tech.bonus[techbonus])*100 + '% 在探险中发现更多的资源。');
       } else if (techbonus == 'storage') {
-        tooltips.push('+' + (tech.bonus[techbonus])*100 + '% ' + techbonus + ' space');
+        tooltips.push('+' + (tech.bonus[techbonus])*100 + '% ' + techbonus + ' 空间');
       } else if (techbonus == 'craft') {
-        tooltips.push('+' + (tech.bonus[techbonus])*100 + '% ' + techbonus + ' efficiency');
+        tooltips.push('+' + (tech.bonus[techbonus])*100 + '% ' + techbonus + ' 效率');
       } else if (items.hasOwnProperty(techbonus)) {
         tooltips.push('+' + (tech.bonus[techbonus])*100 + '% ' + cnname(techbonus) + ' 生产');
       } else if (techbonus != 'invest') {
@@ -5266,7 +5266,7 @@ function updateTechTooltip(techname) {
 
   if (tech.hasOwnProperty('max')) {
     for (var techmax in tech.max) {
-      tooltips.push('+' + (tech.max[techmax]) + ' max ' + techmax);
+      tooltips.push('+' + (tech.max[techmax]) + ' 最大 ' + techmax);
     }
   }
 
@@ -5335,6 +5335,8 @@ function cnname(key){
         name="金币";
     }else if(temp=="structure"){
         name="结构";
+    }else if(temp=="horse"){
+        name="马";
     }else{
         return key;
     }
