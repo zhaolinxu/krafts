@@ -5430,6 +5430,23 @@ function cnTec(techname){
         name="战术";
     }else if(temp=="Studies"){
         name="研究";
+        //下面是遗物
+    }else if(temp=="motivation"){
+        name="意志";
+    }else if(temp=="depot"){
+        name="仓库";
+    }else if(temp=="mastery"){
+        name="征服";
+    }else if(temp=="vengeance"){
+        name="复仇";
+    }else if(temp=="aegis"){
+        name="庇护";
+    }else if(temp=="bargain"){
+        name="议价";
+    }else if(temp=="learning"){
+        name="学习";
+    }else if(temp=="memory"){
+        name="记忆";
     }else{
         return techname;
     }

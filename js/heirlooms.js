@@ -349,7 +349,7 @@ function drawheirlooms(){
 	}
 	else
 	{
-		$("#upgradeheirloom").text("Upgrade")
+		$("#upgradeheirloom").text("升级")
 		$(".heirloomslog2").html(" ")
 	}
 	$(".heirloomlist").html("");
@@ -363,7 +363,7 @@ function drawheirlooms(){
 		suffix3=" +"+heir[6]
 		}
 
-		heirlist+=("<tr><td style='background-color:#272822;font-weight:700;padding:5px; color:"+getRarityColor(heir[2])+"' >"+heir[0]+suffix3+"</div></td><td><button onclick='storeheirlooms("+i+")'>Pick</button></td></tr>")		
+		heirlist+=("<tr><td style='background-color:#272822;font-weight:700;padding:5px; color:"+getRarityColor(heir[2])+"' >"+heir[0]+suffix3+"</div></td><td><button onclick='storeheirlooms("+i+")'>选择</button></td></tr>")		
 		}
 heirlist+="<table>"
 		$(".heirloomlist").html(heirlist)

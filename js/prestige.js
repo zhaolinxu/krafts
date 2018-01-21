@@ -82,7 +82,8 @@ else
 {
 	$(".legacy_"+b).removeClass("unavailable")
 }
-$(".legacy_"+b).html(capitalize(b)+" ("+prestige[b]+")");
+$(".legacy_"+b).html(cnTec(b)+" ("+prestige[b]+")");
+//    capitalize(b)
 $(".legacy_"+b).attr('tooltip', '遗物: '+ prestige["legacy"]+" / "+Math.round(legacycost))
 
 switch(b){
