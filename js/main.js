@@ -1606,7 +1606,7 @@ var techdata = {
   leadership: {
     cost: {coin: 25},
     unlock: [".build_castle"],
-    desc: ["解锁城堡，这可以授予强大领导人的头衔"]
+    desc: ["解锁城堡，这可以授予强大的领袖头衔"]
   },
   armament: {
     cost: {spear: 50, sword: 25, armor: 2},
@@ -1680,7 +1680,7 @@ var techdata = {
   studies: {
     cost: {knowledge: 400},
     unlock: [".hire_scientist"],
-    desc: ["Allows hiring scientists that use funds to gain knowledge."]
+    desc: ["允许雇佣使用资金来获取知识的科学家。"]
   },
   organization: {
     cost: {block: 500, knowledge: 300},
@@ -1689,32 +1689,32 @@ var techdata = {
   culturaltrade: {
     name: "文化贸易",
     cost: {bronze: 50, knowledge: 500},
-    desc: ["Allows getting knowledge when trading with other civilizations"]
+    desc: ["允许在与其他文明交易时获得知识。"]
   },
   intelligence: {
     cost: {steel: 100, knowledge: 500},
-    desc: ["When you win a fight, you get a chance to steal knowledge from the enemy"]
+    desc: ["当你赢得一场战斗，你就有机会从敌人那里窃取知识。"]
   },
   crushing: {
     cost: {pickaxe: 500, knowledge: 500},
     unlock: [".build_crusher"],
-    desc: ["Allows building crushing mills to produce sand"]
+    desc: ["允许建造粉碎工厂生产沙子。"]
   },
   floatglass: {
     name: "浮筒玻璃",
     cost: {tin: 200, sand: 600, knowledge: 500},
     unlock: [".craft_glass"],
-    desc: ["A process to create sheets of glass"]
+    desc: ["一个制造玻璃的过程"]
   },
   canteen: {
     cost: {knowledge: 700},
     max: {water: 20},
-    desc: ["Allows to find or steal water bottles to further increase water storage"]
+    desc: ["允许找到或偷取水瓶，以进一步增加水的储存空间"]
   },
   galleon: {
     cost: {wood: 40000, plank: 1000, knowledge: 800},
     unlock: [".hire_galleon"],
-    desc: ["Galleons are mega ships that can carry loads of resources"]
+    desc: ["帆船是一艘可以承载大量资源的大型船只。"]
   },
   contracts: {
     cost: {coin: 200, knowledge: 500},
@@ -1723,33 +1723,33 @@ var techdata = {
   glassblowing: {
     cost: {glass: 20, knowledge: 500},
     unlock: [".craft_bottle"],
-    desc: ["Allows you to craft bottles to store water and other liquids."]
+    desc: ["允许你制作瓶子来储存水和其他液体。"]
   },
   rampage: {
     cost: {sword: 1000, knowledge: 800},
     unlock: [".craft_greatsword", ".hire_berserk"],
-    desc: ["A thousand swords were used to perfect the technique, allows crafting greatswords,",
-      "and hiring berserks"]
+    desc: ["用一千把剑来完善这一技术，可以制作大剑，",
+      "还有雇佣狂战士"]
   },
   construction: {
     cost: {block: 2000, knowledge: 800},
     unlock: [".build_blockyard"],
-    desc: ["Lets you build blockyards to automate block manufacturing"]
+    desc: ["使您可以构建砌块厂，使砌块制造自动化"]
   },
   architecture: {
     cost: {block: 1500, structure: 500, steel: 150, knowledge: 1000},
     unlock: [".craft_frame"],
-    desc: ["Allows crafting frames, a complex building material."]
+    desc: ["允许制作框架，一种复杂的建筑材料。"]
   },
   chemistry: {
     cost: {bottle: 50, knowledge: 1000},
     unlock: [".build_laboratory"],
-    desc: ["Lets you build laboratories where scientists can work"]
+    desc: ["让你建立一个可以让科学家工作的实验室。"]
   },
   elephantry: {
     cost: {supplies: 100, knowledge: 800},
     unlock: [".hire_warelephant"],
-    desc: ["Allows you to ride elephants into war"]
+    desc: ["允许你骑大象进入战争。"]
   },
   wareconomy: {
     name: "战争经济",
@@ -1760,31 +1760,31 @@ var techdata = {
     name: "地下储存",
     cost: {chest: 50, knowledge: 500},
     unlock: [".build_bunker"],
-    desc: ["Allows building bunkers to store bulk materials"]
+    desc: ["允许建筑掩体储存大量材料。"]
   },
   risk: {
     cost: {token: 200, knowledge: 800},
     unlock: [".playx10", ".playx100"],
-    desc: ["Lets you play x10 and x100 in the casino"]
+    desc: ["让你在赌场玩x10和x100的次数。"]
   },
   investment: {
     cost: {coin: 1000, knowledge: 300},
     bonus: {invest: 2000},
-    desc: ["Gives back 2000 coins at a rate of 0.1/s"]
+    desc: ["以0.1个/秒的速率提供2000个硬币"]
   },
   domestication: {
     cost: {food: 10000, water: 200, knowledge: 800},
-    desc: ["Allows you to take back elephants from expeditions"]
+    desc: ["允许你从探险中带回大象。"]
   },
   expansion: {
     cost: {supplies: 200, plank: 2000},
     unlock: [".expansionsea", ".territory"],
-    desc: ["Allows you to conquest new territory by fleet fights"]
+    desc: ["允许你通过舰队战斗征服新的领地。"]
   },
   investigation: {
     cost: {chemicals: 15, knowledge: 800},
     unlock: [".build_scienceoutpost"],
-    desc: ["Allows you to build scientific outposts in conquered territory"]
+    desc: ["允许你在被征服的领土上建立科学的前哨站。"]
   },
   internationalization: {
     cost: {gold: 70, bronze: 300, knowledge: 800},
@@ -1818,18 +1818,18 @@ var techdata = {
     name: "露天开采",
     cost: {mineral: 80000, pickaxe: 3000, knowledge: 1200},
     unlock: [".build_quarry"],
-    desc: ["Allows you to build quarrys to extract clay from the ground"]
+    desc: ["允许你建造采石场以从地面提取粘土"]
   },
   seacaptain: {
     name: "船长",
     cost: {plank: 3000, coin: 800, knowledge: 1200},
     unlock: [".leader_foehn"],
-    desc: ["Unlocks a new leader"]
+    desc: ["解锁一个新领袖"]
   },
   wisdom: {
     cost: {knowledge: 1300},
     unlock: [".leader_alfear"],
-    desc: ["Unlocks a new leader"]
+    desc: ["解锁一个新领袖"]
   },
   masonry: {
     cost: {frame: 20, block: 3000, knowledge: 1300},
@@ -3168,9 +3168,9 @@ else
 }
 $(".build_compressor").html("压缩机 ("+buildings["compressor"]+")");
 $(".build_compressor").attr('tooltip', '砖: '+ parseFloat(craft["brick"]).toFixed(2)+" / "+parseFloat(brickcost).toFixed(2))
-$(".build_compressor").attr('tooltip2', 'Glass: '+ parseFloat(craft["glass"]).toFixed(2)+" / "+parseFloat(glasscost).toFixed(2))
+$(".build_compressor").attr('tooltip2', '玻璃: '+ parseFloat(craft["glass"]).toFixed(2)+" / "+parseFloat(glasscost).toFixed(2))
 $(".build_compressor").attr('tooltip3', '框架: '+ parseFloat(craft["frame"]).toFixed(2)+" / "+parseFloat(framecost).toFixed(2))
-$(".build_compressor").attr('tooltip5', 'Increases all storages by 5%');
+$(".build_compressor").attr('tooltip5', '增加全部存储上限 5%');
 
 
 tokencost=Math.pow(1.15,(buildings["share"]))*1000
@@ -3182,8 +3182,8 @@ else
 	$(".build_share").removeClass("unavailable")
 }
 $(".build_share").html("股份 ("+buildings["share"]+")");
-$(".build_share").attr('tooltip', 'Token: '+ parseFloat(craft["token"]).toFixed(2)+" / "+parseFloat(tokencost).toFixed(2))
-$(".build_share").attr('tooltip3', 'Token production +0.1/秒');
+$(".build_share").attr('tooltip', '令牌: '+ parseFloat(craft["token"]).toFixed(2)+" / "+parseFloat(tokencost).toFixed(2))
+$(".build_share").attr('tooltip3', '令牌生产 +0.1/秒');
 
 
 blockcost=Math.pow(1.2,(buildings["repository"]))*5000
@@ -3198,9 +3198,9 @@ else
 }
 $(".build_repository").html("存储库 ("+buildings["repository"]+")");
 $(".build_repository").attr('tooltip', '砌块: '+ parseFloat(craft["block"]).toFixed(2)+" / "+parseFloat(blockcost).toFixed(2))
-$(".build_repository").attr('tooltip2', 'Glass: '+ parseFloat(craft["glass"]).toFixed(2)+" / "+parseFloat(glasscost).toFixed(2))
-$(".build_repository").attr('tooltip3', 'Bottle: '+ parseFloat(craft["bottle"]).toFixed(2)+" / "+parseFloat(bottlecost).toFixed(2))
-$(".build_repository").attr('tooltip5', 'Provides storage for complex materials');
+$(".build_repository").attr('tooltip2', '玻璃: '+ parseFloat(craft["glass"]).toFixed(2)+" / "+parseFloat(glasscost).toFixed(2))
+$(".build_repository").attr('tooltip3', '瓶子: '+ parseFloat(craft["bottle"]).toFixed(2)+" / "+parseFloat(bottlecost).toFixed(2))
+$(".build_repository").attr('tooltip5', '为复杂的材料提供存储。');
 
 
 woodcost=Math.pow(1.2,(buildings["trainstation"]))*100000
@@ -3217,9 +3217,9 @@ unattainable=maximums["wood"]*(bonus["storage"]+1)<woodcost || maximums["iron"]*
 set_unattainable(".build_trainstation", unattainable);
 $(".build_trainstation").html("火车站 ("+buildings["trainstation"]+")");
 $(".build_trainstation").attr('tooltip', '木头: '+ parseFloat(items["wood"]).toFixed(2)+" / "+parseFloat(woodcost).toFixed(2))
-$(".build_trainstation").attr('tooltip2', 'Iron: '+ parseFloat(items["iron"]).toFixed(2)+" / "+parseFloat(ironcost).toFixed(2))
+$(".build_trainstation").attr('tooltip2', '铁: '+ parseFloat(items["iron"]).toFixed(2)+" / "+parseFloat(ironcost).toFixed(2))
 $(".build_trainstation").attr('tooltip3', '框架: '+ parseFloat(craft["frame"]).toFixed(2)+" / "+parseFloat(framecost).toFixed(2))
-$(".build_trainstation").attr('tooltip5', '+2 train capacity');
+$(".build_trainstation").attr('tooltip5', '+2 火车容量');
 
 
 brickcost= Math.pow(1.3,(buildings["workshop"]))*500
@@ -4267,8 +4267,8 @@ else
 {
 	$(".legacy_warp").removeClass("unavailable")
 }
-$(".legacy_warp").html("Rush economy");
-$(".legacy_warp").attr('tooltip', 'Treasures: '+ parseFloat(prestige["treasure"]).toFixed(2)+" / "+parseFloat(treasurecost).toFixed(2))
+$(".legacy_warp").html("冲击经济");
+$(".legacy_warp").attr('tooltip', '宝藏: '+ parseFloat(prestige["treasure"]).toFixed(2)+" / "+parseFloat(treasurecost).toFixed(2))
 $(".legacy_warp").attr('tooltip3', '给你30分钟的生产。')
 
 diamondcost=1
@@ -4279,9 +4279,9 @@ else
 {
 	$(".rush1").removeClass("unavailable")
 }
-$(".rush1").html("Boost 1 hour");
-$(".rush1").attr('tooltip', 'Diamond: '+ parseFloat(craft["diamond"]).toFixed(2)+" / "+parseFloat(diamondcost).toFixed(2))
-$(".rush1").attr('tooltip3', 'Doubles your production for 1 hour')
+$(".rush1").html("提升1小时");
+$(".rush1").attr('tooltip', '钻石: '+ parseFloat(craft["diamond"]).toFixed(2)+" / "+parseFloat(diamondcost).toFixed(2))
+$(".rush1").attr('tooltip3', '1小时内把你的产量提升一倍。')
 
 diamondcost=20
 if(craft["diamond"]<diamondcost){
@@ -5266,7 +5266,7 @@ function updateTechTooltip(techname) {
 
   if (tech.hasOwnProperty('max')) {
     for (var techmax in tech.max) {
-      tooltips.push('+' + (tech.max[techmax]) + ' 最大 ' + techmax);
+      tooltips.push('+' + (tech.max[techmax]) + ' 最大 ' + cnname(techmax));
     }
   }
 
@@ -5353,6 +5353,8 @@ function cnname(key){
         name="锁";
     }else if(temp=="diamond"){
         name="钻石";
+    }else if(temp=="chest"){
+        name="箱子";
     }else{
         return key;
     }
@@ -5420,6 +5422,14 @@ function cnTec(techname){
         name="地质学";
     }else if(temp=="Camps"){
         name="营地";
+    }else if(temp=="Funding"){
+        name="融资";
+    }else if(temp=="Savings"){
+        name="储蓄";
+    }else if(temp=="Tactics"){
+        name="战术";
+    }else if(temp=="Studies"){
+        name="研究";
     }else{
         return techname;
     }

@@ -96,13 +96,13 @@ function refreshselect(){
 		for(gives in traderatio){
 		if(items[gives]>0)
 		{
-   		    $(".selgive").append("<option value='"+gives+"'>"+gives+"</option>")
+   		    $(".selgive").append("<option value='"+gives+"'>"+cnname(gives)+"</option>")
 		}
    	}
 }
 function refreshselecttrain(){
 	$(".tradetrainselect").html("")
-	 $(".tradetrainselect").append("<option value='nothing'>Stop trading</option>")
+	 $(".tradetrainselect").append("<option value='nothing'>停止交易</option>")
 		for(gets in tradetrain){
    		    $(".tradetrainselect").append("<option value='"+gets+"'>"+gets+"</option>")
    	}
@@ -111,7 +111,7 @@ function refreshtrain(){
 if($(".tradetrainselect").val()!="nothing")
 {
 trademission["trainbuy"]=$(".tradetrainselect").val()
-$(".tradetrainlog").html("Trading "+tradetrain[trademission["trainbuy"]]+" "+trademission["trainbuy"]+" per coin.")
+$(".tradetrainlog").html("交易 "+tradetrain[trademission["trainbuy"]]+" "+trademission["trainbuy"]+" 每个金币。")
 }
 else
 {
@@ -131,7 +131,7 @@ function refreshtrade(){
 		crew+=people["galleon"]*5
 		crew+=people["caravel"]*3
 		$(".ratiotrade").html(traderatio[$(".selgive").val()][$(".selget").val()])
-		$(".traderecieve").html("You get "+intToString(amountget)+" "+$(".selget").val()+"<br><br>Supplies: "+cost+" Crew: "+crew)
+		$(".traderecieve").html("你得到了 "+intToString(amountget)+" "+$(".selget").val()+"<br><br>供应: "+cost+" 船员: "+crew)
 
 }
 
@@ -181,23 +181,23 @@ function tradeship(){
 	amountget=resourcestrade*traderatio[$(".selgive").val()][$(".selget").val()]
 
 	if($(".selget").val()=="nothing"){
-		$(".docklog").html("No resource selected.")
+		$(".docklog").html("没有选择资源。")
 		return;
 
 	}
 	if(resourcestrade==0){
-		$(".docklog").html("Specify an amount.")
+		$(".docklog").html("指定一个数量。")
 		return;
 
 	}
 	if(resourcestrade<0){
-		$(".docklog").html("You cant send negative amounts, that's madness.")
+		$(".docklog").html("你不能发送负数，这太疯狂了。")
 		return;
 
 	}
 	if(isNaN($(".tradeamount").val()))
 	{
-		$(".docklog").html("Incorrect trade amount.")
+		$(".docklog").html("贸易金额不正确。")
 		return;
 
 	}
@@ -205,13 +205,13 @@ function tradeship(){
 
 		
 	if (resourcestrade>resources){
-		$(".docklog").html("Not enough resources for this trade.")
+		$(".docklog").html("没有足够的资源进行这种交易。")
 		return;
 	}
 
 
 	if (resourcestrade>maxresources || amountget>maxresources){
-		$(".docklog").html("Not enough cargo capacity for this trade route.")
+		$(".docklog").html("这条贸易航线没有足够的货物运输能力。")
 		return;
 	}
 
@@ -220,7 +220,7 @@ function tradeship(){
 	cost+=people["galleon"]*10
 	cost+=people["caravel"]*3
 	if (craft["supplies"]<cost){
-		$(".docklog").html("Not enough supplies for the mission.")
+		$(".docklog").html("没有足够的供应来完成任务。")
 		return;
 	}
 
@@ -230,7 +230,7 @@ function tradeship(){
 	crew+=people["caravel"]*3
 
 	if(people["sailor"]<crew){
-		$(".docklog").html("Not enough  crew to support the fleet.")
+		$(".docklog").html("没有足够的船员来支持舰队。")
 		return;
 	}
 
@@ -244,7 +244,7 @@ function tradeship(){
 
 		tickinterval = setInterval(function(){ ticktrade()}, 1000);
 
-		$(".docklog").html("Trade Mission<br>Time remaining: "+totime(trademission["time"]));
+		$(".docklog").html("贸易任务<br>剩余时间: "+totime(trademission["time"]));
 		$(".tradego").hide()
 
 	}
@@ -254,7 +254,7 @@ function tradeship(){
 function ticktrade(){
 
 trademission["time"]--
-$(".docklog").html("Trade Mission<br>Time remaining: "+totime(trademission["time"]));
+$(".docklog").html("贸易任务<br>剩余时间: "+totime(trademission["time"]));
 
 
 if(trademission["time"]<1){
@@ -263,16 +263,16 @@ items[trademission["resourceget"]]+=trademission["get"];
 
 clearInterval(tickinterval);
 
-var docklog="The fleet is back!<br> You recieve "+intToString(trademission["get"])+" "+trademission["resourceget"]+"<br> "
+var docklog="舰队回来了!<br> 你收到 "+intToString(trademission["get"])+" "+trademission["resourceget"]+"<br> "
 
 $(".tradego").show()
 if(Math.random()>0.90){
-docklog+=("You also get 1 lock<br>");
+docklog+=("你也得到了一个锁。<br>");
 craft["lock"]++
 
 }
 if(Math.random()>0.98){
-				docklog+="<div style='display:inline;color:orange'>The locals gave you a heirloom!</div><br>";
+				docklog+="<div style='display:inline;color:orange'>当地人给了你一个传家宝!</div><br>";
 				createheirloom();
 				$("#heirlooms").show()
 				unlocked["#heirlooms"]=1;
@@ -286,7 +286,7 @@ gainings+=people["galleon"]*50
 gainings+=people["caravel"]*20
 
 gainings=Math.random()*gainings
-docklog+=("While you were there, you also learnt some things about their culture, +"+intToString(gainings)+" knowledge<br>");
+docklog+=("当你在那里的时候，你也学到了一些关于他们的文化的东西， +"+intToString(gainings)+" 知识<br>");
 items["knowledge"]+=gainings;
 
 }

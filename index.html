@@ -48,7 +48,7 @@
 		<li id="militarypane"><a data-toggle="tab" href="#military">军事</a></li>
 		<li id="casinopane"><a data-toggle="tab" href="#casino">赌场</a></li>
 		<li id="marketpane"><a data-toggle="tab" href="#market">市场</a></li>
-		<li id="leaderpane"><a data-toggle="tab" href="#leader">领导人</a></li>
+		<li id="leaderpane"><a data-toggle="tab" href="#leader">领袖</a></li>
 		<li id="dockpane"><a data-toggle="tab" href="#dock">码头</a></li>
 		<li id="heirloomspane"><a data-toggle="tab" href="#heirlooms">传家宝</a></li>
 		<li id="legacypane"><a data-toggle="tab" href="#legacy">遗产</a></li>
@@ -329,7 +329,7 @@
     <div class="casinogame2">
     用5金币来玩<br>
     <div class="tablero"></div>
-    <button class="playgame2" onclick="playgame2('5')">Play</button> <button class="playx10" onclick="playgame2('50')">Play x10</button> <button class="playx100" onclick="playgame2('500')">Play x100</button>
+    <button class="playgame2" onclick="playgame2('5')">玩一次</button> <button class="playx10" onclick="playgame2('50')">玩 x10</button> <button class="playx100" onclick="playgame2('500')">玩 x100</button>
     <div class='totalwon'></div>
     </div>
 
@@ -375,41 +375,41 @@
 
 	</div>
 	<div id="dock" class="dock tab-pane fade">
-	<div class="block hire_galley"></div><button class="fire salvage_galley" onclick='salvage("galley")'>Salvage 1</button><br>
-	<div class="block hire_galleon"></div><button class="fire salvage_galleon" onclick='salvage("galleon")'>Salvage 1</button><br>
-	<div class="block hire_fireship"></div><button class="fire salvage_fireship" onclick='salvage("fireship")'>Salvage 1</button><br>
-	<div class="block hire_caravel"></div><button class="fire salvage_caravel" onclick='salvage("caravel")'>Salvage 1</button><br><br>
+	<div class="block hire_galley"></div><button class="fire salvage_galley" onclick='salvage("galley")'>营救 1</button><br>
+	<div class="block hire_galleon"></div><button class="fire salvage_galleon" onclick='salvage("galleon")'>营救 1</button><br>
+	<div class="block hire_fireship"></div><button class="fire salvage_fireship" onclick='salvage("fireship")'>营救 1</button><br>
+	<div class="block hire_caravel"></div><button class="fire salvage_caravel" onclick='salvage("caravel")'>营救 1</button><br><br>
 	<div class="tradesea">
 	贸易使命<br>
 	数量: <input class="tradeamount" type="number" value="1"></input><button class="maxtrade" onclick="maxtrade()">最大</button><br><br>
-	发送 <select class="selgive"></select><div class="ratiotrade"></div><select class="selget"><option value='nothing'>----</option></select> Receive<br><br>
+	发送 <select class="selgive"></select><div class="ratiotrade"></div><select class="selget"><option value='nothing'>----</option></select> 收到<br><br>
 	<div class="traderecieve"></div><br>
-	<button class="tradego" onclick="tradeship()">Trade</button>
+	<button class="tradego" onclick="tradeship()">贸易</button>
 
 
 
 
 	</div><br><br>
 	<div class="expansionsea">
-	Expansion mission<br>
-	If you lose, all your ships will be destroyed.<br><br>
+	扩展任务<br>
+	如果你输了，你所有的船都将被摧毁。<br><br>
 	<div class="expansionlog">
 		
 
 	</div><br><br>
-	<button class="expand" onclick="expand()">Fight</button>
+	<button class="expand" onclick="expand()">战斗</button>
 	</div><br><br>
 	<div class="docklog">
 
 	</div>
-	<button type="button" class="resetbutton" data-toggle="modal" data-target="#myModal">Explore new continent</button>
+	<button type="button" class="resetbutton" data-toggle="modal" data-target="#myModal">探索新的大陆</button>
 	</div>
 
 
 
 		<div id="heirlooms" class="heirlooms tab-pane fade">
 		<button id="sellheirloombutton" onclick="sellheirloom()">出售</button>
-		<button onclick="swapheirlooms()">Pick</button><br><br>
+		<button onclick="swapheirlooms()">选择</button><br><br>
 		<div class="heirloomslog"></div><br><br>
 		Your empire heirloom:<br>
 		<div class="heirloomslog2"></div><br>
