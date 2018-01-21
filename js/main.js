@@ -4291,9 +4291,9 @@ else
 {
 	$(".rush24").removeClass("unavailable")
 }
-$(".rush24").html("Boost 1 day");
-$(".rush24").attr('tooltip', 'Diamond: '+ parseFloat(craft["diamond"]).toFixed(2)+" / "+parseFloat(diamondcost).toFixed(2))
-$(".rush24").attr('tooltip3', 'Doubles your production for 1 day')
+$(".rush24").html("提升1天");
+$(".rush24").attr('tooltip', '钻石: '+ parseFloat(craft["diamond"]).toFixed(2)+" / "+parseFloat(diamondcost).toFixed(2))
+$(".rush24").attr('tooltip3', '1天内把你的产量提升一倍。')
 
 diamondcost=100
 if(craft["diamond"]<diamondcost){
@@ -4303,14 +4303,14 @@ else
 {
 	$(".rush7").removeClass("unavailable")
 }
-$(".rush7").html("Boost 1 week");
-$(".rush7").attr('tooltip', 'Diamond: '+ parseFloat(craft["diamond"]).toFixed(2)+" / "+parseFloat(diamondcost).toFixed(2))
-$(".rush7").attr('tooltip3', 'Doubles your production for 1 week')
+$(".rush7").html("提升1周");
+$(".rush7").attr('tooltip', '钻石: '+ parseFloat(craft["diamond"]).toFixed(2)+" / "+parseFloat(diamondcost).toFixed(2))
+$(".rush7").attr('tooltip3', '1周内把你的产量提升一倍。')
 
-$(".currentrush").html("Remaining boost "+totimehour(bonus["rush"]))
+$(".currentrush").html("剩余的提升 "+totimehour(bonus["rush"]))
 //Others
 
-$(".shardsnum").html("Shards: "+prestige["shards"]);
+$(".shardsnum").html("碎片: "+prestige["shards"]);
 
 if(prestige["number"]>0){
 	tooltipsprestige("motivation");
@@ -4324,8 +4324,8 @@ if(prestige["number"]>0){
   
   legacyadd = getlegacyadd();
   legacyaddstr = legacyadd > 0 ? " (" + legacyadd + ")" : "";
-	$(".legacynum").html("Legacy: "+prestige["legacy"]+legacyaddstr)
-	$(".treasurenum").html("Treasures: "+prestige["treasure"])
+	$(".legacynum").html("遗物: "+prestige["legacy"]+legacyaddstr)
+	$(".treasurenum").html("宝藏: "+prestige["treasure"])
 }
 
 
@@ -5341,6 +5341,18 @@ function cnname(key){
         name="存储";
     }else if(temp=="horse"){
         name="马";
+    }else if(temp=="knowledge"){
+        name="知识";
+    }else if(temp=="token"){
+        name="令牌";
+    }else if(temp=="plank"){
+        name="板材";
+    }else if(temp=="supplies"){
+        name="供给";
+    }else if(temp=="lock"){
+        name="锁";
+    }else if(temp=="diamond"){
+        name="钻石";
     }else{
         return key;
     }

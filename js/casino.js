@@ -195,24 +195,24 @@ if(opened>=81){
     craft["diamond"]+=1;
     diamonize();
 }
-$(".totalwon").html("Total Won: "+intToString(totalwon));
+$(".totalwon").html("累计胜利: "+intToString(totalwon));
 $(".playgame2").html(remaining)
 if(remaining<1){
 if(totalwon>0){
-    $(".tablero").html("<div class='lose'>You Won "+intToString(totalwon)+" tokens</div>")
+    $(".tablero").html("<div class='lose'>你胜利获得了 "+intToString(totalwon)+" 令牌</div>")
     craft["token"]+=totalwon;
     totalwon=0;
 }
 else
 {
-    $(".tablero").html("<div class='lose'>Better luck next time!</div>")
+    $(".tablero").html("<div class='lose'>祝你下次好运!</div>")
 
 }
     craft["lock"]+=locks*coinsplayed*0.2;
     locks=0;
     coinsplayed=0;
     $(".totalwon").html("")
-    $(".playgame2").html("Play")
+    $(".playgame2").html("开始玩")
 }
 
 }
@@ -411,10 +411,10 @@ switch(slotline){
 
 craft["coin"]+=prize*slotbet;
 if(prize>0){
-    $(".slotlog").html("Congratulations! You won "+(prize*slotbet)+" coins.")
+    $(".slotlog").html("恭喜! 你赢取了 "+(prize*slotbet)+" 金币。")
 }
 else
 {
-     $(".slotlog").html("Try again!")
+     $(".slotlog").html("再试一次!")
 }
 }

@@ -335,17 +335,17 @@ function drawheirlooms(){
 	suffix2=" +"+heirlooms[13]
 	}
 	if(heirlooms[1]>0){
-		$(".heirloomslog").html("<div style='background-color:#272822;font-weight:700;padding:5px; color:"+getRarityColor(heirlooms[2])+"' >"+heirlooms[0]+suffix+"</div> Value: "+heirlooms[1]+" Rarity: "+heirlooms[2]+"<br>"+heirlooms[11]+(heirlooms[3]*100).toFixed(2)+"%")
-		$("#sellheirloombutton").text("Sell ("+heirlooms[1]+" shards)")
+		$(".heirloomslog").html("<div style='background-color:#272822;font-weight:700;padding:5px; color:"+getRarityColor(heirlooms[2])+"' >"+heirlooms[0]+suffix+"</div> 价值: "+heirlooms[1]+" 稀有度: "+heirlooms[2]+"<br>"+heirlooms[11]+(heirlooms[3]*100).toFixed(2)+"%")
+		$("#sellheirloombutton").text("出售 ("+heirlooms[1]+" 碎片)")
 	}
 	else
 	{
 		$(".heirloomslog").html(" ");
-		$("#sellheirloombutton").text("Sell")
+		$("#sellheirloombutton").text("出售")
 	}
 	if(heirlooms[5]>0){
-		$(".heirloomslog2").html("<div style='background-color:#272822;font-weight:700;padding:5px; color:"+getRarityColor(heirlooms[6])+"' >"+heirlooms[4]+suffix2+"</div> Value: "+heirlooms[5]+" Rarity: "+heirlooms[6]+"<br>"+heirlooms[9]+(heirlooms[7]*100).toFixed(2)+"%")
-		$("#upgradeheirloom").text("Upgrade ("+Math.ceil(Math.pow(1.5,(heirlooms[13]))*5)+" shards)")
+		$(".heirloomslog2").html("<div style='background-color:#272822;font-weight:700;padding:5px; color:"+getRarityColor(heirlooms[6])+"' >"+heirlooms[4]+suffix2+"</div> 价值: "+heirlooms[5]+" 稀有度: "+heirlooms[6]+"<br>"+heirlooms[9]+(heirlooms[7]*100).toFixed(2)+"%")
+		$("#upgradeheirloom").text("升级 ("+Math.ceil(Math.pow(1.5,(heirlooms[13]))*5)+" 碎片)")
 	}
 	else
 	{
