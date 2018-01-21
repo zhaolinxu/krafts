@@ -361,7 +361,7 @@
 	<div class="currentrush"></div>
 	</div>
 	<div id="leader" class="leader tab-pane fade">
-	Cost 1 title per lv<br>
+	每级消耗1个头衔<br>
 	<div class="block leader_sucellus"></div><br>
 	<div class="block leader_eredal"></div><br>
 	<div class="block leader_khrysos"></div><br>
@@ -1151,23 +1151,23 @@
 	});
 	// Same again for hires. 
 	$(".block[class*='hire_']").click(function() {
-		console.log('hiring worker');
+//		console.log('hiring worker');
 		var classes = $(this).attr("class").split(" ");
 		classes.forEach(function(c) {
-			console.log(c);
+//			console.log(c);
 			if (c.substring(0, 5) == "hire_") {
 				var thing = c.replace("hire_", "");
-				console.log(thing);
+//				console.log(thing);
 				hire(thing);
 			}
 		})
 	});
 	// And also for research. 
 	$(".block[class*='tech_']").click(function() {
-		console.log('researching');
+//		console.log('researching');
 		var classes = $(this).attr("class").split(" ");
 		classes.forEach(function(c) {
-			console.log(c);
+//			console.log(c);
 			if (c.substring(0, 5) == "tech_") {
 				var thing = c.replace("tech_", "");
 				research(thing);
@@ -1176,7 +1176,7 @@
 	});
 	// And finally for crafting
 	$(".block[class*='craft_']").click(function() {
-		console.log('crafting');
+//		console.log('crafting');
 		var classes = $(this).attr("class").split(" ");
 		classes.forEach(function(c) {
 			if (c.substring(0, 6) == "craft_") {

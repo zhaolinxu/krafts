@@ -111,11 +111,11 @@ if(crew>people["sailor"]){
 		combatlog+="Round "+(i+1)+"<br>"
 
 
-		combatlog+="Your ships deals "+intToString(dmg1)+" damage<br>"
-		combatlog+="The enemy ships deal "+intToString(dmg2)+" damage<br>"
+		combatlog+="你的船只受到了 "+intToString(dmg1)+" 伤害<br>"
+		combatlog+="敌方船只受到了"+intToString(dmg2)+" 伤害<br>"
 		if(chains>0 && power2>0){
 			totalchains=chains+(Math.random()*(chains/3))-(Math.random()*(chains/3));
-			combatlog+="You incapacitate enemy ships for -"+intToString(totalchains)+" power<br>"
+			combatlog+="你使敌人的船失去了 -"+intToString(totalchains)+" 能力<br>"
 			power2-=totalchains
 			if(power2<0){
 				power2=0;
@@ -123,13 +123,13 @@ if(crew>people["sailor"]){
 		}
 		if(burn>0){
 			totalburn+=burn+(Math.random()*(burn/3))-(Math.random()*(burn/3));
-			combatlog+="The enemy ships burn for "+intToString(totalburn)+" damage<br>"		
+			combatlog+="敌舰被燃烧，造成了 "+intToString(totalburn)+" 伤害<br>"		
 		}
 		hp2-=(dmg1+totalburn);
 		hp-=dmg2;
-		combatlog+="Your fleet structure: "+Math.round(hp) +" / Enemy fleet structure: "+Math.round(hp2)+"<br><br>";
+		combatlog+="你的舰队结构: "+Math.round(hp) +" / 敌人舰队结构: "+Math.round(hp2)+"<br><br>";
 		if(hp<0){
-			combatlog+="You lose the combat.<br> All your ships are destroyed.<br> All your sailors died<br>"
+			combatlog+="你输掉了战斗。<br> 所有船舶全部损坏。<br> 你的水手都死了<br>"
 
 			rewardplank=0;
 			rewardstructure=0;

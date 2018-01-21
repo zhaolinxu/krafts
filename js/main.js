@@ -2900,7 +2900,7 @@ $(".build_castle").html("城堡 ("+buildings["castle"]+")");
 $(".build_castle").attr('tooltip', '砌块: '+ parseFloat(craft["block"]).toFixed(2)+" / "+parseFloat(blockcost).toFixed(2))
 $(".build_castle").attr('tooltip2', '黄金: '+ parseFloat(items["gold"]).toFixed(2)+" / "+parseFloat(goldcost).toFixed(2))
 $(".build_castle").attr('tooltip4', '解锁领导者以统治王国。');
-$(".build_castle").attr('tooltip5', '+1 称号等级');
+$(".build_castle").attr('tooltip5', '+1 头衔等级');
 
 
 tokencost= Math.pow(1.2,(buildings["relic"]))*20
@@ -3393,7 +3393,7 @@ else
 $(".hire_woodcutter").html("伐木工 ("+people["woodcutter"]+")");
 $(".hire_woodcutter").attr('tooltip', '食物: '+ parseFloat(items["food"]).toFixed(2)+" / "+parseFloat(foodcost).toFixed(2))
 $(".hire_woodcutter").attr('tooltip2', "食物消耗: -0.10/秒");
-$(".hire_woodcutter").attr('tooltip3', "Wood production: +1.00/秒");
+$(".hire_woodcutter").attr('tooltip3', "木头生产: +1.00/秒");
 
 
 foodcost=50;
@@ -3793,7 +3793,7 @@ for (b in techdata) {
   var techname = tech.hasOwnProperty('name') ? tech.name : toProperCase(b);
   var suffix = (technologies[b] > 0 ? (techname.length < 14 ? ' (已研究)' : ' (确实...)')  : '');
   $(".tech_"+b).html(cnTec(techname) + suffix);
-    console.log(cnTec(techname))
+//    console.log(cnTec(techname))
 
 }
 
@@ -3848,7 +3848,7 @@ else
 $(".craft_spear").html("矛");
 $(".craft_spear").attr('tooltip', '木头: '+ parseFloat(items["wood"]).toFixed(2)+" / "+parseFloat(woodcost).toFixed(2))
 $(".craft_spear").attr('tooltip2', '铜: '+ parseFloat(items["copper"]).toFixed(2)+" / "+parseFloat(coppercost).toFixed(2))
-$(".craft_spear").attr('tooltip4', "Spear made of wood and copper");
+$(".craft_spear").attr('tooltip4', "矛是由木头和铜制作的");
 
 
 ironcost=10
@@ -3860,7 +3860,7 @@ else
 	$(".craft_sword").removeClass("unavailable")
 }
 $(".craft_sword").html("剑");
-$(".craft_sword").attr('tooltip', 'Iron: '+ parseFloat(items["iron"]).toFixed(2)+" / "+parseFloat(ironcost).toFixed(2))
+$(".craft_sword").attr('tooltip', '铁: '+ parseFloat(items["iron"]).toFixed(2)+" / "+parseFloat(ironcost).toFixed(2))
 $(".craft_sword").attr('tooltip3', "强大的铁剑");
 
 woodcost=100
@@ -3930,7 +3930,7 @@ else
 {
 	$(".craft_armor").removeClass("unavailable")
 }
-$(".craft_armor").html("护甲");
+$(".craft_armor").html("盔甲");
 $(".craft_armor").attr('tooltip', '钢: '+ parseFloat(items["steel"]).toFixed(2)+" / "+parseFloat(steelcost).toFixed(2))
 $(".craft_armor").attr('tooltip2', '青铜: '+ parseFloat(craft["bronze"]).toFixed(2)+" / "+parseFloat(bronzecost).toFixed(2))
 $(".craft_armor").attr('tooltip4', "精致的盔甲");
@@ -4201,51 +4201,51 @@ else
 
 }
 
-$(".leader_sucellus").html("Sucellus (等级:" + people["sucellus"]+")");
+$(".leader_sucellus").html("吸管 (等级:" + people["sucellus"]+")");
 $(".leader_sucellus").attr('tooltip', '增加  木头 的产量 20%')
 $(".leader_sucellus").attr('tooltip2', '增加  水 的产量 20%')
 $(".leader_sucellus").attr('tooltip3', '增加  食物 的产量 20%')
 $(".leader_sucellus").attr('tooltip4', '增加  水的存储上限 +5')
 $(".leader_sucellus").attr('tooltip6', "“自然不是可选的”");
 
-$(".leader_eredal").html("Eredal (等级:" + people["eredal"]+")");
+$(".leader_eredal").html("光明 (等级:" + people["eredal"]+")");
 $(".leader_eredal").attr('tooltip', '增加  矿物 的产量 10%')
 $(".leader_eredal").attr('tooltip2', '增加  铜 的产量 10%')
 $(".leader_eredal").attr('tooltip3', '增加  铁 的产量 10%')
 $(".leader_eredal").attr('tooltip4', '增加  钢 的产量 10%')
 $(".leader_eredal").attr('tooltip6', "“金属直到死亡”");
 
-$(".leader_khrysos").html("Khrysos (等级:" + people["khrysos"]+")");
+$(".leader_khrysos").html("克瑞索斯 (等级:" + people["khrysos"]+")");
 $(".leader_khrysos").attr('tooltip', '增加  黄金 的产量 25%')
 $(".leader_khrysos").attr('tooltip2', '增加  市场比率 10%')
 $(".leader_khrysos").attr('tooltip4', "“一切都有代价”");
 
-$(".leader_elisia").html("Elisia (等级:" + people["elisia"]+")");
+$(".leader_elisia").html("埃利西亚 (等级:" + people["elisia"]+")");
 $(".leader_elisia").attr('tooltip', '增加工艺效率5%')
-$(".leader_elisia").attr('tooltip2', '增加  wood and mineral storage by 500')
-$(".leader_elisia").attr('tooltip4', "'Making makes us human'");
+$(".leader_elisia").attr('tooltip2', '增加  木头和矿物存储上限 500')
+$(".leader_elisia").attr('tooltip4', "“让我们成为人类”");
 
-$(".leader_xochiquetzal").html("Xochiquetzal (等级:" + people["xochiquetzal"]+")");
-$(".leader_xochiquetzal").attr('tooltip', '增加  max population by 2')
-$(".leader_xochiquetzal").attr('tooltip2', '增加  troops hp by 5%')
-$(".leader_xochiquetzal").attr('tooltip4', "'Life finds a way'");
+$(".leader_xochiquetzal").html("索兹米哥格查尔 (等级:" + people["xochiquetzal"]+")");
+$(".leader_xochiquetzal").attr('tooltip', '增加人口上限 +2')
+$(".leader_xochiquetzal").attr('tooltip2', '增加军队生命 5%')
+$(".leader_xochiquetzal").attr('tooltip4', "“生活找到了出路”");
 
-$(".leader_warmuk").html("Warmuk (等级:" + people["warmuk"]+")");
-$(".leader_warmuk").attr('tooltip', '增加  troops attack by 10%')
-$(".leader_warmuk").attr('tooltip2', '增加  max morale by 2')
-$(".leader_warmuk").attr('tooltip3', '增加  morale 的产量 5%')
-$(".leader_warmuk").attr('tooltip5', "'If you run away, you will die tired'");
+$(".leader_warmuk").html("沃马克 (等级:" + people["warmuk"]+")");
+$(".leader_warmuk").attr('tooltip', '增加军队攻击 10%')
+$(".leader_warmuk").attr('tooltip2', '增加士气上限 +2')
+$(".leader_warmuk").attr('tooltip3', '增加士气的产量 5%')
+$(".leader_warmuk").attr('tooltip5', "“如果你逃跑了，你就会累得要死。”");
 
-$(".leader_foehn").html("Foehn (等级:" + people["foehn"]+")");
+$(".leader_foehn").html("焚风 (等级:" + people["foehn"]+")");
 $(".leader_foehn").attr('tooltip', '增加船10%的能源')
 $(".leader_foehn").attr('tooltip2', '增加船舶结构 10%')
 $(".leader_foehn").attr('tooltip3', '增加船舶载货能力 15%')
-$(".leader_foehn").attr('tooltip5', "'Take what you can, give nothing back.'");
+$(".leader_foehn").attr('tooltip5', "“拿你能做的，什么都不要。”");
 
-$(".leader_alfear").html("Alfear (等级:" + people["alfear"]+")");
-$(".leader_alfear").attr('tooltip', '增加  knowledge 的产量 10%')
-$(".leader_alfear").attr('tooltip2', '增加  knowledge maximum by 100')
-$(".leader_alfear").attr('tooltip4', "'For even the very wise cannot see all ends.'");
+$(".leader_alfear").html("恐惧 (等级:" + people["alfear"]+")");
+$(".leader_alfear").attr('tooltip', '增加  知识 的产量 10%')
+$(".leader_alfear").attr('tooltip2', '增加  知识上限 100')
+$(".leader_alfear").attr('tooltip4', "“即使是非常聪明的人也看不出所有的结局。”");
 
 treasurecost = Math.floor(Math.pow(1.7,(bonus["reespeccost"]))*5)
 if(prestige["treasure"]<treasurecost){
@@ -4774,7 +4774,7 @@ $(".inventory").html(inv_text);
 $(".population").html("人口: "+population+" / "+ +maximums["population"]);
 $(".ships").html("船: "+ships+" / "+ +maximums["ships"]);
 $(".trains").html("火车: "+trains+" / "+ +maximums["trains"]);
-$(".titles").html("称号: "+bonus["title"]);
+$(".titles").html("头衔: "+bonus["title"]);
 $(".territory").html("领土: "+intToString(bonus["territory"]));
 var inv_text="<table>"
 for(key in craft){
@@ -5253,7 +5253,7 @@ function updateTechTooltip(techname) {
       } else if (techbonus == 'exprew') {
         tooltips.push('+' + (tech.bonus[techbonus])*100 + '% 在探险中发现更多的资源。');
       } else if (techbonus == 'storage') {
-        tooltips.push('+' + (tech.bonus[techbonus])*100 + '% ' + techbonus + ' 空间');
+        tooltips.push('+' + (tech.bonus[techbonus])*100 + '% ' + cnname(techbonus) + ' 空间');
       } else if (techbonus == 'craft') {
         tooltips.push('+' + (tech.bonus[techbonus])*100 + '% ' + techbonus + ' 效率');
       } else if (items.hasOwnProperty(techbonus)) {
@@ -5331,10 +5331,14 @@ function cnname(key){
         name="矛";
     }else if(temp=="sword"){
         name="剑";
+    }else if(temp=="armor"){
+        name="盔甲";
     }else if(temp=="coin"){
         name="金币";
     }else if(temp=="structure"){
         name="结构";
+    }else if(temp=="storage"){
+        name="存储";
     }else if(temp=="horse"){
         name="马";
     }else{

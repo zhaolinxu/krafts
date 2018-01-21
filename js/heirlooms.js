@@ -123,7 +123,7 @@ function createheirloom(x){
 		value*=1;
 		rarity*=2;
 		bns="knowledge";
-		bnsd="Knowledge production: +"
+		bnsd="知识生产: +"
 		power*=0.05;
 	}else if(rnd2<80){
 		name+="Crate ";
