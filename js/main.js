@@ -2835,7 +2835,7 @@ set_unattainable(".build_kiln", unattainable);
 $(".build_kiln").html("窑炉 ("+buildings["kiln"]+")");
 $(".build_kiln").attr('tooltip', '矿物: '+ parseFloat(items["mineral"]).toFixed(2)+" / "+parseFloat(mineralcost).toFixed(2))
 $(".build_kiln").attr('tooltip2', '砌块: '+ parseFloat(craft["block"]).toFixed(2)+" / "+parseFloat(blockcost).toFixed(2))
-$(".build_kiln").attr('tooltip3', '木材消耗: -2.00/秒');
+$(".build_kiln").attr('tooltip3', '木头消耗: -2.00/秒');
 $(".build_kiln").attr('tooltip4', '煤生产: +0.01/秒');
 
 bronzecost= Math.pow(1.5,(buildings["statue"]))*1
@@ -2930,7 +2930,7 @@ set_unattainable(".build_shipyard", unattainable);
 $(".build_shipyard").html("船厂 ("+buildings["shipyard"]+")");
 $(".build_shipyard").attr('tooltip', '木头: '+ parseFloat(items["wood"]).toFixed(2)+" / "+parseFloat(woodcost).toFixed(2))
 $(".build_shipyard").attr('tooltip2', '结构: '+ parseFloat(craft["structure"]).toFixed(2)+" / "+parseFloat(structurecost).toFixed(2))
-$(".build_shipyard").attr('tooltip4', '木材消耗 -40.00/秒');
+$(".build_shipyard").attr('tooltip4', '木头消耗 -40.00/秒');
 $(".build_shipyard").attr('tooltip5', '板材生产 +0.05/秒');
 
 
@@ -2946,9 +2946,9 @@ else
 unattainable=maximums["iron"]*(bonus["storage"]+1)<ironcost
 set_unattainable(".build_docks", unattainable);
 $(".build_docks").html("码头 ("+buildings["docks"]+")");
-$(".build_docks").attr('tooltip', 'Iron: '+ parseFloat(items["iron"]).toFixed(2)+" / "+parseFloat(ironcost).toFixed(2))
-$(".build_docks").attr('tooltip2', '木板: '+ parseFloat(craft["plank"]).toFixed(2)+" / "+parseFloat(plankcost).toFixed(2))
-$(".build_docks").attr('tooltip4', '+1 Ship storage');
+$(".build_docks").attr('tooltip', '铁: '+ parseFloat(items["iron"]).toFixed(2)+" / "+parseFloat(ironcost).toFixed(2))
+$(".build_docks").attr('tooltip2', '板材: '+ parseFloat(craft["plank"]).toFixed(2)+" / "+parseFloat(plankcost).toFixed(2))
+$(".build_docks").attr('tooltip4', '+1 船上限');
 
 
 blockcost=Math.pow(1.4,(buildings["bank"]))*200
@@ -3005,7 +3005,7 @@ else
 $(".build_blockyard").html("砌块 ("+buildings["blockyard"]+")");
 $(".build_blockyard").attr('tooltip', '青铜: '+ parseFloat(craft["bronze"]).toFixed(2)+" / "+parseFloat(bronzecost).toFixed(2))
 $(".build_blockyard").attr('tooltip2', '镐斧: '+ parseFloat(craft["pickaxe"]).toFixed(2)+" / "+parseFloat(pickaxecost).toFixed(2))
-$(".build_blockyard").attr('tooltip4', '木材消耗 -4.00/秒');
+$(".build_blockyard").attr('tooltip4', '木头消耗 -4.00/秒');
 $(".build_blockyard").attr('tooltip5', '矿物消耗 -8.00/秒');
 $(".build_blockyard").attr('tooltip6', '砌块生产 +0.04/秒');
 
@@ -3075,10 +3075,10 @@ else
 $(".build_tradeoutpost").html("贸易前哨 ("+buildings["tradeoutpost"]+")");
 $(".build_tradeoutpost").attr('tooltip', '框架: '+ parseFloat(craft["frame"]).toFixed(2)+" / "+parseFloat(framecost).toFixed(2))
 $(".build_tradeoutpost").attr('tooltip2', '金币: '+ parseFloat(craft["coin"]).toFixed(2)+" / "+parseFloat(coincost).toFixed(2))
-$(".build_tradeoutpost").attr('tooltip3', 'Territory: '+ parseFloat(bonus["territory"]).toFixed(2)+" / "+parseFloat(territorycost).toFixed(2))
+$(".build_tradeoutpost").attr('tooltip3', '领土: '+ parseFloat(bonus["territory"]).toFixed(2)+" / "+parseFloat(territorycost).toFixed(2))
 $(".build_tradeoutpost").attr('tooltip5', '黄金产量 +0.01/秒');
-$(".build_tradeoutpost").attr('tooltip6', 'Max population +10');
-$(".build_tradeoutpost").attr('tooltip7', 'Grants 1 title per outpost');
+$(".build_tradeoutpost").attr('tooltip6', '人口上限 +10');
+$(".build_tradeoutpost").attr('tooltip7', '每个哨站授予1个头衔。');
 
 
 framecost=Math.pow(1.3,(buildings["militaryoutpost"]))*10
@@ -3114,14 +3114,14 @@ else
 unattainable=maximums["mineral"]*(bonus["storage"]+1)<mineralcost
 set_unattainable(".build_quarry", unattainable);
 $(".build_quarry").html("采石场 ("+buildings["quarry"]+")");
-$(".build_quarry").attr('tooltip', 'Mineral: '+ parseFloat(items["mineral"]).toFixed(2)+" / "+parseFloat(mineralcost).toFixed(2))
+$(".build_quarry").attr('tooltip', '矿物: '+ parseFloat(items["mineral"]).toFixed(2)+" / "+parseFloat(mineralcost).toFixed(2))
 $(".build_quarry").attr('tooltip2', '镐斧: '+ parseFloat(craft["pickaxe"]).toFixed(2)+" / "+parseFloat(pickaxecost).toFixed(2))
-$(".build_quarry").attr('tooltip4', '粘土production +0.20/秒');
+$(".build_quarry").attr('tooltip4', '粘土生产 +0.20/秒');
 if(technologies["mineralcoal"]==1){
-$(".build_quarry").attr('tooltip5', '煤production +0.02/秒');
+$(".build_quarry").attr('tooltip5', '煤生产 +0.02/秒');
 }
 if(technologies["safestorage"]==1){
-$(".build_quarry").attr('tooltip6', 'Nickel production +0.001/秒');
+$(".build_quarry").attr('tooltip6', '镍生产 +0.001/秒');
 }
 
 
@@ -3137,9 +3137,9 @@ else
 $(".build_carpentry").html("木匠 ("+buildings["carpentry"]+")");
 $(".build_carpentry").attr('tooltip', '框架: '+ parseFloat(craft["frame"]).toFixed(2)+" / "+parseFloat(framecost).toFixed(2))
 $(".build_carpentry").attr('tooltip2', '砖: '+ parseFloat(craft["brick"]).toFixed(2)+" / "+parseFloat(brickcost).toFixed(2))
-$(".build_carpentry").attr('tooltip4', '木材消耗 -5.00/秒');
-$(".build_carpentry").attr('tooltip5', 'Iron consumption -0.10/秒');
-$(".build_carpentry").attr('tooltip6', 'Structure production +0.005/秒');
+$(".build_carpentry").attr('tooltip4', '木头消耗 -5.00/秒');
+$(".build_carpentry").attr('tooltip5', '铁消耗 -0.10/秒');
+$(".build_carpentry").attr('tooltip6', '结构生产 +0.005/秒');
 
 
 brickcost=Math.pow(1.4,(buildings["blastfurnace"]))*25
@@ -3152,8 +3152,8 @@ else
 }
 $(".build_blastfurnace").html("高炉 ("+buildings["blastfurnace"]+")");
 $(".build_blastfurnace").attr('tooltip', '砖: '+ parseFloat(craft["brick"]).toFixed(2)+" / "+parseFloat(brickcost).toFixed(2))
-$(".build_blastfurnace").attr('tooltip2', '矿物消耗 per foundryman -0.25/秒');
-$(".build_blastfurnace").attr('tooltip3', '铁的产量 per foundryman +0.01/秒');
+$(".build_blastfurnace").attr('tooltip2', '每个铸造工人矿物消耗 -0.25/秒');
+$(".build_blastfurnace").attr('tooltip3', '每个铸造工人铁的产量 +0.01/秒');
 
 
 brickcost=Math.pow(1.2,(buildings["compressor"]))*500
@@ -3372,12 +3372,12 @@ else
 unattainable=maximums["concrete"]*(bonus["storage"]+1)<concretecost
 set_unattainable(".build_factory", unattainable);
 $(".build_factory").html("工厂 ("+buildings["factory"]+")");
-$(".build_factory").attr('tooltip', 'Concrete: '+ parseFloat(items["concrete"]).toFixed(2)+" / "+parseFloat(concretecost).toFixed(2))
+$(".build_factory").attr('tooltip', '混凝土: '+ parseFloat(items["concrete"]).toFixed(2)+" / "+parseFloat(concretecost).toFixed(2))
 $(".build_factory").attr('tooltip2', '砖: '+ parseFloat(craft["brick"]).toFixed(2)+" / "+parseFloat(brickcost).toFixed(2))
-$(".build_factory").attr('tooltip3', 'Toolbox: '+ parseFloat(craft["toolbox"]).toFixed(2)+" / "+parseFloat(toolboxcost).toFixed(2))
+$(".build_factory").attr('tooltip3', '工具箱: '+ parseFloat(craft["toolbox"]).toFixed(2)+" / "+parseFloat(toolboxcost).toFixed(2))
 
 $(".build_factory").attr('tooltip5', '+20% 工艺效率 ');
-$(".build_factory").attr('tooltip6', '+100 items crafted when active');
+$(".build_factory").attr('tooltip6', '+100 物品制作，当激活时');
 
 //People
 
@@ -3678,9 +3678,9 @@ else
 {
 	$(".hire_galley").removeClass("unavailable")
 }
-$(".hire_galley").html("厨房 ("+people["galley"]+")");
+$(".hire_galley").html("大帆船 ("+people["galley"]+")");
 $(".hire_galley").attr('tooltip', '木头: '+ parseFloat(items["wood"]).toFixed(2)+" / "+parseFloat(woodcost).toFixed(2))
-$(".hire_galley").attr('tooltip2', '木板: '+ parseFloat(craft["plank"]).toFixed(2)+" / "+parseFloat(plankcost).toFixed(2))
+$(".hire_galley").attr('tooltip2', '板材: '+ parseFloat(craft["plank"]).toFixed(2)+" / "+parseFloat(plankcost).toFixed(2))
 $(".hire_galley").attr('tooltip3', '结构体: '+ parseFloat(craft["structure"]).toFixed(2)+" / "+parseFloat(structurecost).toFixed(2))
 $(".hire_galley").attr('tooltip5', "动力: 150  结构体: 2,000");
 $(".hire_galley").attr('tooltip6', '货运能力: 5,000  人员: 2');
@@ -3696,7 +3696,7 @@ else
 	$(".hire_galleon").removeClass("unavailable")
 }
 $(".hire_galleon").html("帆船 ("+people["galleon"]+")");
-$(".hire_galleon").attr('tooltip', '木板: '+ parseFloat(craft["plank"]).toFixed(2)+" / "+parseFloat(plankcost).toFixed(2))
+$(".hire_galleon").attr('tooltip', '板材: '+ parseFloat(craft["plank"]).toFixed(2)+" / "+parseFloat(plankcost).toFixed(2))
 $(".hire_galleon").attr('tooltip2', '结构体: '+ parseFloat(craft["structure"]).toFixed(2)+" / "+parseFloat(structurecost).toFixed(2))
 $(".hire_galleon").attr('tooltip4', "动力: 500  结构体: 15,000");
 $(".hire_galleon").attr('tooltip5', '货运能力: 25,000  人员: 5');
@@ -3712,7 +3712,7 @@ else
 	$(".hire_fireship").removeClass("unavailable")
 }
 $(".hire_fireship").html("消防艇 ("+people["fireship"]+")");
-$(".hire_fireship").attr('tooltip', '木板: '+ parseFloat(craft["plank"]).toFixed(2)+" / "+parseFloat(plankcost).toFixed(2))
+$(".hire_fireship").attr('tooltip', '板材: '+ parseFloat(craft["plank"]).toFixed(2)+" / "+parseFloat(plankcost).toFixed(2))
 $(".hire_fireship").attr('tooltip2', '钢: '+ parseFloat(items["steel"]).toFixed(2)+" / "+parseFloat(steelcost).toFixed(2))
 $(".hire_fireship").attr('tooltip3', '煤: '+ parseFloat(items["coal"]).toFixed(2)+" / "+parseFloat(coalcost).toFixed(2))
 $(".hire_fireship").attr('tooltip4', "动力: 0  结构: 4,000");
@@ -3732,7 +3732,7 @@ else
 }
 $(".hire_caravel").html("轻快帆船 ("+people["caravel"]+")");
 $(".hire_caravel").attr('tooltip', '木头: '+ parseFloat(items["wood"]).toFixed(2)+" / "+parseFloat(woodcost).toFixed(2))
-$(".hire_caravel").attr('tooltip2', '木板: '+ parseFloat(craft["plank"]).toFixed(2)+" / "+parseFloat(plankcost).toFixed(2))
+$(".hire_caravel").attr('tooltip2', '板材: '+ parseFloat(craft["plank"]).toFixed(2)+" / "+parseFloat(plankcost).toFixed(2))
 $(".hire_caravel").attr('tooltip3', '铁: '+ parseFloat(items["iron"]).toFixed(2)+" / "+parseFloat(ironcost).toFixed(2))
 $(".hire_caravel").attr('tooltip4', "动力: 200  结构: 6,000");
 $(".hire_caravel").attr('tooltip5', '货运能力: 10.000  人员: 3');
@@ -3947,7 +3947,7 @@ else
 	$(".craft_supplies").removeClass("unavailable")
 }
 $(".craft_supplies").html("供给");
-$(".craft_supplies").attr('tooltip', '木板: '+ parseFloat(craft["plank"]).toFixed(2)+" / "+parseFloat(plankcost).toFixed(2))
+$(".craft_supplies").attr('tooltip', '板材: '+ parseFloat(craft["plank"]).toFixed(2)+" / "+parseFloat(plankcost).toFixed(2))
 $(".craft_supplies").attr('tooltip2', '食物: '+ parseFloat(items["food"]).toFixed(2)+" / "+parseFloat(foodcost).toFixed(2))
 $(".craft_supplies").attr('tooltip3', '水: '+ parseFloat(items["water"]).toFixed(2)+" / "+parseFloat(watercost).toFixed(2))
 $(".craft_supplies").attr('tooltip5', "装有供应品的桶");
@@ -3965,7 +3965,7 @@ else
 	$(".craft_chest").removeClass("unavailable")
 }
 $(".craft_chest").html("箱子");
-$(".craft_chest").attr('tooltip', '木板: '+ parseFloat(craft["plank"]).toFixed(2)+" / "+parseFloat(plankcost).toFixed(2))
+$(".craft_chest").attr('tooltip', '板材: '+ parseFloat(craft["plank"]).toFixed(2)+" / "+parseFloat(plankcost).toFixed(2))
 $(".craft_chest").attr('tooltip2', '钢: '+ parseFloat(items["steel"]).toFixed(2)+" / "+parseFloat(steelcost).toFixed(2))
 $(".craft_chest").attr('tooltip3', '青铜: '+ parseFloat(craft["bronze"]).toFixed(2)+" / "+parseFloat(bronzecost).toFixed(2))
 $(".craft_chest").attr('tooltip4', '锁: '+ parseFloat(craft["lock"]).toFixed(2)+" / "+parseFloat(lockcost).toFixed(2))

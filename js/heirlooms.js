@@ -22,17 +22,17 @@ function createheirloom(x){
 	var power=1;
 
 	if(rnd1<10){
-		name="Broken ";
+		name="破碎的 ";
 		value=0.3;
 		rarity=1;
 		power=0.1;
 	}
 	else if(rnd1<20){
-		name="Used ";
+		name="二手的 ";
 		value=1;
 		power=0.5;
 	}else if(rnd1>99){
-		name="Mysterious ";
+		name="神秘的 ";
 		value=5;
 		rarity=5;
 		power=3;
@@ -235,7 +235,7 @@ function createheirloom(x){
 		rarity*=8;
 		power*=4;
 	}else if(rnd3<100){
-		name+="of the Sun ";
+		name+="太阳的";
 		value*=15;
 		rarity*=15;
 		power*=10;
