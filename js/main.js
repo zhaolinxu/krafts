@@ -3799,21 +3799,21 @@ for (b in techdata) {
 
 $(".research_economy").html("经济 " + intToString(bonus["economy"]));
 $(".research_economy").attr('tooltip', "经济是一种有利可图的力量。繁荣和财富在等待着。");
-$(".research_economy").attr('tooltip2', "those who seek to harness it.");
-$(".research_economy").attr('tooltip4', "Increases global production");
-if(bonus["economy"]>100000) {$(".research_economy").attr('tooltip6', 'An additional investment of ' + parseFloat(Math.pow(1.1,Math.round(Math.ceil(Math.log(bonus["economy"]/100000)/Math.log(1.1),0)))*100000-bonus["economy"]).toFixed(2) + ' knowledge will unlock the next Mastery Technology.');}
+$(".research_economy").attr('tooltip2', "那些想要驾驭它的人。");
+$(".research_economy").attr('tooltip4', "增加全局生产");
+if(bonus["economy"]>100000) {$(".research_economy").attr('tooltip6', '一个额外的投资 ' + parseFloat(Math.pow(1.1,Math.round(Math.ceil(Math.log(bonus["economy"]/100000)/Math.log(1.1),0)))*100000-bonus["economy"]).toFixed(2) + ' 知识将解锁下一个精通技术。');}
 
 $(".research_science").html("科技 " + intToString(bonus["science"]));
-$(".research_science").attr('tooltip', "Science is an evolutionary force. Progress can be slow,");
-$(".research_science").attr('tooltip2', "but it will never stop pushing humanity forward.");
+$(".research_science").attr('tooltip', "科学是一种进化的力量。进展可能会很慢,");
+$(".research_science").attr('tooltip2', "但它永远不会停止推动人类前进。");
 $(".research_science").attr('tooltip4', "提升工艺效率");
-if(bonus["science"]>100000) {$(".research_science").attr('tooltip6', 'An additional investment of ' + parseFloat(Math.pow(1.1,Math.round(Math.ceil(Math.log(bonus["science"]/100000)/Math.log(1.1),0)))*100000-bonus["science"]).toFixed(2) + ' knowledge will unlock the next Mastery Technology.');}
+if(bonus["science"]>100000) {$(".research_science").attr('tooltip6', '一个额外的投资 ' + parseFloat(Math.pow(1.1,Math.round(Math.ceil(Math.log(bonus["science"]/100000)/Math.log(1.1),0)))*100000-bonus["science"]).toFixed(2) + ' 知识将解锁下一个精通技术。');}
 
 $(".research_military").html("军事 " + intToString(bonus["military"]));
-$(".research_military").attr('tooltip', "The military are a powerful force. There are times when");
-$(".research_military").attr('tooltip2', "only might can make right. Is it now?");
+$(".research_military").attr('tooltip', "军队是一支强大的力量。有些时候");
+$(".research_military").attr('tooltip2', "只有强权才是公理。是现在吗?");
 $(".research_military").attr('tooltip4', "增加部队攻击和生命。");
-if(bonus["military"]>100000) {$(".research_military").attr('tooltip6', 'An additional investment of ' + parseFloat(Math.pow(1.1,Math.round(Math.ceil(Math.log(bonus["military"]/100000)/Math.log(1.1),0)))*100000-bonus["military"]).toFixed(2) + ' knowledge will unlock the next Mastery Technology.');}
+if(bonus["military"]>100000) {$(".research_military").attr('tooltip6', '一个额外的投资 ' + parseFloat(Math.pow(1.1,Math.round(Math.ceil(Math.log(bonus["military"]/100000)/Math.log(1.1),0)))*100000-bonus["military"]).toFixed(2) + ' 知识将解锁下一个精通技术。');}
 
 
 
