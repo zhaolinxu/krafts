@@ -1789,22 +1789,22 @@ var techdata = {
   internationalization: {
     cost: {gold: 70, bronze: 300, knowledge: 800},
     unlock: [".build_tradeoutpost"],
-    desc: ["Allows you to build trade outposts in conquered territory"]
+    desc: ["允许你在被征服的领土上建立贸易据点。"]
   },
   camps: {
     cost: {horse: 10, elephant: 2, knowledge: 800},
     unlock: [".build_militaryoutpost"],
-    desc: ["Allows you to build military outposts in conquered territory"]
+    desc: ["允许你在被征服的领土上建立军事前哨。"]
   },
   fireship: {
     cost: {wood: 80000, frame: 5, knowledge: 1000},
     unlock: [".hire_fireship"],
-    desc: ["Allows you to build fire ships, an agressive military ship"]
+    desc: ["允许你建造一艘消防船，一艘有攻击性的军舰"]
   },
   deals: {
     cost: {gold: 100, coin: 1500, knowledge: 1200},
     unlock: [".deals"],
-    desc: ["A merchant will appear in the market every 10 min with a new offer"]
+    desc: ["一个商人每十分钟会有一个新的报价出现在市场上"]
   },
   careening: {
     cost: {wood: 80000, plank: 1000, knowledge: 800},
@@ -1812,7 +1812,7 @@ var techdata = {
   },
   finding: {
     cost: {morale: 60, food: 20000, knowledge: 1200},
-    desc: ["Allows you to find more complex materials in expeditions, like sand, clay or bricks"]
+    desc: ["允许您在考察中发现更复杂的材料，如沙子，粘土或砖块"]
   },
   openmining: {
     name: "露天开采",
@@ -1834,21 +1834,21 @@ var techdata = {
   masonry: {
     cost: {frame: 20, block: 3000, knowledge: 1300},
     unlock: [".craft_brick"],
-    desc: ["Allows you to craft bricks used in buildings"]
+    desc: ["允许您制作建筑物中使用的砖块"]
   },
   woodwork: {
     cost: {wood: 90000, knowledge: 1000},
     unlock: [".build_carpentry"],
-    desc: ["Allows you to build carpentries to automate structure crafting"]
+    desc: ["允许您建立木工自动化结构工艺"]
   },
   multitasking: {
     cost: {pickaxe: 2000, knowledge: 1000},
-    desc: ["Miners now also extract some clay"]
+    desc: ["矿工现在也提取一些粘土"]
   },
   commodities: {
     cost: {coin: 1000, knowledge: 1000},
     unlock: [".trade_sand", ".trademax_sand"],
-    desc: ["Allows you to buy sand on the market"]
+    desc: ["允许你在市场上购买沙子"]
   },
   quenching: {
     cost: {iron: 500, steel: 250, knowledge: 1200},
@@ -1858,7 +1858,7 @@ var techdata = {
     name: "铸铁",
     cost: {brick: 50, knowledge: 1200},
     unlock: [".build_blastfurnace"],
-    desc: ["New techniques allows you to build blast furnaces"]
+    desc: ["新技术可以让你建立高炉"]
   },
   insecticides: {
     cost: {chemicals: 20, knowledge: 1200},
@@ -1867,12 +1867,12 @@ var techdata = {
   explosives: {
     cost: {morale: 70, knowledge: 1300},
     unlock: [".craft_gunpowder"],
-    desc: ["Allows you to craft gunpowder"]
+    desc: ["允许你制作火药"]
   },
   commerce: {
     cost: {coin: 2000, knowledge: 1200},
     unlock: [".hire_marketer"],
-    desc: ["Allows you to hire marketers"]
+    desc: ["允许你雇佣营销人员。"]
   },
   safes: {
     cost: {lock: 100, knowledge: 1200},
@@ -1881,27 +1881,27 @@ var techdata = {
   packaging: {
     cost: {chest: 200, knowledge: 1300},
     unlock: [".build_compressor"],
-    desc: ["Allows to build compressor to increase storage space of other buildings"]
+    desc: ["允许建造压缩机以增加其他建筑物的储存空间。"]
   },
   ammunition: {
     cost: {gunpowder: 50, knowledge: 1200},
     unlock: [".craft_ammo"],
-    desc: ["Allows you to craft ammo"]
+    desc: ["允许你制作弹药"]
   },
   gunnery: {
     cost: {iron: 500, ammo: 1000, knowledge: 1200},
     unlock: [".craft_musket", ".hire_musketeer"],
-    desc: ["Allows you to craft musket and hire musketeers"]
+    desc: ["允许你制作滑膛枪和雇佣火枪手"]
   },
   windward: {
     cost: {wood: 200000, plank: 10000, knowledge: 1500},
     unlock: [".hire_caravel"],
-    desc: ["Allows you to build caravels"]
+    desc: ["允许你建造帆船"]
   },
   mineralcoal: {
     name: "矿物煤",
     cost: {pickaxe: 10000, coal: 500, knowledge: 1500},
-    desc: ["Quarries now also produce coal"]
+    desc: ["采石场现在也生产煤。"]
   },
   carrying: {
     cost: {horse: 100, morale: 120, knowledge: 1500},
@@ -1910,70 +1910,70 @@ var techdata = {
   shareholding: {
     cost: {token: 5000, coin: 5000, knowledge: 1500},
     unlock: [".build_share"],
-    desc: ["Allows you to redeem tokens on the casino for casino shares"]
+    desc: ["允许你在赌场的股票上兑换代币。"]
   },
   safestorage: {
     name: "安全存储",
     cost: {frame: 100, glass: 300, knowledge: 1600},
     unlock: [".build_repository"],
-    desc: ["Allows you to build repositories to store complex materials",
-      "Quarries now also produce nickel",
-      "You can also get nickel on expeditions or trade routes"]
+    desc: ["允许您构建存储库来存储复杂的材料。",
+      "采石场现在也生产镍",
+      "您也可以在探险或贸易路线上获得镍"]
   },
   metalwork: {
     cost: {iron: 750, steel: 400, knowledge: 1700},
     unlock: [".craft_plate"],
-    desc: ["Allows you to craft alloy plates"]
+    desc: ["允许您制作合金板"]
   },
   steamengine: {
     name: "蒸汽机",
     cost: {iron: 800, plate: 50, knowledge: 1800},
     unlock: [".craft_engine"],
-    desc: ["Allows you to build steam powered engines"]
+    desc: ["允许你建造蒸汽动力引擎。"]
   },
   armoredcombat: {
     name: "武装战斗",
     cost: {morale: 130, plate: 500, knowledge: 2000},
     unlock: [".hire_lighttank"],
-    desc: ["Allows you to build armored tanks to ride into battle"]
+    desc: ["允许你建造装甲坦克进入战斗。"]
   },
   railtransport: {
     name: "铁路运输",
     cost: {coin: 10000, plate: 300, knowledge: 2000},
     unlock: [".build_trainstation"],
-    desc: ["Trains are a good way to keep your economy moving"]
+    desc: ["火车是保持经济运转的好方法。"]
   },
   industrialization: {
     cost: {chemicals: 100, plate: 300, knowledge: 2000},
     unlock: [".build_workshop"],
-    desc: ["Further developments has increased the efficiency of crafting"]
+    desc: ["进一步的发展提高了工艺的效率。"]
   },
   academicpublishing: {
     name: "学术出版",
     cost: {knowledge: 2500},
     unlock: [".craft_book"],
-    desc: ["Allows you to store your knowledge in books of scientific papers"]
+    desc: ["允许你把你的知识储存在科学论文里。"]
   },
   patents: {
     cost: {coin: 10000, knowledge: 2000},
     unlock: [".craft_patent"],
-    desc: ["Allows you to buy patents to further advance your research"]
+    desc: ["允许你购买专利以进一步推动你的研究。"]
   },
   logistics: {
     cost: {coin: 5000, book: 10},
-    desc: ["Logistics provide a shortcut to crafting",
+    desc: ["后勤为手工制作提供了一条捷径",
       "允许你直接通过点击它的名字来制作材料。"]
   },
   electricity: {
     cost: {book: 10, knowledge: 2800},
     unlock: [".build_powerplant", "#facilitiespane"],
-    desc: ["Grants you to the knowledge of handling electricity",
-      "Allows you to build powerplants"]
+    desc: ["让你了解如何处理电力。",
+      "允许你建造动力装置"]
   },
   pyroprocessing: {
     cost: {mineral: 200000, clay: 10000, book: 5},
     unlock: [".build_cementkiln", "#facilitiespane"],
-    desc: ["Allows you to build cement kilns"]
+    desc: ["允许你建造水泥窑。"]
   },
   triforce: {
     cost: {knowledge: 3000},
@@ -1982,42 +1982,42 @@ var techdata = {
   education: {
     cost: {book: 20, knowledge: 3000},
     unlock: [".build_university"],
-    desc: ["Allows the building of universities"]
+    desc: ["允许建立大学。"]
   },
   cementhydration: {
     name: "水泥水化",
     cost: {clay: 15000, book: 20},
     unlock: [".build_concretemixer"],
-    desc: ["Allows you to build concrete mixers"]
+    desc: ["允许你建造混凝土搅拌机。"]
   },
   workforce: {
     name: "劳动力",
     cost: {concrete: 15000, book: 30},
     unlock: [".build_toolfactory"],
-    desc: ["Allows you to build tool factories to provide industrial tools"]
+    desc: ["允许你建造工具工厂来提供工业工具"]
   },
   luck: {
     cost: {token: 50000, book: 50},
     unlock: [".slotmachine"],
-    desc: ["Allows you to play the slot machine in the casino",
-      "Multiplies by 1000 the maximum bet on double or nothing"]
+    desc: ["允许您在赌场玩老虎机",
+      "最大赌注x1000倍或无"]
   },
   wargames: {
     name: "战争游戏",
     cost: {morale: 250, book: 20},
     unlock: [".craft_strategy"],
-    desc: ["Allows you to gather plans from the enemy and use them to make strategies"]
+    desc: ["让你从敌人那里收集计划，并用它们制定策略"]
   },
   militarization: {
     cost: {spear: 300000, sword: 100000, book: 30},
     unlock: [".build_barracks"],
-    desc: ["Allows you to build barracks"]
+    desc: ["允许你建造兵营"]
   },
   industrialrevolution: {
     name: "工业革命",
     cost: {coin: 500000, toolbox: 100, book: 100},
     unlock: [".build_factory"],
-    desc: ["Allows you to build mass production factories"]
+    desc: ["让您建立大量生产工厂"]
   }
 };
 
@@ -3568,7 +3568,7 @@ $(".hire_knight").attr('tooltip3', '盔甲: '+ parseFloat(craft["armor"]).toFixe
 $(".hire_knight").attr('tooltip4', "食物消耗: -2.00/秒");
 $(".hire_knight").attr('tooltip5', '士气生产 +0.04/秒');
 $(".hire_knight").attr('tooltip6', '攻击力: 25 血量: 200');
-$(".hire_knight").attr('tooltip7', '盔甲: 10');
+$(".hire_knight").attr('tooltip7', '护甲: 10');
 
 
 foodcost=1000;
