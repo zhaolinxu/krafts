@@ -4913,25 +4913,10 @@ function toggletech(){
 		techvisible=1;
 	}
 }
+//改为localStorage存档
 function save(){
-	
-	clearListCookies()
+	//整理存档数据
 	bonus["savetime"]=parseInt(serverTime())
-
-	Cookies.set( 'items', JSON.stringify(items) ,{ expires: 9999 });
-	Cookies.set( 'bonus', JSON.stringify(bonus) ,{ expires: 9999 });
-	Cookies.set( 'buildings', JSON.stringify(buildings) ,{ expires: 9999 });
-	Cookies.set( 'maximums',JSON.stringify( maximums) ,{ expires: 9999 });
-	Cookies.set( 'technologies', JSON.stringify(technologies) ,{ expires: 9999 });
-	Cookies.set( 'people', JSON.stringify(people) ,{ expires: 9999 });
-	Cookies.set( 'craft', JSON.stringify(craft) ,{ expires: 9999 });
-	Cookies.set('population', population,{ expires: 9999 });
-	Cookies.set('trademission', trademission,{ expires: 9999 });
-	Cookies.set('prestige', prestige,{ expires: 9999 });
-	Cookies.set('buildstatus', buildstatus,{ expires: 9999 });
-	Cookies.set('autotechnologies', autotechnologies,{ expires: 9999 });
-	Cookies.set('heirlooms', heirlooms,{ expires: 9999 });
-
 	var unlock1=new Array()
 	var unlock2=new Array()
 	var unlock3=new Array()
@@ -4951,10 +4936,29 @@ function save(){
 			unlock3[key]=unlocked[key]
 		}
 	}
-
-	Cookies.set( 'unlock1', btoa(JSON.stringify(unlock1)) ,{ expires: 9999 });
-	Cookies.set( 'unlock2', btoa(JSON.stringify(unlock2)) ,{ expires: 9999 });
-	Cookies.set( 'unlock3', btoa(JSON.stringify(unlock3)) ,{ expires: 9999 });
+	var savedata={
+		items:JSON.stringify(items),
+		bonus:JSON.stringify(bonus),
+		buildings:JSON.stringify(buildings),
+		maximums:JSON.stringify(maximums),
+		technologies:JSON.stringify(technologies),
+		people:JSON.stringify(people),
+		craft:JSON.stringify(craft),
+		population:JSON.stringify(population),
+		trademission:JSON.stringify(trademission),
+		prestige:JSON.stringify(prestige),
+		buildstatus:JSON.stringify(buildstatus),
+		autotechnologies:JSON.stringify(autotechnologies),
+		heirlooms:JSON.stringify(heirlooms),
+		unlock1:btoa(JSON.stringify(unlock1)),
+		unlock2:btoa(JSON.stringify(unlock2)),
+		unlock3:btoa(JSON.stringify(unlock3))
+	};
+	//清除现有存档数据
+	window.localStorage.removeItem("kraftGameSave");
+	//保存新存档数据
+	window.localStorage.setItem("kraftGameSave",JSON.stringify(savedata));
+	console.log("gamesaved");
 }
 function encode(){
 bonus["savetime"]=parseInt(serverTime())
@@ -5061,9 +5065,10 @@ fillDeal();
 }
 
 }
+//TODO:: 改为读取localStorage存档
 function load(){
-
-	if (typeof Cookies.get( 'items') != 'undefined'){
+	//如果有cookie存档，转成localStorage存档保存
+	if(typeof Cookies.get('items') != 'undefined'){
 		items = update(items,JSON.parse(Cookies.get( 'items')));
 		bonus = update(bonus,JSON.parse(Cookies.get( 'bonus')));
 		buildings = update(buildings,JSON.parse(Cookies.get( 'buildings')));
@@ -5071,121 +5076,186 @@ function load(){
 		technologies = update(technologies,JSON.parse(Cookies.get( 'technologies')));
 		people = update(people,JSON.parse(Cookies.get( 'people')));
 		craft = update(craft,JSON.parse(Cookies.get( 'craft')));
-if(typeof Cookies.get( 'heirlooms') != 'undefined'){
-heirlooms = update(heirlooms,JSON.parse(Cookies.get( 'heirlooms')));
-drawheirlooms();
-}
-		if(typeof Cookies.get( 'unlock1') != 'undefined'){
-		update(unlocked,JSON.parse(atob(Cookies.get( 'unlock1'))));
-		update(unlocked,JSON.parse(atob(Cookies.get( 'unlock2'))));
-		update(unlocked,JSON.parse(atob(Cookies.get( 'unlock3'))));
-		console.log('new');
+		if(typeof Cookies.get( 'heirlooms') != 'undefined'){
+			heirlooms = update(heirlooms,JSON.parse(Cookies.get( 'heirlooms')));
+			drawheirlooms();
+		}
+		if(typeof Cookies.get('unlock1') != 'undefined'){
+			update(unlocked,JSON.parse(atob(Cookies.get( 'unlock1'))));
+			update(unlocked,JSON.parse(atob(Cookies.get( 'unlock2'))));
+			update(unlocked,JSON.parse(atob(Cookies.get( 'unlock3'))));
+			console.log('new');
 		}
 		else{
-		unlocked = update(unlocked,JSON.parse(Cookies.get( 'unlocked')));
-		console.log('old');
+			unlocked = update(unlocked,JSON.parse(Cookies.get('unlocked')));
+			console.log('old');
 		}
-
-		//population = Cookies.get('population');
-    population = 0 // Doesn't it make more sense to start from 0 since it is recalculating from scratch?
-    trains = 0
-    ships = 0
-    for (p in peopledata) {
-      population += people[p] * peopledata[p].cost.pop;
-    }
-    for (p in shipdata) {
-      ships += people[p] * shipdata[p].cost.ships;
-    }
-    for (p in traindata) {
-      population += people[p] * traindata[p].cost.pop;
-      trains += people[p] * traindata[p].cost.trains;
-    }
-
+		population = 0 // Doesn't it make more sense to start from 0 since it is recalculating from scratch?
+		trains = 0
+		ships = 0
+		for (p in peopledata) {
+		  population += people[p] * peopledata[p].cost.pop;
+		}
+		for (p in shipdata) {
+		  ships += people[p] * shipdata[p].cost.ships;
+		}
+		for (p in traindata) {
+		  population += people[p] * traindata[p].cost.pop;
+		  trains += people[p] * traindata[p].cost.trains;
+		}
 		for(key in unlocked){
 			if (unlocked[key]==1)
 			{
 				$(key).show().removeClass("invisible")
 			}
 		}
-
 		if(buildings["library"]>=7){
 		$(".tech_wrapping").show()
-		unlocked[".tech_wrapping"]=1;
+			unlocked[".tech_wrapping"]=1;
 		}
-		
 		if(craft["diamond"]>=1){
 			diamonize()
 		}
 		if(typeof Cookies.get( 'autotechnologies') != 'undefined'){
-		autotechnologies = update(autotechnologies,JSON.parse(Cookies.get( 'autotechnologies')));
+			autotechnologies = update(autotechnologies,JSON.parse(Cookies.get( 'autotechnologies')));
 		}
+		maximums["cement"]=buildings["bunker"]*500
+		maximums["trains"]=buildings["trainstation"]*2
+		//END RETROCOMPATIBILITY
 
+		if(technologies["safestorage"]==1){
+			traderatio["wood"]["nickel"]=0.00015;
+			traderatio["mineral"]["nickel"]=0.00018;
+		}
+		if (typeof Cookies.get( 'trademission') != 'undefined'){
+			trademission = update(trademission,JSON.parse(Cookies.get('trademission')));
+			if(trademission["time"]>0){
+				tickinterval = setInterval(function(){ ticktrade()}, 1000);
+				$(".docklog").html("贸易任务<br>剩余时间: "+totime(trademission["time"]));
+				$(".tradego").hide()
+			}
+		}
+		if (typeof Cookies.get( 'prestige') != 'undefined'){
+			prestige = update(prestige,JSON.parse(Cookies.get('prestige')));
+		}
+		if (typeof Cookies.get( 'buildstatus') != 'undefined'){
+			buildstatus = update(buildstatus,JSON.parse(Cookies.get('buildstatus')));
+			for (key in buildstatus){
+				if(buildstatus[key]==0){
+					buildstatus[key]==0
+					$(".build_"+key).addClass("off")
+				}
+			}
+		}
+		if(bonus["savetime"]!=0){
+			warp()
+		}
+		researchunlock()
+		$('.tradetrainselect').val(trademission["trainbuy"]);
+		
+		//cookie存档清理,以新的存档方式保存
+		clearListCookies();
+		save();
+	}
+	//读取localStorage存档
+	var savedata = window.localStorage.getItem("kraftGameSave");	
+	if(savedata != null){
+		savedata = JSON.parse(savedata);
+		
+		items = update(items,JSON.parse(savedata.items));
+		bonus = update(bonus,JSON.parse(savedata.bonus));
+		buildings = update(buildings,JSON.parse(savedata.buildings));
+		maximums = update(maximums,JSON.parse(savedata.maximums));
+		technologies = update(technologies,JSON.parse(savedata.technologies));
+		people = update(people,JSON.parse(savedata.people));
+		craft = update(craft,JSON.parse(savedata.craft));
+		
+		savedata.heirlooms = JSON.parse(savedata.heirlooms);
+		if(savedata.heirlooms.length > 0){
+			heirlooms = update(heirlooms,savedata.heirlooms);
+			drawheirlooms();
+		}		
+		
+		update(unlocked,JSON.parse(atob(savedata.unlock1)));
+		update(unlocked,JSON.parse(atob(savedata.unlock2)));
+		update(unlocked,JSON.parse(atob(savedata.unlock3)));
+			
+		population = 0 // Doesn't it make more sense to start from 0 since it is recalculating from scratch?
+		trains = 0
+		ships = 0
+		for (p in peopledata) {
+		  population += people[p] * peopledata[p].cost.pop;
+		}
+		for (p in shipdata) {
+		  ships += people[p] * shipdata[p].cost.ships;
+		}
+		for (p in traindata) {
+		  population += people[p] * traindata[p].cost.pop;
+		  trains += people[p] * traindata[p].cost.trains;
+		}
+		for(key in unlocked){
+			if (unlocked[key]==1)
+			{
+				$(key).show().removeClass("invisible")
+			}
+		}
+		if(buildings["library"]>=7){
+		$(".tech_wrapping").show()
+			unlocked[".tech_wrapping"]=1;
+		}
+		if(craft["diamond"]>=1){
+			diamonize()
+		}
+		
+		savedata.autotechnologies = JSON.parse(savedata.autotechnologies);
+		if(savedata.autotechnologies.length > 0){
+			autotechnologies = update(autotechnologies,savedata.autotechnologies);
+		}		
+		
+		maximums["cement"]=buildings["bunker"]*500
+		maximums["trains"]=buildings["trainstation"]*2
+		//END RETROCOMPATIBILITY
 
-maximums["cement"]=buildings["bunker"]*500
-maximums["trains"]=buildings["trainstation"]*2
-	//END RETROCOMPATIBILITY
-
-if(technologies["safestorage"]==1){
-
-traderatio["wood"]["nickel"]=0.00015;
-traderatio["mineral"]["nickel"]=0.00018;
-
-}
-
-
-
-
-
-	if (typeof Cookies.get( 'trademission') != 'undefined'){
-		trademission = update(trademission,JSON.parse(Cookies.get('trademission')));
+		if(technologies["safestorage"]==1){
+			traderatio["wood"]["nickel"]=0.00015;
+			traderatio["mineral"]["nickel"]=0.00018;
+		}
+		
+		trademission = update(trademission,JSON.parse(savedata.trademission));
 		if(trademission["time"]>0){
 			tickinterval = setInterval(function(){ ticktrade()}, 1000);
 			$(".docklog").html("贸易任务<br>剩余时间: "+totime(trademission["time"]));
 			$(".tradego").hide()
 		}
-
-	}
-
-	if (typeof Cookies.get( 'prestige') != 'undefined'){
-		prestige = update(prestige,JSON.parse(Cookies.get('prestige')));
-	}
-
-	if (typeof Cookies.get( 'buildstatus') != 'undefined'){
-		buildstatus = update(buildstatus,JSON.parse(Cookies.get('buildstatus')));
+		
+		prestige = update(prestige,JSON.parse(savedata.prestige));
+			
+		buildstatus = update(buildstatus,JSON.parse(savedata.buildstatus));
 		for (key in buildstatus){
 			if(buildstatus[key]==0){
 				buildstatus[key]==0
 				$(".build_"+key).addClass("off")
 			}
 		}
-
-	}
-
-	if(bonus["savetime"]!=0){
+		
+		if(bonus["savetime"]!=0){
 			warp()
+		}
+		researchunlock()
+		$('.tradetrainselect').val(trademission["trainbuy"]);
+
+		save();
 	}
-
-
-	researchunlock()
-	$('.tradetrainselect').val(trademission["trainbuy"]);
-	save()
-
+	
+	// Loop through every tech and define hover events to update the tooltip only on hover
+	for (var techname in techdata) {
+		$(".tech_"+techname).hover(
+		  setTechOnHover(techname),
+		  resetTechOnHover()
+		);
+		updateTechTooltip(techname); // Initialize the tooltip once otherwise it looks bad on first hover
 	}
-
-  // Loop through every tech and define hover events to update the tooltip only on hover
-  for (var techname in techdata) {
-    $(".tech_"+techname).hover(
-      setTechOnHover(techname),
-      resetTechOnHover()
-    );
-    updateTechTooltip(techname); // Initialize the tooltip once otherwise it looks bad on first hover
-  }
-
-} 
-
-
-
-
+}
 
 
 function update(array1, array2){
