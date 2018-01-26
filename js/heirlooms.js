@@ -20,6 +20,7 @@ function createheirloom(x){
 	var name="";
 	var bns=""
 	var power=1;
+    var cns="";
 
 	if(rnd1<10){
 		name="破碎的 ";
@@ -37,17 +38,17 @@ function createheirloom(x){
 		rarity=5;
 		power=3;
 	}else if(rnd1>95){
-		name="Pristine ";
+		name="原始的 ";
 		value=2.5;
 		rarity=2;
 		power=2;
 	}else if(rnd1>85){
-		name="Untouched ";
+		name="未动过的 ";
 		value=2;
 		rarity=1.5;
 		power=1.5;
 	}else if(rnd1>75){
-		name="New ";
+		name="新的 ";
 		value=1.5;
 		rarity=1.5;
 		power=1.2;
@@ -55,7 +56,7 @@ function createheirloom(x){
 
 
 	if(rnd2<10){
-		name+="Axe ";
+		name+="斧 ";
 		value*=0.4;
 		rarity*=1;
 		bns="wood";
@@ -63,105 +64,105 @@ function createheirloom(x){
 		power*=0.1;
 	}
 	else if(rnd2<20){
-		name+="Pickaxe ";
+		name+="镐斧 ";
 		value*=0.5;
 		rarity*=1;
 		bns="mineral";
 		bnsd="矿物生产: +"
 		power*=0.1;
 	}else if(rnd2<30){
-		name+="Staff ";
+		name+="权杖 ";
 		value*=1.5;
 		rarity*=1;
 		bns="morale";
 		bnsd="士气生产: +"
 		power*=0.1;
 	}else if(rnd2<40){
-		name+="Coin ";
+		name+="金币 ";
 		value*=2;
 		rarity*=1;
 		bns="gold";
 		bnsd="黄金生产: +"
 		power*=0.05;
 	}else if(rnd2<50){
-		name+="Sword ";
+		name+="剑 ";
 		value*=1;
 		rarity*=1;
 		bns="power";
 		bnsd="部队力量: +"
 		power*=0.03;
 	}else if(rnd2<55){
-		name+="Shield ";
+		name+="盾 ";
 		value*=1;
 		rarity*=2;
 		bns="armor";
 		bnsd="军队防御: +"
 		power*=0.05;
 	}else if(rnd2<60){
-		name+="Jar ";
+		name+="罐子 ";
 		value*=1;
 		rarity*=1;
 		bns="healing";
-		bnsd="Healing : +"
+		bnsd="治疗 : +"
 		power*=0.06;
 	}else if(rnd2<65){
-		name+="Dress ";
+		name+="衣服 ";
 		value*=6;
 		rarity*=2;
 		bns="hp";
-		bnsd="Troops hp: +"
+		bnsd="军队血量: +"
 		power*=0.03;
 	}else if(rnd2<70){
-		name+="Cannon ";
+		name+="大炮 ";
 		value*=1;
 		rarity*=2;
 		bns="shippower";
-		bnsd="Ship power: +"
+		bnsd="船攻击力: +"
 		power*=0.025;
 	}else if(rnd2<75){
-		name+="Book ";
+		name+="书 ";
 		value*=1;
 		rarity*=2;
 		bns="knowledge";
 		bnsd="知识生产: +"
 		power*=0.05;
 	}else if(rnd2<80){
-		name+="Crate ";
+		name+="箱子 ";
 		value*=2;
 		rarity*=2;
 		bns="shipcargo";
-		bnsd="Ship cargo capacity: +"
+		bnsd="货舱容量: +"
 		power*=0.15;
 	}else if(rnd2<85){
-		name+="Hammer ";
+		name+="锤子 ";
 		value*=5;
 		rarity*=2;
 		bns="craft";
-		bnsd="Crafting efficiency: +"
+		bnsd="制作效率: +"
 		power*=0.015;
 	}else if(rnd2<90){
-		name+="Glasses ";
+		name+="眼镜 ";
 		value*=1;
 		rarity*=2;
 		bns="exprew";
-		bnsd="Expedition rewards: +"
+		bnsd="探险的奖励: +"
 		power*=0.025;
 	}else if(rnd2<93){
-		name+="Fossil ";
+		name+="化石 ";
 		value*=9;
 		rarity*=3;
 		bns="legacy";
-		bnsd="Legacy obtained: +"
+		bnsd="遗物获得: +"
 		power*=0.01;
 	}else if(rnd2<96){
-		name+="Crown ";
+		name+="王冠 ";
 		value*=10;
 		rarity*=3;
 		bns="trade";
 		bnsd="贸易比率: +"
 		power*=0.025;
 	}else if(rnd2<98){
-		name+="Chest ";
+		name+="箱子 ";
 		value*=15;
 		rarity*=4;
 		bns="storage";
@@ -169,7 +170,7 @@ function createheirloom(x){
 		power*=0.01;
 
 	}else if(rnd2<99.5){
-		name+="Relic ";
+		name+="遗物 ";
 		value*=20;
 		rarity*=5;
 		bns="global";
@@ -178,7 +179,7 @@ function createheirloom(x){
 	}
 	else
 	{
-		name+="Enigma ";
+		name+="谜 ";
 		value*=30;
 		rarity*=15;
 		bns="auto";
@@ -187,55 +188,64 @@ function createheirloom(x){
 	}
 
 
-
 	if(rnd3<15){
-		name+="of the Beggar ";
+        cns="乞丐的";
+		cns+=name;
 		value*=0.5;
 		rarity*=2;
 		power*=0.5;
 	}
 	else if(rnd3<30){
-		name+="of the Bandit ";
+        cns="强盗的";
+		cns+=name;
 		value*=1;
 		rarity*=2;
 		power*=1;
 	}else if(rnd3<45){
-		name+="of the Warrior ";
+        cns="战士的";
+		cns+=name;
 		value*=1.5;
 		rarity*=2;
 		power*=1.25;
 	}else if(rnd3<55){
-		name+="of the Lady ";
+        cns="女士的";
+		cns+=name;
 		value*=1.5;
 		rarity*=2.5;
 		power*=1.5;
 	}else if(rnd3<65){
-		name+="of the Traveler ";
+        cns="旅行者的";
+		cns+=name;
 		value*=1.5;
 		rarity*=2.5;
 		power*=1.5;
 	}else if(rnd3<75){
-		name+="of the Ancient ";
+        cns="古老的";
+		cns+=name;
 		value*=2;
 		rarity*=2.5;
 		power*=1.5;
 	}else if(rnd3<85){
-		name+="of the Noble ";
+        cns="贵族的";
+		cns+=name;
 		value*=2.5;
 		rarity*=2.5;
 		power*=2;
 	}else if(rnd3<93){
-		name+="of the Queen ";
+		cns="王后的";
+		cns+=name;
 		value*=4;
 		rarity*=6;
 		power*=3;
 	}else if(rnd3<99){
-		name+="of the King ";
+        cns="国王的";
+		cns+=name;
 		value*=5;
 		rarity*=8;
 		power*=4;
 	}else if(rnd3<100){
-		name+="太阳的";
+		cns="太阳的";
+		cns+=name;
 		value*=15;
 		rarity*=15;
 		power*=10;
@@ -244,24 +254,24 @@ function createheirloom(x){
 
 	if(rnd3<150){
 		if(rnd4<1){
-			name+="God";
+			name+="上帝";
 			value*=100;
 			rarity*=100;
 			power*=50;
 		}
 		else if(rnd4<10){
-			name+="Hero";
+			name+="英雄";
 			value*=35;
 			rarity*=35;
 			power*=20;
 		}
 		else if(rnd4<50){
-			name+="Master";
+			name+="主人";
 			value*=20;
 			rarity*=20;
 			power*=5;
 		}else if(rnd4<150){
-			name+="Teacher";
+			name+="老师";
 			value*=10;
 			rarity*=10;
 			power*=2;

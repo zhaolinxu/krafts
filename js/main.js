@@ -4255,7 +4255,7 @@ else
 {
 	$(".reespec").removeClass("unavailable")
 }
-$(".reespec").html("Respec");
+$(".reespec").html("洗点");
 $(".reespec").attr('tooltip', '宝藏: '+ parseFloat(prestige["treasure"]).toFixed(2)+" / "+parseFloat(treasurecost).toFixed(2))
 $(".reespec").attr('tooltip3', '你可以拿回你的头衔，为此付出代价..')
 
