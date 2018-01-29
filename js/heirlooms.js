@@ -300,11 +300,11 @@ function createheirloom(x){
 }
 
 function setHeirloomNotif() {
-	$("#heirloomspane").html("<a data-toggle='tab' onclick='clearHeirloomNotif()' href='#heirlooms'><div style='color:orange'>Heirlooms(!)</div></a>");
+	$("#heirloomspane").html("<a data-toggle='tab' onclick='clearHeirloomNotif()' href='#heirlooms'><div style='color:orange'>传家宝(!)</div></a>");
 }
 
 function clearHeirloomNotif() {
-	setTimeout(function(){$("#heirloomspane").html("<a data-toggle='tab' href='#heirlooms'>Heirlooms</a>");},20);
+	setTimeout(function(){$("#heirloomspane").html("<a data-toggle='tab' href='#heirlooms'>传家宝</a>");},20);
 }
 
 

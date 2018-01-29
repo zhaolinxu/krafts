@@ -4962,20 +4962,30 @@ function save(){
 }
 function encode(){
 bonus["savetime"]=parseInt(serverTime())
-encodestring=JSON.stringify(items)+"--"+JSON.stringify(bonus)+"--"
-encodestring+=JSON.stringify(buildings)+"--"+JSON.stringify( maximums)+"--"+JSON.stringify(technologies)+"--"
-encodestring+=JSON.stringify(people)+"--"+JSON.stringify(craft)+"--"+JSON.stringify(unlocked)+"--"
-encodestring+=JSON.stringify(population)+"--"+JSON.stringify(trademission)+"--"
-encodestring+=JSON.stringify(prestige)+"--"+JSON.stringify(buildstatus)+"--"+JSON.stringify(autotechnologies)+"--"+JSON.stringify(heirlooms)
+encodestring = '';
+encodestring+=JSON.stringify(items)+"--";
+encodestring+=JSON.stringify(bonus)+"--";
+encodestring+=JSON.stringify(buildings)+"--";
+encodestring+=JSON.stringify( maximums)+"--";
+encodestring+=JSON.stringify(technologies)+"--";
+encodestring+=JSON.stringify(people)+"--";
+encodestring+=JSON.stringify(craft)+"--";
+encodestring+=JSON.stringify(unlocked)+"--";
+encodestring+=JSON.stringify(population)+"--";
+encodestring+=JSON.stringify(trademission)+"--";
+encodestring+=JSON.stringify(prestige)+"--";
+encodestring+=JSON.stringify(buildstatus)+"--";
+encodestring+=JSON.stringify(autotechnologies)+"--";
+encodestring+=JSON.stringify({"type":"chs","data":encodeURI(heirlooms)});
+
 b64string=btoa(encodestring);
 $('.inputtxt').val(b64string)
 }
 
 function decode(){
-for(var key in unlocked){
-	unlocked[key]=0;
-}
-
+	for(var key in unlocked){
+		unlocked[key]=0;
+	}
 	unlocked[".legacy_motivation"]=1;
 	unlocked[".legacy_depot"]=1;
 	unlocked[".legacy_vengeance"]=1;
@@ -5009,12 +5019,17 @@ prestige = update(prestige,JSON.parse(result[10]));
 buildstatus = update(buildstatus,JSON.parse(result[11]));
 
 if(result[12]!=null){
-autotechnologies = update(autotechnologies,JSON.parse(result[12]));
-
+	autotechnologies = update(autotechnologies,JSON.parse(result[12]));
 }
 if(result[13]!=null){
-heirlooms = update(heirlooms,JSON.parse(result[13]));
-drawheirlooms();
+	heirlooms_res = JSON.parse(result[13]);
+	if(typeof(heirlooms_res.type) != 'undefined' && heirlooms_res.type == 'chs'){
+		heirlooms = update(heirlooms,decodeURI(heirlooms_res.data));
+	}
+	else{
+		heirlooms = update(heirlooms,JSON.parse(result[13]));
+	}
+	drawheirlooms();
 }
 		population = Cookies.get('population');
 		population=people["woodcutter"]+people["smelter"]+people["farmer"]+people["miner"]+people["foundryman"]+people["sailor"]+people["scientist"]+people["marketer"]+people["pikeman"]+people["swordman"]+people["knight"]+people["medic"]+people["berserk"]+people["warelephant"]+people["musketeer"]+(people["lighttank"]*3)+(people["cargotrain"]*3)
