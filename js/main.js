@@ -5440,6 +5440,8 @@ function cnname(key){
         name="钻石";
     }else if(temp=="chest"){
         name="箱子";
+    }else if(temp=="artifact"){
+        name="神器";
     }else{
         return key;
     }
