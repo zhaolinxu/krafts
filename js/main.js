@@ -5442,6 +5442,10 @@ function cnname(key){
         name="箱子";
     }else if(temp=="artifact"){
         name="神器";
+    }else if(temp=="glass"){
+        name="玻璃";
+    }else if(temp=="sand"){
+        name="沙子";
     }else{
         return key;
     }
