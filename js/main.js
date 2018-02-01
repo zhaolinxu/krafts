@@ -2969,7 +2969,7 @@ $(".build_bank").attr('tooltip2', '钢: '+ parseFloat(items["steel"]).toFixed(2)
 $(".build_bank").attr('tooltip3', '金币: '+ parseFloat(craft["coin"]).toFixed(2)+" / "+parseFloat(coincost).toFixed(2))
 $(".build_bank").attr('tooltip5', '黄金存储上限 +2');
 $(".build_bank").attr('tooltip6', '黄金消耗 -0.10/秒');
-$(".build_bank").attr('tooltip7', '黄金生产 +0.02/秒');
+$(".build_bank").attr('tooltip7', '金币生产 +0.02/秒');
 
 
 coppercost=Math.pow(1.2,(buildings["crusher"]))*150
