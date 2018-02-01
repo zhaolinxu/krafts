@@ -393,16 +393,16 @@ else
 }
 
 $(".tech_"+techname).addClass((autotechnologies[techname] >0 ? "researched" : ""))
-$(".tech_"+techname).html(capitalize(autoscience[k])+" mastery "+ Math.ceil(j/5) + (autotechnologies[techname] >0 ? " (res..)" : ""));
-$(".tech_"+techname).attr('tooltip', 'Book: '+ parseFloat(craft["book"]).toFixed(2)+" / "+parseFloat(bookcost).toFixed(2))
+$(".tech_"+techname).html(capitalize(autoscience[k])+" 掌握 "+ Math.ceil(j/5) + (autotechnologies[techname] >0 ? " (确实..)" : ""));
+$(".tech_"+techname).attr('tooltip', '书: '+ parseFloat(craft["book"]).toFixed(2)+" / "+parseFloat(bookcost).toFixed(2))
 var effect=""
 var amount=Math.floor(Math.pow(1.05,(j/5))*5);
 switch(k){
-case 0: effect="Knowledge production +"+amount+"%";break;
-case 1: effect="Wood production +"+amount+"%";break;
-case 2: effect="Mineral production +"+amount+"%";break;
+case 0: effect="知识生产 +"+amount+"%";break;
+case 1: effect="木头生产 +"+amount+"%";break;
+case 2: effect="矿物生产 +"+amount+"%";break;
 case 3: effect="工艺效率 +"+amount+"%";break;
-case 4: effect="Maximum storage +"+amount+"%";break;
+case 4: effect="最大存储 +"+amount+"%";break;
 }
 $(".tech_"+techname).attr('tooltip3', effect);
 
