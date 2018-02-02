@@ -33,7 +33,7 @@ $(".btndeal").show()
 function tickdeal(){
 
 trademission["merchanttime"]--
-$(".dealtime").html("A new merchant arrives in "+totime(trademission["merchanttime"]))
+$(".dealtime").html("距离下一个商人抵达还有 "+totime(trademission["merchanttime"]))
 
 if(trademission["merchanttime"]<1){
 newDeal();
@@ -44,7 +44,7 @@ newDeal();
 function fillDeal(){
 if(trademission["done"]==0)
 {
-$(".deallog").html("A merchant arrived at your market<br><br>I offer you this fine "+intToString(trademission["merchantnumber"])+" "+trademission["merchantcraft"]+"<br>for only "+intToString(trademission["merchantnumber"]*trademission["marchantratio"])+" coins.")
+$(".deallog").html("一个商人抵达你的市场<br><br>为您提供 "+intToString(trademission["merchantnumber"])+" "+cnname(trademission["merchantcraft"])+"<br>只需要"+intToString(trademission["merchantnumber"]*trademission["marchantratio"])+" 金币。")
 $(".btndeal").show()
 }
 else
