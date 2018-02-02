@@ -3681,8 +3681,8 @@ else
 $(".hire_galley").html("大帆船 ("+people["galley"]+")");
 $(".hire_galley").attr('tooltip', '木头: '+ parseFloat(items["wood"]).toFixed(2)+" / "+parseFloat(woodcost).toFixed(2))
 $(".hire_galley").attr('tooltip2', '板材: '+ parseFloat(craft["plank"]).toFixed(2)+" / "+parseFloat(plankcost).toFixed(2))
-$(".hire_galley").attr('tooltip3', '结构体: '+ parseFloat(craft["structure"]).toFixed(2)+" / "+parseFloat(structurecost).toFixed(2))
-$(".hire_galley").attr('tooltip5', "动力: 150  结构体: 2,000");
+$(".hire_galley").attr('tooltip3', '结构: '+ parseFloat(craft["structure"]).toFixed(2)+" / "+parseFloat(structurecost).toFixed(2))
+$(".hire_galley").attr('tooltip5', "动力: 150  结构: 2,000");
 $(".hire_galley").attr('tooltip6', '货运能力: 5,000  人员: 2');
 
 
@@ -3697,8 +3697,8 @@ else
 }
 $(".hire_galleon").html("帆船 ("+people["galleon"]+")");
 $(".hire_galleon").attr('tooltip', '板材: '+ parseFloat(craft["plank"]).toFixed(2)+" / "+parseFloat(plankcost).toFixed(2))
-$(".hire_galleon").attr('tooltip2', '结构体: '+ parseFloat(craft["structure"]).toFixed(2)+" / "+parseFloat(structurecost).toFixed(2))
-$(".hire_galleon").attr('tooltip4', "动力: 500  结构体: 15,000");
+$(".hire_galleon").attr('tooltip2', '结构: '+ parseFloat(craft["structure"]).toFixed(2)+" / "+parseFloat(structurecost).toFixed(2))
+$(".hire_galleon").attr('tooltip4', "动力: 500  结构: 15,000");
 $(".hire_galleon").attr('tooltip5', '货运能力: 25,000  人员: 5');
 
 plankcost=1000;
@@ -3793,7 +3793,7 @@ for (b in techdata) {
   var techname = tech.hasOwnProperty('name') ? tech.name : toProperCase(b);
   var suffix = (technologies[b] > 0 ? (techname.length < 14 ? ' (已研究)' : ' (确实...)')  : '');
   $(".tech_"+b).html(cnTec(techname) + suffix);
-//    console.log(cnTec(techname))
+    console.log(cnTec(techname))
 
 }
 
@@ -5538,6 +5538,62 @@ function cnTec(techname){
         name="学习";
     }else if(temp=="memory"){
         name="记忆";
+    }else if(temp=="Healing"){
+        name="治愈";
+    }else if(temp=="Crushing"){
+        name="压碎";
+    }else if(temp=="Contracts"){
+        name="契约";
+    }else if(temp=="Construction"){
+        name="施工";
+    }else if(temp=="Glassblowing"){
+        name="玻璃吹制";
+    }else if(temp=="Organization"){
+        name="机构";
+    }else if(temp=="Organization"){
+        name="机构";
+    }else if(temp=="Woodwork"){
+        name="木工";
+    }else if(temp=="Intelligence"){
+        name="情报";
+    }else if(temp=="Canteen"){
+        name="水壶";
+    }else if(temp=="Galleon"){
+        name="大型帆船";
+    }else if(temp=="Rampage"){
+        name="狂暴";
+    }else if(temp=="Architecture"){
+        name="建筑学";
+    }else if(temp=="Chemistry"){
+        name="化学";
+    }else if(temp=="Elephantry"){
+        name="大象";
+    }else if(temp=="Risk"){
+        name="冒险";
+    }else if(temp=="Investment"){
+        name="投资";
+    }else if(temp=="Domestication"){
+        name="驯化";
+    }else if(temp=="Expansion"){
+        name="扩张";
+    }else if(temp=="Investigation"){
+        name="侦查";
+    }else if(temp=="Internationalization"){
+        name="国际化";
+    }else if(temp=="Fireship"){
+        name="消防船";
+    }else if(temp=="Deals"){
+        name="交易";
+    }else if(temp=="Careening"){
+        name="护理";
+    }else if(temp=="Finding"){
+        name="发现";
+    }else if(temp=="Wisdom"){
+        name="智慧";
+    }else if(temp=="Masonry"){
+        name="石工";
+    }else if(temp=="Multitasking"){
+        name="多任务";
     }else{
         return techname;
     }

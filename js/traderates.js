@@ -116,7 +116,7 @@ $(".tradetrainlog").html("交易 "+tradetrain[trademission["trainbuy"]]+" "+trad
 else
 {
 trademission["trainbuy"]=$(".tradetrainselect").val()
-$(".tradetrainlog").html("Trading stopped")	
+$(".tradetrainlog").html("贸易已停止")	
 }
 }
 function refreshtrade(){
@@ -131,7 +131,7 @@ function refreshtrade(){
 		crew+=people["galleon"]*5
 		crew+=people["caravel"]*3
 		$(".ratiotrade").html(traderatio[$(".selgive").val()][$(".selget").val()])
-		$(".traderecieve").html("你得到了 "+intToString(amountget)+" "+$(".selget").val()+"<br><br>供应: "+cost+" 船员: "+crew)
+		$(".traderecieve").html("你得到了 "+intToString(amountget)+" "+cnname($(".selget").val())+"<br><br>供应: "+cost+" 船员: "+crew)
 
 }
 
@@ -315,7 +315,7 @@ $(document).ready(function(){
 
 		for(key in traderatio[$(this).val()])
 		{
-			$(".selget").append("<option value='"+key+"'>"+key+"</option>")
+			$(".selget").append("<option value='"+key+"'>"+cnname(key)+"</option>")
 		}
 		refreshtrade()
 	})
