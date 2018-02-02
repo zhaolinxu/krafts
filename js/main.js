@@ -3793,7 +3793,7 @@ for (b in techdata) {
   var techname = tech.hasOwnProperty('name') ? tech.name : toProperCase(b);
   var suffix = (technologies[b] > 0 ? (techname.length < 14 ? ' (已研究)' : ' (确实...)')  : '');
   $(".tech_"+b).html(cnTec(techname) + suffix);
-    console.log(cnTec(techname))
+//    console.log(cnTec(techname))
 
 }
 
