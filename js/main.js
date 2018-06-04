@@ -5446,6 +5446,40 @@ function cnname(key){
         name="玻璃";
     }else if(temp=="sand"){
         name="沙子";
+    }else if(temp=="clay"){
+        name="粘土";
+    }else if(temp=="cement"){
+        name="水泥";
+    }else if(temp=="concrete"){
+        name="混凝土";
+    }else if(temp=="nickel"){
+        name="镍";
+    }else if(temp=="chemicals"){
+        name="化学品";
+    }else if(temp=="book"){
+        name="书籍";
+    }else if(temp=="plans"){
+        name="计划";
+    }else if(temp=="ammo"){
+        name="弹药";
+    }else if(temp=="bottle"){
+        name="瓶子";
+    }else if(temp=="elephant"){
+        name="大象";
+    }else if(temp=="plate"){
+        name="金属板";
+    }else if(temp=="engine"){
+        name="发动机";
+    }else if(temp=="greatsword"){
+        name="巨剑";
+    }else if(temp=="musket"){
+        name="滑膛枪";
+    }else if(temp=="brick"){
+        name="砖";
+    }else if(temp=="frame"){
+        name="框架";
+    }else if(temp=="gunpower"){
+        name="火药";
     }else{
         return key;
     }

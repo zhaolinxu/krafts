@@ -393,7 +393,7 @@ else
 }
 
 $(".tech_"+techname).addClass((autotechnologies[techname] >0 ? "researched" : ""))
-$(".tech_"+techname).html(capitalize(autoscience[k])+" 掌握 "+ Math.ceil(j/5) + (autotechnologies[techname] >0 ? " (确实..)" : ""));
+$(".tech_"+techname).html(capitalize(cnname(autoscience[k]))+" 掌握 "+ Math.ceil(j/5) + (autotechnologies[techname] >0 ? " (确实..)" : ""));
 $(".tech_"+techname).attr('tooltip', '书: '+ parseFloat(craft["book"]).toFixed(2)+" / "+parseFloat(bookcost).toFixed(2))
 var effect=""
 var amount=Math.floor(Math.pow(1.05,(j/5))*5);
@@ -428,7 +428,7 @@ else
 }
 
 $(".tech_"+techname).addClass((autotechnologies[techname] >0 ? "researched" : ""))
-$(".tech_"+techname).html(capitalize(autoeconomy[k])+" 掌握 "+ Math.ceil(j/5) + (autotechnologies[techname] >0 ? " (确实..)" : ""));
+$(".tech_"+techname).html(capitalize(cnname(autoeconomy[k]))+" 掌握 "+ Math.ceil(j/5) + (autotechnologies[techname] >0 ? " (确实..)" : ""));
 $(".tech_"+techname).attr('tooltip', '书籍: '+ parseFloat(craft["book"]).toFixed(2)+" / "+parseFloat(bookcost).toFixed(2))
 var effect=""
 var amount=Math.floor(Math.pow(1.05,(j/5))*5);
@@ -463,7 +463,7 @@ else
 }
 
 $(".tech_"+techname).addClass((autotechnologies[techname] >0 ? "researched" : ""))
-$(".tech_"+techname).html(capitalize(automilitary[k])+" 掌握 "+ Math.ceil(j/5) + (autotechnologies[techname] >0 ? " (确实..)" : ""));
+$(".tech_"+techname).html(capitalize(cnname(automilitary[k]))+" 掌握 "+ Math.ceil(j/5) + (autotechnologies[techname] >0 ? " (确实..)" : ""));
 $(".tech_"+techname).attr('tooltip', '书籍: '+ parseFloat(craft["book"]).toFixed(2)+" / "+parseFloat(bookcost).toFixed(2))
 var effect=""
 var amount=Math.floor(Math.pow(1.05,(j/5))*5);
